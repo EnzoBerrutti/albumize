@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ServicioMusicaService } from './servicios/servicio-musica.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'albumize';
+
+  constructor(private api:ServicioMusicaService){}
+
+  fetchResults():void {
+    this.api.searchSongORArtist().then(result=>{
+      console.log(result)
+    })
+  }
 }
