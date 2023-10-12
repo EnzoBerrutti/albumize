@@ -16,8 +16,8 @@ export class ServicioMusicaService {
       const request = await fetch(this.urlShazam, {
         method: 'GET',
         headers: {
-          'X-RapidAPI-Key': 'd92d15d437msh5605811bbf98ecap17f2e0jsncc792d61e177',
-          'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
+          'X-RapidAPI-Key': 'd92d15d437msh5605811bbf98ecap17f2e0jsncc792d61e177'
+          /*'X-RapidAPI-Host': 'shazam.p.rapidapi.com'*/
         }
     });
       const data = await request.json()
