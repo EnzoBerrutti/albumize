@@ -1,3 +1,18 @@
 <h1>Hello World</h1>
 
-<button>Click me</button>
+<button class="d-block">Click me</button>
+<button class="mt-3 btn btn-success" (click)="obtenerAdeleImagesAndAlbums()">Ver Albunes de Adele</button>
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <img [src]='imgAdele[0]' alt="">
+        </div>
+    </div>
+    <div class="row">
+        <h2 *ngIf="active" class="col-6 offset-3 text-center">Adele's albums</h2>
+        <div *ngFor="let item of albumsAdele;" class="col-6 offset-3 d-flex text-center flex-column">
+            <p>{{item}}</p>
+        </div>
+    </div>
+</div>
