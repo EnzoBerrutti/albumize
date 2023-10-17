@@ -1,9 +1,10 @@
 <h1>Hello World</h1>
 
 <button class="d-block">Click me</button>
-<button class="mt-3 btn btn-success" (click)="obtenerAdeleImagesAndAlbums()">Ver Albunes de Adele</button>
+<!-- <button class="mt-3 btn btn-success" (click)="obtenerAdeleImagesAndAlbums()">Ver Albunes de Adele</button>
+ -->
 
-<div class="container">
+<div *ngIf="active" class="container">
     <div class="row">
         <div class="col-6 offset-3">
             <img [src]='imgAdele[0]' alt="">

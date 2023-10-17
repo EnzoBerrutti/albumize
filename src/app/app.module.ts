@@ -8,6 +8,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './pages/home/home.component';
 import { AlbumComponent } from './pages/album/album.component';
 import { HelloAndButtonComponent } from './components/hello-and-button/hello-and-button.component';
+import { SearchArtistComponent } from './components/search-artist/search-artist.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { HelloAndButtonComponent } from './components/hello-and-button/hello-and
     NavbarComponent,
     HomeComponent,
     AlbumComponent,
-    HelloAndButtonComponent
-  ],
+    HelloAndButtonComponent,
+    SearchArtistComponent,
+      ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

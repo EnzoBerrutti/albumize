@@ -36,11 +36,10 @@ export class ServicioMusicaService {
   } 
   
   
-  async searchArtist(){
+  async searchArtist(artistName:string){
     try {
       const token = await this.getTokenSpotify()
-      console.log(token)
-      const request = await fetch(this.urlSpotifyRequests + '/search/' + this.searchParams1,{
+      const request = await fetch(`${this.urlSpotifyRequests}/search/?q=${artistName}&type=artist&limit=10`,{
         headers : {"Authorization" : "Bearer  " + token }
       })
       const data = await request.json()
@@ -65,8 +64,9 @@ export class ServicioMusicaService {
 
   }
 
-  async getArtistAlbums(artistId:string){
+  async getArtistAlbums(artistId:number){
     try {
+      console.log(this.urlSpotifyRequests + '/artists/' + artistId +  this.searchParams2)
       const token = await this.getTokenSpotify()
       const request = await fetch(this.urlSpotifyRequests + '/artists/' + artistId +  this.searchParams2,{
         headers : {"Authorization" : "Bearer  " + token }

@@ -20,7 +20,8 @@ interface albums {
   realeaseDatePrecision:string,
   uri:string;
   artists:string[],
-  albumGroup: string
+  albumGroup: string,
+  img:images
 }
 
 @Component({
@@ -39,8 +40,8 @@ export class HelloAndButtonComponent {
 
   }
 
-  async obtenerAdeleImagesAndAlbums(){
-    this.active = true;
+ /*  async obtenerAdeleImagesAndAlbums(){
+    this.active = !this.active;
     const artistID = await this.api.searchArtist()
     const adeleImages = await this.api.getArtist(artistID)
     adeleImages['images'].forEach((element:images) => {
@@ -54,7 +55,7 @@ export class HelloAndButtonComponent {
       
     });
 
-/*     this.imgAdele.push(adele[images]) */
+     this.imgAdele.push(adele[images]) 
     console.log("hello")
-  }
+  } */
 }
