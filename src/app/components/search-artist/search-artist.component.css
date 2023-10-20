@@ -6,3 +6,43 @@ img{
 h1{
     font-weight: 700;
 }
+
+.albums{
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.album-content{
+    background-color: rgb(237, 237, 237);
+    border-bottom: 1px solid black;
+    display: flex;
+    margin: 10px 0;
+    width: 80%;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.album-content:hover{
+    background-color: rgb(75, 75, 75);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color:white;
+}
+
+.info-album{
+    margin: 0 10px;
+}
+
+.info-album p{
+    margin: 2px 0;
+}
+
+.info-album-name{
+    font-size: 20px;
+    font-weight: 500;
+}
+.imagen-album{
+    width: 100px;
+    height: auto;
+}

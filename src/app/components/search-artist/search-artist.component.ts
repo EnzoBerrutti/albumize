@@ -3,25 +3,34 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ServicioMusicaService } from 'src/app/services/servicio-musica.service';
 
 interface images {
-  height:string,
-  url:string,
-  width:string
+  height: string,
+  url: string,
+  width: string
+}
+
+interface artist {
+  external_urls: string,
+  href: string,
+  id: string,
+  name: string,
+  type: string,
+  uri: string
 }
 
 interface albums {
-  type:string,
-  totalTracks:string,
-  availableMarkets:string,
-  externalsURL:string,
-  href:string,
-  id:string,
-  images:images[],
-  name:string,
-  release_date:string,
-  realeaseDatePrecision:string,
-  uri:string;
-  artists:string[],
-  albumGroup: string,
+  album_type: string,
+  artists: artist[],
+  availableMarkets: string,
+  externalsURL: string,
+  href: string,
+  id: string,
+  images: images[],
+  name: string,
+  release_date: string,
+  realeaseDatePrecision: string,
+  totalTracks: string;
+  type: string,
+  uri: string,
 }
 
 @Component({
@@ -31,50 +40,33 @@ interface albums {
 })
 export class SearchArtistComponent {
   img: string[] = []
-  albums:albums[] = []
+  albums: albums[] = []
 
-  casa!:string 
   idArtist = {} as number
-  
-  active:boolean = false
-  formulario:FormGroup = this.fb.group({
+
+  active: boolean = false
+  formulario: FormGroup = this.fb.group({
     nombre: ''
   })
 
-  constructor(private api:ServicioMusicaService,
-              private fb:FormBuilder){}
+  constructor(private api: ServicioMusicaService,
+    private fb: FormBuilder) { }
 
 
-  async searchArtistName(){
+  async getAlbums() {
     this.albums = []
-    if(!this.active){
-      this.active = !this.active
-
-      const artistName = this.formulario.controls['nombre'].value
-      console.log(artistName)
-      
-      this.idArtist = await this.api.searchArtist(artistName)
-      console.log(this.idArtist)
-    } else{
-      this.active = !this.active
-    }
-  }
-
-  async getArtistAlbums(){
-    await this.searchArtistName()
-
-    const objeto = await this.api.getArtistAlbums(this.idArtist)
-    
-    console.log(objeto)
-    
-    console.log(objeto['items'])
-    objeto['items'].forEach((element:albums) => {
-      this.albums.push(element)
-    })
-
-    console.log(this.albums[0].images[0].url)
+    this.active = !this.active
+    const query = this.formulario.controls['nombre'].value
+    const data = await this.api.getAlbums(query)
+    this.albums = data['albums']['items']
+    this.getAlbumYear()
+    console.log(this.albums)
 
   }
 
-
+getAlbumYear(){
+  this.albums.forEach((item)=>{
+    item.release_date = item.release_date.split("-")[0]
+  })
+}
 }
