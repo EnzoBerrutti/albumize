@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ServicioMusicaService } from 'src/app/services/servicio-musica.service';
 
@@ -38,9 +38,10 @@ interface albums {
   templateUrl: './search-artist.component.html',
   styleUrls: ['./search-artist.component.css']
 })
-export class SearchArtistComponent {
+export class SearchArtistComponent implements OnInit{
   img: string[] = []
   albums: albums[] = []
+  new_releases: albums[] = []
 
   idArtist = {} as number
 
@@ -52,6 +53,14 @@ export class SearchArtistComponent {
   constructor(private api: ServicioMusicaService,
     private fb: FormBuilder) { }
 
+    async ngOnInit(){
+      console.log("Hello")
+      const data = await this.api.getNewReleases()
+      this.new_releases = data['albums']['items']
+      this.getAlbumYear(this.new_releases)
+      this.getDottedName(this.new_releases)
+      console.log(this.new_releases)
+    }
 
   async getAlbums() {
     this.albums = []
@@ -59,14 +68,25 @@ export class SearchArtistComponent {
     const query = this.formulario.controls['nombre'].value
     const data = await this.api.getAlbums(query)
     this.albums = data['albums']['items']
-    this.getAlbumYear()
+    this.getAlbumYear(this.albums)
+    this.getDottedName(this.albums)
     console.log(this.albums)
 
   }
 
-getAlbumYear(){
-  this.albums.forEach((item)=>{
+getAlbumYear(array:albums[]){
+  array.forEach((item)=>{
     item.release_date = item.release_date.split("-")[0]
   })
 }
+
+getDottedName(array:albums[]){
+  array.forEach((item:albums)=>{
+    if(item.name.length > 12){
+      item.name = item.name.slice(0,12) + '...'
+    }
+  })
+  
+}
+
 }

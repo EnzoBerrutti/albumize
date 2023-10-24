@@ -10,6 +10,7 @@ import { AlbumComponent } from './pages/album/album.component';
 import { HelloAndButtonComponent } from './components/hello-and-button/hello-and-button.component';
 import { SearchArtistComponent } from './components/search-artist/search-artist.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AlbumTracksComponent } from './components/album-tracks/album-tracks.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AlbumComponent,
     HelloAndButtonComponent,
     SearchArtistComponent,
+    AlbumTracksComponent,
       ],
   imports: [
     BrowserModule,

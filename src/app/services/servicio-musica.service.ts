@@ -13,6 +13,7 @@ export class ServicioMusicaService {
   clientSecret:string = 'fd634a32c1904ade834f5897cc52c6fd'
   paramsToken:string = "?grant_type=client_credentials&client_id=" + this.clientID + "&client_secret=" + this.clientSecret
   
+  // CREDENTIALS FOR QUERIES
   header = { "Content-type" : 'application/x-www-form-urlencoded'} //No funciona todavia
   urlSpotifyRequests: string = 'https://api.spotify.com/v1'
 
@@ -38,6 +39,32 @@ export class ServicioMusicaService {
     try {
       const token = await this.getTokenSpotify()
       const request = await fetch(`${this.urlSpotifyRequests}/search?q=${querySearch}&type=album`, {
+        headers : {"Authorization" : "Bearer  " + token }
+      })
+      const response = request.json()
+      return response
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  async getAlbumByID(id:string){
+    try {
+      const token = await this.getTokenSpotify()
+      const request = await fetch(`${this.urlSpotifyRequests}/albums/${id}`, {
+        headers : {"Authorization" : "Bearer  " + token }
+      })
+      const response = request.json()
+      return response
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  async getNewReleases(){
+    try {
+      const token = await this.getTokenSpotify()
+      const request = await fetch(`${this.urlSpotifyRequests}/browse/new-releases`, {
         headers : {"Authorization" : "Bearer  " + token }
       })
       const response = request.json()

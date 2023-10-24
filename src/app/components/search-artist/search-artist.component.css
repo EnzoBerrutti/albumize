@@ -8,41 +8,50 @@ h1{
 }
 
 .albums{
-    display: flex;
-    grid-template-columns: repeat(3, 1fr);
+    background-color: rgb(25, 25, 25);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
 }
 
 
 .album-content{
-    background-color: rgb(237, 237, 237);
-    border-bottom: 1px solid black;
-    display: flex;
+    background-color: rgb(24, 24, 24);
     margin: 10px 0;
-    width: 80%;
+    width: 250px;
+    height: 320px;
+    padding: 20px;
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
     cursor: pointer;
+    border-radius: 7px;
 }
 
 .album-content:hover{
-    background-color: rgb(75, 75, 75);
-    border-bottom: 1px solid rgb(255, 255, 255);
-    color:white;
+    background-color: rgb(63, 63, 63);
 }
 
 .info-album{
-    margin: 0 10px;
+    display: flex;
+    flex-direction: column; 
 }
 
 .info-album p{
     margin: 2px 0;
+    color: white;
 }
 
 .info-album-name{
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 500;
 }
 .imagen-album{
-    width: 100px;
+    width: 210px;
     height: auto;
+    border-radius: 7px;
 }
+
+.img-album{
+    text-align: center;
+}
+
