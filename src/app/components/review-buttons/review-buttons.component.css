@@ -1,0 +1,22 @@
+.whole{
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+}
+
+.write{
+    float: right;
+}
+
+.text{
+    padding-right: 1rem;
+    font-size: x-large;
+}
+
+button{
+    font-size: x-large;
+    border-radius: 5px;
+}
+
+.opciones{
+    font-size: large;
+}
