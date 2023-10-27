@@ -1,37 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Album } from 'src/app/interfaces/interfaces';
 import { ServicioMusicaService } from 'src/app/services/servicio-musica.service';
-
-interface images {
-  height: string,
-  url: string,
-  width: string
-}
-
-interface artist {
-  external_urls: string,
-  href: string,
-  id: string,
-  name: string,
-  type: string,
-  uri: string
-}
-
-interface albums {
-  album_type: string,
-  artists: artist[],
-  availableMarkets: string,
-  externalsURL: string,
-  href: string,
-  id: string,
-  images: images[],
-  name: string,
-  release_date: string,
-  realeaseDatePrecision: string,
-  totalTracks: string;
-  type: string,
-  uri: string,
-}
 
 @Component({
   selector: 'app-search-artist',
@@ -40,8 +10,8 @@ interface albums {
 })
 export class SearchArtistComponent implements OnInit{
   img: string[] = []
-  albums: albums[] = []
-  new_releases: albums[] = []
+  albums: Album[] = []
+  new_releases: Album[] = []
 
   idArtist = {} as number
 
@@ -74,14 +44,14 @@ export class SearchArtistComponent implements OnInit{
 
   }
 
-getAlbumYear(array:albums[]){
+getAlbumYear(array:Album[]){
   array.forEach((item)=>{
     item.release_date = item.release_date.split("-")[0]
   })
 }
 
-getDottedName(array:albums[]){
-  array.forEach((item:albums)=>{
+getDottedName(array:Album[]){
+  array.forEach((item:Album)=>{
     if(item.name.length > 12){
       item.name = item.name.slice(0,12) + '...'
     }

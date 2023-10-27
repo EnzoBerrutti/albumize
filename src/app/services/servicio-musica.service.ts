@@ -54,7 +54,7 @@ export class ServicioMusicaService {
       const request = await fetch(`${this.urlSpotifyRequests}/albums/${id}`, {
         headers : {"Authorization" : "Bearer  " + token }
       })
-      const response = request.json()
+      const response = await request.json()
       return response
     } catch (error) {
       console.log(error)

@@ -10,7 +10,7 @@
     <div class="col-10 offset-1">
         <div class="albums">
             <div *ngFor="let album of albums;">
-                <a>
+                <a routerLink="/album/{{album.id}}">
                     <div class="album-content">
                         <div class="img-album">
                             <img class="imagen-album" [src]="album.images[1].url" alt="">
