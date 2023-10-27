@@ -2,7 +2,8 @@ export interface Review{
     review:string,
     albumUrl:string,
     punctuation:number,
-    reviewer:string; /*debe ser un username*/
+    reviewer:string, /*debe ser un username*/
+    date:Date;
 }
 
 export interface User{

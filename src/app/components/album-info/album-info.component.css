@@ -18,7 +18,10 @@
 .albumIcon{
     height: 15rem;
     width: 15rem;
+    border: 0.1rem solid rgb(63, 63, 63);
     border-radius: 10px;
+    margin-left: 2rem;
+    
 }
 
 .albumTitle{
@@ -26,14 +29,22 @@
     margin-top: 6rem;
     align-items: center;
     font-size: xx-large;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.artist{
+    padding-left: 1.6rem;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .score{
     font-size:250%;
     margin-top: 3.5rem;
     margin-bottom: 4rem;
-    margin-left: 7rem;
-    border: 3px solid black;
+    margin-left: 15rem;
+    border: 3px solid rgb(63, 63, 63);
     border-radius: 200px;
     font-family: 'Roboto';
     padding: 2rem;

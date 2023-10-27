@@ -14,7 +14,7 @@ export class ReviewsService {
   async getReviews(){
     try{
       const resultado = await fetch(this.url)
-      const reviews = resultado.json()
+      const reviews = await resultado.json()
       return reviews;
     }catch(err){
       console.log(err)
@@ -55,7 +55,7 @@ export class ReviewsService {
   async getReview(id:number){
     try{
         const resultado = await fetch(`${this.url}/${id}`)
-        const review = resultado.json();
+        const review = await resultado.json();
         return review;
     }catch(error){
       console.log(error);

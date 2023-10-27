@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,Input, OnInit } from '@angular/core';
+import { Review } from 'src/app/interfaces/interfaces';
 
 @Component({
   selector: 'app-review-in-album-page',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./review-in-album-page.component.css']
 })
 export class ReviewInAlbumPageComponent {
-
-}
+  @Input() review!: Review;
+};

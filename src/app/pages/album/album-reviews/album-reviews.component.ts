@@ -5,13 +5,15 @@ import { ReviewsService } from 'src/app/services/reviews.service';
 import { ServicioMusicaService } from 'src/app/services/servicio-musica.service';
 
 @Component({
-  selector: 'app-album-info',
-  templateUrl: './album-info.component.html',
-  styleUrls: ['./album-info.component.css']
+  selector: 'app-album-reviews',
+  templateUrl: './album-reviews.component.html',
+  styleUrls: ['./album-reviews.component.css']
 })
-export class AlbumInfoComponent implements OnInit{
+export class AlbumReviewsComponent implements OnInit{
 
-  album: Album | undefined
+  album:Album[] = []
+  listaReviews:Review[] = []
+  listaReviewsFiltrada:Review[] = []
 
   constructor(private route:ActivatedRoute,private servicio:ServicioMusicaService,private reviews:ReviewsService){}
 
@@ -20,8 +22,15 @@ export class AlbumInfoComponent implements OnInit{
       const albumId = params.get('id');
 
       if(albumId){
-        this.album = await this.servicio.getAlbumByID(albumId)
+        await this.leer()
+        this.listaReviewsFiltrada = this.listaReviews.filter(review=>
+          review.albumUrl === albumId)
       }
     });
+  }
+
+  async leer(){
+    this.listaReviews = await this.reviews.getReviews()
+    console.log(this.listaReviews);
   }
 }

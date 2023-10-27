@@ -1,0 +1,5 @@
+<app-album-info></app-album-info>
+<app-review-buttons></app-review-buttons>
+<ul *ngFor="let review of listaReviewsFiltrada">
+    <ul><app-review-in-album-page [review]="review"></app-review-in-album-page></ul>
+</ul>
