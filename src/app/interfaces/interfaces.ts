@@ -13,17 +13,6 @@ export interface User{
     reviewList:Review[];
 }
 
-export interface AlbumInDb{
-    albumUrl:string,
-    score:number,
-    reviews:Review[];
-    /*LOS DATOS DEL ALBUM QUE GUARDAMOS EN NUESTRO JASON/BASE DE DATOS */
-}
-
-export interface AlbumFromAPI{
-    /*IMAGEN, DATOS, LISTA DE CANCIONES, CUALQUIER COSA QUE NOS SIRVA DE LA API*/
-}
-
 export interface Images {
     height: string,
     url: string,
@@ -53,4 +42,15 @@ export interface Images {
     totalTracks: string;
     type: string,
     uri: string,
+  }
+
+  export interface Track{
+    artists: Artist[];
+    duration_ms: number;
+    name: string;
+    trackNumber: number;
+  }
+
+  export interface TracksResponse{
+    items:Track[];
   }

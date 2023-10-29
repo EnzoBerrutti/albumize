@@ -74,4 +74,17 @@ export class ServicioMusicaService {
     }
   }
 
+  async getAlbumSongs(id:String){
+    try{
+      const token = await this.getTokenSpotify()
+      const request = await fetch (`${this.urlSpotifyRequests}/albums/${id}/tracks`, {
+        headers: {"Authorization" : "Bearer  " + token }
+      })
+      const response = await request.json()
+      return response
+    }catch(error)
+    {
+      console.log(error);
+    }
+  }
 }

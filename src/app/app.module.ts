@@ -11,8 +11,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AlbumTracksComponent } from './components/album-tracks/album-tracks.component';
 import { ReviewButtonsComponent } from './components/review-buttons/review-buttons.component';
 import { ReviewInAlbumPageComponent } from './components/review-in-album-page/review-in-album-page.component';
-import { AlbumInfoComponent } from './components/album-info/album-info.component';
+
 import { AlbumReviewsComponent } from './pages/album/album-reviews/album-reviews.component';
+import { AlbumInfoComponent } from './pages/album/album-info/album-info.component';
+import { AlbumIntroComponent } from './components/album-intro/album-intro.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,8 @@ import { AlbumReviewsComponent } from './pages/album/album-reviews/album-reviews
     NavbarComponent,
     HomeComponent,
     SearchArtistComponent,
-    AlbumInfoComponent,
     AlbumReviewsComponent,
+    AlbumIntroComponent
   ],
   imports: [
     BrowserModule,

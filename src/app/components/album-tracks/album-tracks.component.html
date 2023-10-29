@@ -1,1 +1,22 @@
-<p>album-tracks works!</p>
+<table>
+    <tbody id="tracks">
+      <tr *ngFor="let track of tracksWithNumbers">
+        <td class="nombre">{{track.trackNumber}}. {{ track.name }}
+          <ng-container [ngSwitch]="track.artists.length">
+            <ng-container *ngSwitchCase="2">
+              <span *ngIf="!track.name.includes('feat.')">(feat. {{ track.artists[1].name }})</span>
+            </ng-container>
+            <ng-container *ngSwitchCase="3">
+              <span *ngIf="!track.name.includes('feat.')">(feat. {{ track.artists[1].name }} & {{ track.artists[2].name }})</span>
+            </ng-container>
+            <ng-container *ngSwitchCase="4">
+              <span *ngIf="!track.name.includes('feat.')">(feat. {{ track.artists[1].name }}, {{ track.artists[2].name }} & {{ track.artists[3].name }})</span>
+            </ng-container>
+            <ng-container *ngSwitchDefault></ng-container>
+          </ng-container>
+      </td>
+      <td class="time">{{ msToMinutesAndSeconds(track.duration_ms) }}</td>
+    </tr>
+  </tbody>
+</table>
+  

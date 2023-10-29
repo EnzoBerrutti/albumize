@@ -1,0 +1,23 @@
+table {
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-bottom: 1rem;
+  }
+  
+  th, td {
+    padding: 8px; 
+    border: 1px solid #9e9e9e4e; 
+    text-align: left; 
+  }
+
+  td.time {
+    padding: 8px; 
+    text-align: left; 
+    border-left: none;
+    border-right: none
+  }
+
+  td.nombre {
+    border-right: none;
+    border-left: none;
+  }

@@ -1,0 +1,10 @@
+.componentes{
+    width: 75%;
+    margin-left: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.derecha{
+    margin-left: 5rem;
+}
