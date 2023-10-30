@@ -3,9 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { AlbumReviewsComponent } from './pages/album/album-reviews/album-reviews.component';
 import { AlbumInfoComponent } from './pages/album/album-info/album-info.component';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
+  {path:'register',component:RegisterPageComponent},
+  {path:'login',component:LoginPageComponent},
   
   {path:'album/:id', component: AlbumInfoComponent},
   

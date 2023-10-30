@@ -15,6 +15,9 @@ import { ReviewInAlbumPageComponent } from './components/review-in-album-page/re
 import { AlbumReviewsComponent } from './pages/album/album-reviews/album-reviews.component';
 import { AlbumInfoComponent } from './pages/album/album-info/album-info.component';
 import { AlbumIntroComponent } from './components/album-intro/album-intro.component';
+import { RegisterFormComponent } from './components/register-form/register-form.component';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { AlbumIntroComponent } from './components/album-intro/album-intro.compon
     HomeComponent,
     SearchArtistComponent,
     AlbumReviewsComponent,
-    AlbumIntroComponent
+    AlbumIntroComponent,
+    RegisterFormComponent,
+    RegisterPageComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
