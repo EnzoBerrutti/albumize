@@ -14,6 +14,10 @@ h1{
 
 }
 
+.album-link{
+    text-decoration: none;
+}
+
 
 .album-content{
     background-color: rgb(24, 24, 24);
