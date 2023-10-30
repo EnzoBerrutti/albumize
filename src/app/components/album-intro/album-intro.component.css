@@ -19,7 +19,7 @@
 .albumIcon{
     height: 15rem;
     width: 15rem;
-    border: 0.1rem solid rgb(63, 63, 63);
+    border: 0.20rem solid rgb(63, 63, 63);
     border-radius: 10px;
     margin-left: 2rem;
     margin-right: 0.5rem;
@@ -48,16 +48,16 @@
 }
 
 .score {
-    position: relative;
-    margin-left: 4.5rem;
+    position: absolute;
+    top: 105px;
     width: 115px;
     height: 115px;
-    margin-top: 3rem;
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
     border: 3px solid rgb(63, 63, 63);
     border-radius: 50%;
     font-family: 'Roboto';
-    font-size: 2.5rem;
-    padding: 1.75rem;
+    font-size: 2.2rem;
     color: white;
     display: flex;
     justify-content: center;
@@ -98,20 +98,40 @@
 
 .score-10 {
     background-color: rgb(0, 153, 255);
-  }
+}
   
-  .score-7to10 {
+.score-7to10 {
     background-color: rgb(20, 225, 37);
-  }
+}
   
-  .score-4to7 {
+.score-4to7 {
     background-color: rgb(246, 255, 0);
-  }
+}
   
-  .score-less-than-4 {
+.score-less-than-4 {
     background-color: rgb(255, 0, 0);
-  }
+}
 
-  .no-score{
+.no-score{
     background-color: rgb(198, 197, 197);
-  }
+}
+
+.image-button {
+    margin-top: 10rem;
+    width: 140px;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.image-button:hover {
+    width: 160px;
+    height: auto;
+    transform: scale(1.1);
+}
+
+.score-and-spotify{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

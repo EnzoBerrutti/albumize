@@ -14,18 +14,19 @@ export class AlbumIntroComponent implements OnInit{
   album: Album | undefined
   listaReviews: Review[] = []
   score:number | String = 0
+  albumId: string | null = null;
 
   constructor(private route:ActivatedRoute,private servicio:ServicioMusicaService,private reviewsService:ReviewsService){}
 
   ngOnInit() {
     this.route.paramMap.subscribe(async params => {
-      const albumId = params.get('id');
+      this.albumId = params.get('id');
 
-      if(albumId){
-        this.album = await this.servicio.getAlbumByID(albumId)
+      if(this.albumId){
+        this.album = await this.servicio.getAlbumByID(this.albumId)
         await this.leer()
         if(this.listaReviews){
-          this.score = this.calcularScore(this.listaReviews,albumId)
+          this.score = this.calcularScore(this.listaReviews,this.albumId)
         }
       }
     });

@@ -46,4 +46,9 @@ export class AlbumTracksComponent implements OnInit{
       trackNumber: index + 1
     }));
   }
+
+  redirectToSpotify(trackId: string) {
+    const spotifyUrl = `https://open.spotify.com/intl-es/track/${trackId}`;
+    window.open(spotifyUrl, '_blank');
+  }
 }

@@ -1,0 +1,16 @@
+.purple-bg{
+    background-image: url('../../../assets/images/bg-purple.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    font-family: 'Playpen Sans', cursive;    
+}
+    
+.albumize-img {
+    background-image: url("../../../assets/images/albumize-logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100px;
+    width: 150px;
+}

@@ -5,17 +5,21 @@
         <p class="artist">{{album.artists[0].name}}</p>
         <p class="date">{{album.release_date | date:'yyyy'}}</p>
     </div>
-    <strong class="score" [ngSwitch]="true"
-        [ngClass]="{
-            'score-10': score == '10',
-            'score-7to10': score < '10' && score >= '7',
-            'score-4to7': score < '7' && score >= '4',
-            'score-less-than-4': score < '4' && score > '0',
-            'no-score': score === 'ND'
-        }">
-  {{ score }}
-</strong>
-
+    <div class = 'score-and-spotify'>
+        <strong class="score" [ngSwitch]="true"
+                [ngClass]="{
+                'score-10': score == '10',
+                'score-7to10': score < '10' && score >= '7',
+                'score-4to7': score < '7' && score >= '4',
+                'score-less-than-4': score < '4' && score > '0',
+                'no-score': score === 'ND'
+                }">
+            {{ score }}
+        </strong>
+        <a class = "spotify" href="https://open.spotify.com/intl-es/album/{{albumId}}" target="_blank">
+            <img class="image-button" src="/assets/images/spotify-button.png" alt="Boton enlace a spotify">
+        </a>
+    </div>
     <div class="trackStats">
         <table class = "list">
             <thead class = "listName">Canción favorita:</thead>
