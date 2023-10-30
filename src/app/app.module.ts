@@ -18,6 +18,8 @@ import { AlbumIntroComponent } from './components/album-intro/album-intro.compon
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { SearchResultPageComponent } from './pages/search-result-page/search-result-page.component';
+import { NewReleasesComponent } from './components/new-releases/new-releases.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
     AlbumIntroComponent,
     RegisterFormComponent,
     RegisterPageComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    SearchResultPageComponent,
+    NewReleasesComponent
   ],
   imports: [
     BrowserModule,

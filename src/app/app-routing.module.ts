@@ -5,12 +5,13 @@ import { AlbumReviewsComponent } from './pages/album/album-reviews/album-reviews
 import { AlbumInfoComponent } from './pages/album/album-info/album-info.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { SearchResultPageComponent } from './pages/search-result-page/search-result-page.component';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'register',component:RegisterPageComponent},
   {path:'login',component:LoginPageComponent},
-  
+  {path:'search/:query', component:SearchResultPageComponent},
   {path:'album/:id', component: AlbumInfoComponent},
   
   {path:'**',redirectTo:'home'}

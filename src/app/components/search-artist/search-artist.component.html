@@ -1,13 +1,13 @@
-<div class="col-4 mb-3">
+<!-- <div class="col-4 mb-3">
     <form (ngSubmit)="getAlbums()" [formGroup]="formulario" action="">
         <label for="nombre" class="form-label">Buscar Nombre de Artista</label>
         <input type="text" class="form-control" id="nombre" formControlName="nombre">
         <button type="submit" class="btn btn-primary">Buscar</button>
     </form>
 </div>
-
-<div *ngIf="active" style="background-color: rgb(25, 25, 25);" class="row">
-    <h1 class="text-center">Resultados de "{{busqueda}}"</h1>
+ -->
+<div style="background-color: rgb(25, 25, 25);" class="row mt-3">
+    <h1 class="text-center">Resultados de "{{querySearch}}"</h1>
     <div class="col-10 offset-1">
         <div class="albums">
             <div *ngFor="let album of albums;">
@@ -28,7 +28,7 @@
 </div>
 
 
-
+<!-- 
 <div style="background-color: rgb(25, 25, 25);" class="row">
     <h1 class="text-center">New Releases</h1>
     <div class="col-10 offset-1">
@@ -48,4 +48,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
