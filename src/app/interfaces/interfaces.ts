@@ -49,6 +49,7 @@ export interface Images {
     duration_ms: number;
     name: string;
     trackNumber: number;
+    id:string,
   }
 
   export interface TracksResponse{
