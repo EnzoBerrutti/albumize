@@ -12,18 +12,39 @@
                 <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="nombre" formControlName="nombre">
             </div>
+            <div class="mb-3 text-warning" *ngIf="validar('nombre', 'required')">
+                Debe ingresar un nombre
+            </div>
+            <div class="mb-3 text-warning" *ngIf="validar('nombre', 'minlength')">
+                El nombre debe tener un minimo de 3 caracteres
+            </div>
             <div class="mb-3">
                 <label for="apellido" class="form-label">Apellido</label>
                 <input type="email" class="form-control" id="apellido" formControlName="apellido">
+            </div>
+            <div class="mb-3 text-warning" *ngIf="validar('apellido', 'required')">
+                Debe ingresar un apellido
+            </div>
+            <div class="mb-3 text-warning" *ngIf="validar('apellido', 'minlength')">
+                El apellido debe tener un minimo de 3 caracteres
             </div>
             <div class="mb-3">
                 <label for="userName" class="form-label">Nombre de Usuario</label>
                 <input type="text" class="form-control" id="userName" formControlName="userName">
             </div>
+            <div class="mb-3 text-warning" *ngIf="validar('userName', 'required')">
+                Debe ingresar un nombre de usuario
+            </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Correo electronico</label>
                 <input type="email" class="form-control" id="email" placeholder="name@example.com"
                     formControlName="email">
+            </div>
+            <div class="mb-3 text-warning" *ngIf="validar('email', 'email')">
+                El email ingresado es incorrecto
+            </div>
+            <div class="mb-3 text-warning" *ngIf="validar('email', 'required')">
+                Debe ingresar un email
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
@@ -33,6 +54,12 @@
                     spaces,
                     special characters, or emoji.
                 </div>
+                <div class="mb-3 text-warning" *ngIf="validar('password', 'required')">
+                    Debe ingresar un password
+                </div>
+               <!--  <div class="mb-3 text-warning" *ngIf="validar('password', 'pattern')">
+                    Debe ingresar un password con las caracteristicas indicadas
+                </div> -->
             </div>
             <div class="mb-3">
                 <button type="submit" class="btn btn-primary btn-lg">Registrarse</button>

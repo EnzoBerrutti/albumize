@@ -15,10 +15,10 @@ export class RegisterFormComponent {
 
   formulario: FormGroup = this.formBuilder.group({
     apellido:['', [Validators.required, Validators.minLength(3)]],
-    nombre:['', Validators.required],
+    nombre:['', [Validators.required , Validators.minLength(3)]],
     userName:['', Validators.required],
-    email:['', Validators.required],
-    password:['', Validators.required]
+    email:['', [Validators.required, Validators.email]],
+    password:['', Validators.required, Validators.pattern("^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$")]
   })
 
   newUser(){
@@ -43,7 +43,7 @@ export class RegisterFormComponent {
   validar(field: string, error: string){
     return this.formulario.controls[field].getError(error)
     &&
-    this.formulario.controls[field].touched
+    this.formulario.controls[field].touched;
   }
 
 }

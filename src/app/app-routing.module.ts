@@ -6,6 +6,8 @@ import { AlbumInfoComponent } from './pages/album/album-info/album-info.componen
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SearchResultPageComponent } from './pages/search-result-page/search-result-page.component';
+import { ProfileMainPageComponent } from './pages/profile-main-page/profile-main-page.component';
+import { ProfileReviewsPageComponent } from './pages/profile-reviews-page/profile-reviews-page.component';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
@@ -13,7 +15,8 @@ const routes: Routes = [
   {path:'login',component:LoginPageComponent},
   {path:'search/:query', component:SearchResultPageComponent},
   {path:'album/:id', component: AlbumInfoComponent},
-  
+  {path:'account/:idUser/main', component: ProfileMainPageComponent},
+  {path:'account/:idUser/reviews', component: ProfileReviewsPageComponent},
   {path:'**',redirectTo:'home'}
 ];
 

@@ -1,0 +1,36 @@
+<div class="row border border-white contenedor profile-user">
+    <div class="col">
+        <div>
+            <div class="profile-img"></div>
+            <hr class="col-11">
+            <div class="mb-3 row">
+                <label for="nombre" class="col-sm-3 col-form-label">Nombre</label>
+                <div class="col-sm-8">
+                    <input type="text" readonly class="form-control-plaintext text-white" id="nombre"
+                        value={{user.nombre}}>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="apellido" class="col-sm-3 col-form-label">Apellido</label>
+                <div class="col-sm-8">
+                    <input type="text" readonly class="form-control-plaintext text-white" id="apellido"
+                        [value]="user.apellido">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="username" class="col-sm-3 col-form-label">Nombre de usuario</label>
+                <div class="col-sm-8">
+                    <input type="text" readonly class="form-control-plaintext text-white" id="username"
+                        [value]="user.username">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="email" class="col-sm-3 col-form-label">Email</label>
+                <div class="col-sm-8">
+                    <input type="text" readonly class="form-control-plaintext text-white" id="email"
+                        [value]="user.email">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

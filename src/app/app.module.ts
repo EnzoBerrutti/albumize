@@ -20,6 +20,12 @@ import { RegisterPageComponent } from './pages/register-page/register-page.compo
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SearchResultPageComponent } from './pages/search-result-page/search-result-page.component';
 import { NewReleasesComponent } from './components/new-releases/new-releases.component';
+import { ProfileMainComponent } from './components/profile/profile-main/profile-main.component';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { ProfileMainPageComponent } from './pages/profile-main-page/profile-main-page.component';
+import { ProfileReviewsPageComponent } from './pages/profile-reviews-page/profile-reviews-page.component';
+
+import { ProfileReviewsComponent } from './components/profile/profile-reviews/profile-reviews.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +43,12 @@ import { NewReleasesComponent } from './components/new-releases/new-releases.com
     RegisterPageComponent,
     LoginPageComponent,
     SearchResultPageComponent,
-    NewReleasesComponent
+    NewReleasesComponent,
+    ProfileMainComponent,
+    SidebarComponent,
+    ProfileMainPageComponent,
+    ProfileReviewsPageComponent,
+    ProfileReviewsComponent
   ],
   imports: [
     BrowserModule,

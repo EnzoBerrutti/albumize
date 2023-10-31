@@ -1,0 +1,22 @@
+.profile-user{
+    font-size: 1.5rem;
+}
+.contenedor{
+    padding: 3rem 0 0 3rem;
+    height: 100vh;
+}
+
+.profile-img{
+    background-image: url("../../../../assets/images/profile-leo.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+    background-color: red;
+    width: 200px;
+    height: 200px;
+}
+
+label{
+    font-weight: 700;
+}
