@@ -1,0 +1,54 @@
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <div class="logo-header">
+                <img src="../../../../favicon.ico" alt="Mi Imagen" id="logo">
+                <h1 class="modal-title fs-5" id="albumize">albumize</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+                
+                <div id="sign-in">
+                    <button type="button" class="btn btn-sign-in">
+                        Sign In
+                      </button>
+                    <button type="button" class="btn btn-register" data-bs-toggle="modal" data-bs-target="#registerBackdrop">
+                        Register
+                      </button>
+                </div>
+        </div>
+        
+        <div class="modal-body">
+            <form class="container-form">
+                <div class="form-group column-form">
+                    <div>
+                        <label for="inputEmail3" class="col-sm-2 email-pw">Email</label>
+                    </div>
+                  <div>
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                  </div>
+                </div>
+                <div class="form-group column-form">
+                    <div>
+                        <label for="inputPassword3" class="col-sm-2 email-pw">Password</label>
+                    </div>
+                  <div>
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                  </div>
+                </div>
+                <div class="form-group column-form">
+                  <div>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                  </div>
+                </div>
+              </form>
+        </div>
+       
+      </div>
+    </div>
+</div>
+
+  <!-- Modal -->
+ <app-register-form></app-register-form>

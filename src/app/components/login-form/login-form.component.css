@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito|Lacquer");
+
+
+#albumize{
+    
+
+    color: black;
+    margin: 0;
+    padding: 5px;
+    font-weight: bolder;
+    font-family: 'nunito';
+    font-size: 40px !important;
+   
+    
+}
+  /* Estilo para centrar el contenido en el encabezado del modal */
+  .modal-header {
+    display: block;
+    padding-bottom: 5px;
+ }
+
+.logo-header{
+    margin-left: 130px;
+    display: flex;
+    align-items: center;
+    
+
+}
+
+#staticBackdrop{
+    margin-top: 100px;
+}
+.modal-content{
+    width: 600px;
+   
+
+}
+#sign-in{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.btn-close{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.btn-register{
+    color: grey;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 0px;
+    margin-left: 90px;
+    padding-right:0px;
+    padding-left:0px;
+
+
+}
+.btn-register:hover{
+    border-bottom: 2px solid black;
+    color: black;
+}
+.btn-sign-in{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 0px;
+    margin-left:  0px;
+    padding-right:0px;
+    padding-left:0px;
+    border-bottom: 2px solid black;
+
+}
+
+.modal-header {
+    display: block;
+   padding-bottom: 0px;
+ }
+
+.logo-header{
+    margin-left: 130px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    
+
+}
+#logo{
+    border-radius:30px;
+    border-color: #AC01F8;
+    outline: none;
+    border-style: double;
+    margin: 0;
+    background-color: #AC01F8;
+    
+
+}
+.container-form{
+    width: 400px;
+ }
+ .modal-body{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 70px;
+
+}
+.form-control{
+    width:400px;
+    border-radius: 0px;
+    border-color: rgb(212, 212, 212);
+
+  
+}
+.form-control:focus{
+    
+    box-shadow: none;
+    outline: none;
+    border-color: rgb(212, 212, 212)
+    
+}
+.column-form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding: 0;
+    height: 70px;
+
+}
+.email-pw{
+    color: black;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 13px !important;
+    
+}
+.btn-primary{
+    width: 400px;
+   margin-top: 20px;
+   height: 45px;
+   font-family: 'Roboto';
+   background-color: rgb(59, 59, 59);
+   outline: none;
+   border: 0px;
+}

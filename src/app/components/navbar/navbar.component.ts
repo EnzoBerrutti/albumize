@@ -21,4 +21,13 @@ export class NavbarComponent {
     this.querySearch = this.formulario.controls['nombre'].value
     this.route.navigate(["/search",this.querySearch])
   }
+  irHome(){
+    this.route.navigate(['home'])
+  }
+  irRegister(){
+    this.route.navigate(['register'])
+  }
+  irLogin(){
+    this.route.navigate(['login'])
+  }
 }

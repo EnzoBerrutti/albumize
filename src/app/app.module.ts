@@ -26,6 +26,7 @@ import { ProfileMainPageComponent } from './pages/profile-main-page/profile-main
 import { ProfileReviewsPageComponent } from './pages/profile-reviews-page/profile-reviews-page.component';
 
 import { ProfileReviewsComponent } from './components/profile/profile-reviews/profile-reviews.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ProfileReviewsComponent } from './components/profile/profile-reviews/pr
     SidebarComponent,
     ProfileMainPageComponent,
     ProfileReviewsPageComponent,
-    ProfileReviewsComponent
+    ProfileReviewsComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,

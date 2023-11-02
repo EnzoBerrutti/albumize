@@ -4,6 +4,8 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { User } from 'src/app/interfaces/interfaces';
 import { Router } from '@angular/router';
 
+
+
 @Component({
   selector: 'app-register-form',
   templateUrl: './register-form.component.html',
@@ -18,7 +20,7 @@ export class RegisterFormComponent {
     nombre:['', [Validators.required , Validators.minLength(3)]],
     userName:['', Validators.required],
     email:['', [Validators.required, Validators.email]],
-    password:['', Validators.required, Validators.pattern("^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$")]
+    password:['', [Validators.required]]
   })
 
   newUser(){
@@ -28,10 +30,10 @@ export class RegisterFormComponent {
       return;
     }
     const user: User = {
-      apellido: this.formulario.controls['apellido'].value,
       nombre:this.formulario.controls['nombre'].value,
-      username: this.formulario.controls['userName'].value,
+      apellido: this.formulario.controls['apellido'].value,
       email: this.formulario.controls['email'].value,
+      username: this.formulario.controls['userName'].value,
       password: this.formulario.controls['password'].value
     }
 

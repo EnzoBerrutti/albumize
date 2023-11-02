@@ -1,69 +1,105 @@
-<div class="row mt-5 ">
-    <div class="purple-bg col-8 offset-2 d-flex justify-content-center align-items-center">
-        <h3 class="px-3">Registrate Gratis en </h3>
-        <div class="albumize-img"></div>
-    </div>
-</div>
+<div class="modal fade" #registerModal id="registerBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <div class="logo-header">
+                <img src="../../../../favicon.ico" alt="Mi Imagen" id="logo">
+                <h1 class="modal-title fs-5" id="albumize-register">albumize</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 
-<div class="row mt-5 ">
-    <div class="col-6 px-5 border-end border-start offset-3">
-        <form id="register-form" [formGroup]="formulario" (ngSubmit)="newUser()">
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre" formControlName="nombre">
             </div>
-            <div class="mb-3 text-warning" *ngIf="validar('nombre', 'required')">
-                Debe ingresar un nombre
-            </div>
-            <div class="mb-3 text-warning" *ngIf="validar('nombre', 'minlength')">
-                El nombre debe tener un minimo de 3 caracteres
-            </div>
-            <div class="mb-3">
-                <label for="apellido" class="form-label">Apellido</label>
-                <input type="email" class="form-control" id="apellido" formControlName="apellido">
-            </div>
-            <div class="mb-3 text-warning" *ngIf="validar('apellido', 'required')">
-                Debe ingresar un apellido
-            </div>
-            <div class="mb-3 text-warning" *ngIf="validar('apellido', 'minlength')">
-                El apellido debe tener un minimo de 3 caracteres
-            </div>
-            <div class="mb-3">
-                <label for="userName" class="form-label">Nombre de Usuario</label>
-                <input type="text" class="form-control" id="userName" formControlName="userName">
-            </div>
-            <div class="mb-3 text-warning" *ngIf="validar('userName', 'required')">
-                Debe ingresar un nombre de usuario
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Correo electronico</label>
-                <input type="email" class="form-control" id="email" placeholder="name@example.com"
-                    formControlName="email">
-            </div>
-            <div class="mb-3 text-warning" *ngIf="validar('email', 'email')">
-                El email ingresado es incorrecto
-            </div>
-            <div class="mb-3 text-warning" *ngIf="validar('email', 'required')">
-                Debe ingresar un email
-            </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" id="password" class="form-control" formControlName="password">
-                <div id="passwordHelpBlock" class="form-text text-white">
-                    Your password must be 8-20 characters long, contain letters and numbers, and must not contain
-                    spaces,
-                    special characters, or emoji.
+                
+                <div id="sign-in">
+                    <button type="button" class="btn btn-sign-in" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Sign In
+                      </button>
+                      <button type="button" class="btn btn-register">
+                        Register
+                      </button>
                 </div>
-                <div class="mb-3 text-warning" *ngIf="validar('password', 'required')">
-                    Debe ingresar un password
-                </div>
-               <!--  <div class="mb-3 text-warning" *ngIf="validar('password', 'pattern')">
-                    Debe ingresar un password con las caracteristicas indicadas
-                </div> -->
-            </div>
-            <div class="mb-3">
-                <button type="submit" class="btn btn-primary btn-lg">Registrarse</button>
-            </div>
-        </form>
+        </div>
+        <div class="modal-body">
+            <form class="container-form" [formGroup]="formulario" (ngSubmit)="newUser()">
+                <div class="form-group col-md-6">
+                    <div>
+                        <label for="inputName" class="label-title">Nombre</label>
+                    </div>
+                    <div>
+                        <input type="text" class="form-control" id="inputName" placeholder="Ingrese su nombre" formControlName="nombre">
+                    </div>
+                    <div class="mb-3 text-warning" *ngIf="validar('nombre', 'required')">
+                        <p class="mensaje-alerta">Debe ingresar un nombre</p> 
+                    </div>
+                    <div class="mb-3 text-warning" *ngIf="validar('nombre', 'minlength')">
+                        <p class="mensaje-alerta">El nombre debe tener un minimo de 3 caracteres</p> 
+                    </div>
+                  </div>
+
+                  <div class="form-group col-md-6">
+                    <div>
+                        <label for="inputApellido" class="label-title">Apellido</label>
+                    </div>
+                    <div> 
+                        <input type="text" class="form-control" id="inputApellido" placeholder="Ingrese su apellido" formControlName="apellido">
+                    </div>
+                    <div class="mb-3 text-warning" *ngIf="validar('apellido', 'required')">
+                        <p class="mensaje-alerta">Debe ingresar un apellido</p> 
+                    </div>
+                    <div class="mb-3 text-warning" *ngIf="validar('apellido', 'minlength')">
+                        <p class="mensaje-alerta">El apellido debe tener un minimo de 3 caracteres</p>
+                    </div>
+                  </div>
+                    <div class="form-group col-md-6">
+                        <div>
+                            <label for="inputEmail" class="label-title">Email</label>
+                        </div>
+                        <div>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Ingrese su email" formControlName="email">
+                        </div>
+                        <div class="mb-3 text-warning" *ngIf="validar('email', 'email')">
+                            <p class="mensaje-alerta">El email ingresado es incorrecto</p>
+                        </div>
+                        <div class="mb-3 text-warning" *ngIf="validar('email', 'required')">
+                            <p class="mensaje-alerta">Debe ingresar un email</p>
+                        </div>
+                        
+                    </div>
+                    <div class="form-group col-md-6">
+                        <div>
+                            <label for="inputUser" class="label-title">Usuario</label>
+                        </div>
+                       <div>
+                        <input type="text" class="form-control" id="inputUser" placeholder="Ingrese el usuario" formControlName="userName">
+                       </div>
+                       <div class="mb-3 text-warning" *ngIf="validar('userName', 'required')">
+                        <p class="mensaje-alerta">Debe ingresar un nombre de usuario</p>
+                    </div>
+                     
+                    </div>
+                    
+                    <div class="form-group col-md-6">
+                        <div>
+                            <label for="inputPW" class="label-title">Contraseña</label>
+                        </div>
+                        <div>
+                            <input type="password" class="form-control" id="inputPW" placeholder="Ingrese la contraseña" formControlName="password">
+                        </div>
+                        <div class="mb-3 text-warning" *ngIf="validar('password', 'required')">
+                            <p class="mensaje-alerta">Debe ingresar un password</p>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                
+                
+                <button type="submit" class="btn btn-primary" id="btn-sign" data-bs-dismiss="modal" aria-label="Close" [disabled]="formulario.invalid" >Register</button>
+                <div class="mb-3 text-warning" *ngIf="formulario.invalid && formulario.touched">
+                    <p class="mensaje-alerta">Debe completar todos los campos antes de registrarse</p>
+                  </div>
+              </form>
+        </div>
+        
+      </div>
     </div>
-</div>
+  </div>
