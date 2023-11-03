@@ -62,6 +62,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.2s ease;
 }
 
 .trackStats {
@@ -97,7 +98,7 @@
 }
 
 .score-10 {
-    background-color: rgb(0, 153, 255);
+    background-color: rgb(23, 162, 255);
 }
   
 .score-7to10 {

@@ -52,5 +52,5 @@ export class SearchArtistComponent implements OnInit {
     })
 
   }
-
+  
 }

@@ -34,7 +34,6 @@ export class AlbumIntroComponent implements OnInit{
 
   async leer(){
     this.listaReviews = await this.reviewsService.getReviews()
-    console.log(this.listaReviews);
   }
 
   calcularScore(reviews: Review[], albumUrl: string): number | string {

@@ -15,6 +15,7 @@ const routes: Routes = [
   {path:'login',component:LoginPageComponent},
   {path:'search/:query', component:SearchResultPageComponent},
   {path:'album/:id', component: AlbumInfoComponent},
+  {path:'album-reviews/:id', component:AlbumReviewsComponent},
   {path:'account/:idUser/main', component: ProfileMainPageComponent},
   {path:'account/:idUser/reviews', component: ProfileReviewsPageComponent},
   {path:'**',redirectTo:'home'}

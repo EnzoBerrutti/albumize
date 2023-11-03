@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 import { SearchArtistComponent } from './components/search-artist/search-artist.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -50,13 +51,14 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     ProfileMainPageComponent,
     ProfileReviewsPageComponent,
     ProfileReviewsComponent,
-    LoginFormComponent
+    LoginFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
