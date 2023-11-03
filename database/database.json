@@ -281,6 +281,14 @@
       "username": "Tomas",
       "password": "tomas1234567",
       "id": 29
+    },
+    {
+      "nombre": "Pepe",
+      "apellido": "Argento",
+      "email": "pepeargento@gmail.com",
+      "username": "pepearg",
+      "password": "pepearg1",
+      "id": 30
     }
   ]
 }

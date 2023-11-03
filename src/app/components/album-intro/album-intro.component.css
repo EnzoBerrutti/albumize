@@ -69,7 +69,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-top: 1rem;
-    gap: 2rem
+    gap: 2rem;
   }
 
 .list{
