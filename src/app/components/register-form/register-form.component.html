@@ -22,70 +22,70 @@
             <form class="container-form" [formGroup]="formulario" (ngSubmit)="newUser()">
                 <div class="form-group col-md-6">
                     <div>
-                        <label for="inputName" class="label-title">Nombre</label>
+                        <label for="inputName" class="label-title">Name</label>
                     </div>
                     <div>
-                        <input type="text" class="form-control" id="inputName" placeholder="Ingrese su nombre" formControlName="nombre">
+                        <input type="text" class="form-control" id="inputName" placeholder="Enter your name" formControlName="nombre">
                     </div>
                     <div class="mb-3 text-warning" *ngIf="validar('nombre', 'required')">
-                        <p class="mensaje-alerta">Debe ingresar un nombre</p> 
+                        <p class="mensaje-alerta">You must enter your name</p> 
                     </div>
                     <div class="mb-3 text-warning" *ngIf="validar('nombre', 'minlength')">
-                        <p class="mensaje-alerta">El nombre debe tener un minimo de 3 caracteres</p> 
+                        <p class="mensaje-alerta">Name should have at least three characters</p> 
                     </div>
                   </div>
 
                   <div class="form-group col-md-6">
                     <div>
-                        <label for="inputApellido" class="label-title">Apellido</label>
+                        <label for="inputApellido" class="label-title">Surname</label>
                     </div>
                     <div> 
-                        <input type="text" class="form-control" id="inputApellido" placeholder="Ingrese su apellido" formControlName="apellido">
+                        <input type="text" class="form-control" id="inputApellido" placeholder="Enter your surname" formControlName="apellido">
                     </div>
                     <div class="mb-3 text-warning" *ngIf="validar('apellido', 'required')">
-                        <p class="mensaje-alerta">Debe ingresar un apellido</p> 
+                        <p class="mensaje-alerta">You must enter your surname</p> 
                     </div>
                     <div class="mb-3 text-warning" *ngIf="validar('apellido', 'minlength')">
-                        <p class="mensaje-alerta">El apellido debe tener un minimo de 3 caracteres</p>
+                        <p class="mensaje-alerta">Surname should have at least three characters</p>
                     </div>
                   </div>
                     <div class="form-group col-md-6">
                         <div>
-                            <label for="inputEmail" class="label-title">Email</label>
+                            <label for="inputEmail" class="label-title">E-mail</label>
                         </div>
                         <div>
-                            <input type="email" class="form-control" id="inputEmail" placeholder="Ingrese su email" formControlName="email">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Enter your e-mail" formControlName="email">
                         </div>
                         <div class="mb-3 text-warning" *ngIf="validar('email', 'email')">
-                            <p class="mensaje-alerta">El email ingresado es incorrecto</p>
+                            <p class="mensaje-alerta">The e-mail does not have the correct format</p>
                         </div>
                         <div class="mb-3 text-warning" *ngIf="validar('email', 'required')">
-                            <p class="mensaje-alerta">Debe ingresar un email</p>
+                            <p class="mensaje-alerta">You must enter your email</p>
                         </div>
                         
                     </div>
                     <div class="form-group col-md-6">
                         <div>
-                            <label for="inputUser" class="label-title">Usuario</label>
+                            <label for="inputUser" class="label-title">Username</label>
                         </div>
                        <div>
-                        <input type="text" class="form-control" id="inputUser" placeholder="Ingrese el usuario" formControlName="userName">
+                        <input type="text" class="form-control" id="inputUser" placeholder="Enter a username" formControlName="userName">
                        </div>
                        <div class="mb-3 text-warning" *ngIf="validar('userName', 'required')">
-                        <p class="mensaje-alerta">Debe ingresar un nombre de usuario</p>
+                        <p class="mensaje-alerta">You must enter a username</p>
                     </div>
                      
                     </div>
                     
                     <div class="form-group col-md-6">
                         <div>
-                            <label for="inputPW" class="label-title">Contraseña</label>
+                            <label for="inputPW" class="label-title">Password</label>
                         </div>
                         <div>
-                            <input type="password" class="form-control" id="inputPW" placeholder="Ingrese la contraseña" formControlName="password">
+                            <input type="password" class="form-control" id="inputPW" placeholder="Enter a password" formControlName="password">
                         </div>
                         <div class="mb-3 text-warning" *ngIf="validar('password', 'required')">
-                            <p class="mensaje-alerta">Debe ingresar un password</p>
+                            <p class="mensaje-alerta">You must enter a password</p>
                         </div>
                         
                         
@@ -95,7 +95,7 @@
                 
                 <button type="submit" class="btn btn-primary" id="btn-sign" data-bs-dismiss="modal" aria-label="Close" [disabled]="formulario.invalid" >Register</button>
                 <div class="mb-3 text-warning" *ngIf="formulario.invalid && formulario.touched">
-                    <p class="mensaje-alerta">Debe completar todos los campos antes de registrarse</p>
+                    <p class="mensaje-alerta">You have to complete all the fieldsets to register</p>
                   </div>
               </form>
         </div>
