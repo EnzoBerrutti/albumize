@@ -64,18 +64,20 @@ h1{
 }
 
 h4{
-    margin-left: 10.5rem;
-    margin-top: 2rem;
+    margin-left: 19rem;
+    margin-top: 0.5rem;
 }
 
 hr{
-    margin-left: 9.7rem;
-    width: 80%;
+    width: 81%;
     margin-bottom: 0.5rem;
 }
 
 .col-10{
-    margin-left: 8.5rem;
-    margin-top:1rem;
+    width: 83%;
 }
 
+#todo{
+    display: flex;
+    justify-content: center;
+}
