@@ -28,6 +28,7 @@ import { ProfileReviewsPageComponent } from './pages/profile-reviews-page/profil
 
 import { ProfileReviewsComponent } from './components/profile/profile-reviews/profile-reviews.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { ShareButtonsComponent } from './components/share-buttons/share-buttons.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     ProfileReviewsPageComponent,
     ProfileReviewsComponent,
     LoginFormComponent,
+    ShareButtonsComponent,
   ],
   imports: [
     BrowserModule,
