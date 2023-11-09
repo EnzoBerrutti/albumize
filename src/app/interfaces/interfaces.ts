@@ -4,6 +4,10 @@ export interface Review {
   punctuation: number,
   reviewer: string, /*debe ser un username*/
   date: Date;
+  favourite?: number;
+  underrated?: number;
+  overrated?: number;
+  worst?: number;
 }
 
 export interface User {

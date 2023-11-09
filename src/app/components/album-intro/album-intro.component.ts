@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Album, Review } from 'src/app/interfaces/interfaces';
+import { Album, Review, Track, TracksResponse } from 'src/app/interfaces/interfaces';
 import { ReviewsService } from 'src/app/services/reviews.service';
 import { ServicioMusicaService } from 'src/app/services/servicio-musica.service';
 
@@ -13,20 +13,32 @@ export class AlbumIntroComponent implements OnInit{
 
   album: Album | undefined
   listaReviews: Review[] = []
-  score:number | String = 0
-  albumId: string | null = null;
+  score:number | string = 0
+  albumId: string | null = null
+  tracks!:TracksResponse
+  tracksWithNumbers: Track [] = []
+  favourite3: string[] = []
+  overrated3: string[] = []
+  underrated3: string[] = []
+  worst3: string[] = []
 
   constructor(private route:ActivatedRoute,private servicio:ServicioMusicaService,private reviewsService:ReviewsService){}
 
   ngOnInit() {
     this.route.paramMap.subscribe(async params => {
       this.albumId = params.get('id');
-
-      if(this.albumId){
-        this.album = await this.servicio.getAlbumByID(this.albumId)
-        await this.leer()
-        if(this.listaReviews){
-          this.score = this.calcularScore(this.listaReviews,this.albumId)
+  
+      if (this.albumId) {
+        this.album = await this.servicio.getAlbumByID(this.albumId);
+        await this.leer();
+        await this.loadAlbumTracks(this.albumId);
+  
+        if (this.listaReviews) {
+          this.score = this.calcularScore(this.listaReviews, this.albumId);
+          this.favourite3 = this.getFavourite3(this.listaReviews, this.tracksWithNumbers, this.albumId);
+          this.overrated3 = this.getOverrated3(this.listaReviews, this.tracksWithNumbers, this.albumId);
+          this.underrated3 = this.getUnderrated3(this.listaReviews, this.tracksWithNumbers, this.albumId);
+          this.worst3 = this.getWorst3(this.listaReviews, this.tracksWithNumbers, this.albumId);
         }
       }
     });
@@ -48,4 +60,187 @@ export class AlbumIntroComponent implements OnInit{
   
     return parseFloat(averageScore.toFixed(1));
   }
+
+  async loadAlbumTracks(id: string) {
+    try {
+      const respuesta = await this.servicio.getAlbumSongs(id);
+      this.tracks = respuesta;
+      this.addNumbersToTracks(this.tracks.items);
+  
+      if (this.listaReviews && this.albumId) {
+        this.favourite3 = this.getFavourite3(this.listaReviews, this.tracksWithNumbers, this.albumId);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  addNumbersToTracks(tracks: Track[]) {
+    this.tracksWithNumbers = tracks.map((track, index) => ({
+      ...track,
+      trackNumber: index + 1
+    }));
+  }
+
+  getFavourite3(reviews: Review[], tracks: Track[], albumId: string): string[] {
+    const countMap: Record<number, number> = {};
+  
+    // Filtrar las revisiones para que solo incluyan las del álbum actual
+    const filteredReviews = reviews.filter((review) => review.albumUrl === albumId);
+  
+    // Contar la frecuencia de cada favorito en las revisiones filtradas
+    filteredReviews.forEach((review) => {
+      const favouriteNumber = review.favourite;
+  
+      if (favouriteNumber !== undefined) {
+        countMap[favouriteNumber] = (countMap[favouriteNumber] || 0) + 1;
+      }
+    });
+  
+    // Ordenar por frecuencia de mayor a menor
+    const sortedCountMap = Object.entries(countMap).sort((a, b) => b[1] - a[1]);
+  
+    // Obtener los tres primeros favoritos o menos si no hay suficientes
+    const top3Indices = sortedCountMap.slice(0, 3).map((entry) => parseInt(entry[0], 10));
+  
+    // Obtener las canciones asociadas con los índices y calcular el porcentaje
+    const totalReviews = filteredReviews.length;
+    const top3Songs: string[] = top3Indices.map((index) => {
+      const track = tracks.find((track) => track.trackNumber === index + 1);
+  
+      if (track) {
+        const percentage = totalReviews !== 0 ? (countMap[index] / totalReviews) * 100 : 0;
+        const truncatedTitle = this.truncateText(track.name);
+        return `${truncatedTitle} ${percentage.toFixed(2)}%`;
+      }
+  
+      return "No Data";
+    });
+  
+    return top3Songs;
+  }
+
+  getOverrated3(reviews: Review[], tracks: Track[], albumId: string): string[] {
+    const countMap: Record<number, number> = {};
+  
+    // Filtrar las revisiones para que solo incluyan las del álbum actual
+    const filteredReviews = reviews.filter((review) => review.albumUrl === albumId);
+  
+    // Contar la frecuencia de cada favorito en las revisiones filtradas
+    filteredReviews.forEach((review) => {
+      const overratedNumber = review.overrated;
+  
+      if (overratedNumber !== undefined) {
+        countMap[overratedNumber] = (countMap[overratedNumber] || 0) + 1;
+      }
+    });
+  
+    // Ordenar por frecuencia de mayor a menor
+    const sortedCountMap = Object.entries(countMap).sort((a, b) => b[1] - a[1]);
+  
+    // Obtener los tres primeros favoritos o menos si no hay suficientes
+    const top3Indices = sortedCountMap.slice(0, 3).map((entry) => parseInt(entry[0], 10));
+  
+    // Obtener las canciones asociadas con los índices y calcular el porcentaje
+    const totalReviews = filteredReviews.length;
+    const top3Songs: string[] = top3Indices.map((index) => {
+      const track = tracks.find((track) => track.trackNumber === index + 1);
+  
+      if (track) {
+        const percentage = totalReviews !== 0 ? (countMap[index] / totalReviews) * 100 : 0;
+        const truncatedTitle = this.truncateText(track.name);
+        return `${truncatedTitle} ${percentage.toFixed(2)}%`;
+      }
+  
+      return "No Data";
+    });
+  
+    return top3Songs;
+  }
+
+  getUnderrated3(reviews: Review[], tracks: Track[], albumId: string): string[] {
+    const countMap: Record<number, number> = {};
+  
+    // Filtrar las revisiones para que solo incluyan las del álbum actual
+    const filteredReviews = reviews.filter((review) => review.albumUrl === albumId);
+  
+    // Contar la frecuencia de cada favorito en las revisiones filtradas
+    filteredReviews.forEach((review) => {
+      const underratedNumber = review.underrated;
+  
+      if (underratedNumber !== undefined) {
+        countMap[underratedNumber] = (countMap[underratedNumber] || 0) + 1;
+      }
+    });
+  
+    // Ordenar por frecuencia de mayor a menor
+    const sortedCountMap = Object.entries(countMap).sort((a, b) => b[1] - a[1]);
+  
+    // Obtener los tres primeros favoritos o menos si no hay suficientes
+    const top3Indices = sortedCountMap.slice(0, 3).map((entry) => parseInt(entry[0], 10));
+  
+    // Obtener las canciones asociadas con los índices y calcular el porcentaje
+    const totalReviews = filteredReviews.length;
+    const top3Songs: string[] = top3Indices.map((index) => {
+      const track = tracks.find((track) => track.trackNumber === index + 1);
+  
+      if (track) {
+        const percentage = totalReviews !== 0 ? (countMap[index] / totalReviews) * 100 : 0;
+        const truncatedTitle = this.truncateText(track.name);
+        return `${truncatedTitle} ${percentage.toFixed(2)}%`;
+      }
+  
+      return "No Data";
+    });
+  
+    return top3Songs;
+  }
+
+  getWorst3(reviews: Review[], tracks: Track[], albumId: string): string[] {
+    const countMap: Record<number, number> = {};
+  
+    // Filtrar las revisiones para que solo incluyan las del álbum actual
+    const filteredReviews = reviews.filter((review) => review.albumUrl === albumId);
+  
+    // Contar la frecuencia de cada favorito en las revisiones filtradas
+    filteredReviews.forEach((review) => {
+      const worstNumber = review.worst;
+  
+      if (worstNumber !== undefined) {
+        countMap[worstNumber] = (countMap[worstNumber] || 0) + 1;
+      }
+    });
+  
+    // Ordenar por frecuencia de mayor a menor
+    const sortedCountMap = Object.entries(countMap).sort((a, b) => b[1] - a[1]);
+  
+    // Obtener los tres primeros favoritos o menos si no hay suficientes
+    const top3Indices = sortedCountMap.slice(0, 3).map((entry) => parseInt(entry[0], 10));
+  
+    // Obtener las canciones asociadas con los índices y calcular el porcentaje
+    const totalReviews = filteredReviews.length;
+    const top3Songs: string[] = top3Indices.map((index) => {
+      const track = tracks.find((track) => track.trackNumber === index + 1);
+  
+      if (track) {
+        const percentage = totalReviews !== 0 ? (countMap[index] / totalReviews) * 100 : 0;
+        const truncatedTitle = this.truncateText(track.name);
+        return `${truncatedTitle} ${percentage.toFixed(2)}%`;
+      }
+  
+      return "No Data";
+    });
+  
+    return top3Songs;
+  }
+
+  truncateText(text: string): string {
+    const maxLength = 12;
+    if (text && text.length > maxLength) {
+        return text.slice(0, maxLength) + '...';
+    }
+    return text || 'No Data';
+  }
 }
+
+

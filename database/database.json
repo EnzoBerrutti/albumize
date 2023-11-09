@@ -6,7 +6,11 @@
       "punctuation": 9,
       "reviewer": "usertest",
       "date": "10-24-2023",
-      "id": 1
+      "id": 1,
+      "favourite": 0,
+      "underrated": 1,
+      "overrated": 2,
+      "worst": 3
     },
     {
       "review": "lorvnerver rb birgu ierbgreiubg eiurb erugbuerigbuerigbieurbg  eribgeriubguier lorvnerver rb birgu ierbgreiubg eiurb erugbuerigbuerigbieurbg  eribgeriubguierbguierb regergregergherhgerhrt hrehlorvnerver rb birgu ierbgreiubg eiurb erugbuerigbuerigbieurbg  eribgeriubguierbguierb regergregergherhgerhrt hrehlorvnerver rb birgu ierbgreiubg eiurb erugbuerigbuerigbieurbg  eribgeriubguierbguierb regergregergherhgerhrt hrehlorvnerver rb birgu ierbgreiubg eiurb erugbuerigbuerigbieurbg  eribgeriubguierbguierb regergregergherhgerhrt hrehlorvnerver rb birgu ierbgreiubg eiurb erugbuerigbuerigbieurbg  eribgeriubguierbguierb regergregergherhgerhrt hrehlorvnerver rb birgu ierbgreiubg eiurb erugbuerigbuerigbieurbg  eribgeriubguierbguierb regergregergherhgerhrt hrehbguierb regergregergherhgerhrt hreh",
@@ -14,7 +18,11 @@
       "punctuation": 5,
       "reviewer": "usertest2",
       "date": "10-25-2023",
-      "id": 2
+      "id": 2,
+      "favourite": 2,
+      "underrated": 4,
+      "overrated": 6,
+      "worst": 8
     },
     {
       "review": "lorem mvefio nbirf efio nbirf rvnerver rb birgu ierbgr eiubg eiurb erugbuerigbuerig bieurbgefio nbirf rvnerver rb birgu ierbgr eiubg eiurb erugbuerigbuerig bieurbgefio nbirf rvnerver rb birgu ierbgr eiubg eiurb erugbuerigbuerig bieurbgefio nbirf rvnerver rb birgu ierbgr eiubg eiurb erugbuerigbuerig bieurbgefio nbirf rvnerver rb birgu ierbgr eiubg eiurb erugbuerigbuerig bieurbgrvnerver rb birgu ierbgr eiubg eiurb erugbuerigbuerig bieurbg eribgeriubguierbguierb  regergregergherhgerhrt hreh",
@@ -22,7 +30,11 @@
       "punctuation": 8,
       "reviewer": "usertest3",
       "date": "10-26-2023",
-      "id": 3
+      "id": 3,
+      "favourite": 3,
+      "underrated": 4,
+      "overrated": 5,
+      "worst": 6
     },
     {
       "review": "ervnerrvnerver rb birgu ierbgreiubg eiurb erugbueg eribgeriubguierbguierb regergerhrt hrehrvnerver rb birgu ierbgreiubg eiurb erugbueg eribgeriubguierbguierb regergerhrt hrehrvnerver rb birgu ierbgreiubg eiurb erugbueg eribgeriubguierbguierb regergerhrt hrehrvnerver rb birgu ierbgreiubg eiurb erugbueg eribgeriubguierbguierb regergerhrt hrehrvnerver rb birgu ierbgreiubg eiurb erugbueg eribgeriubguierbguierb regergerhrt hrehrvnerver rb birgu ierbgreiubg eiurb erugbueg eribgeriubguierbguierb regergerhrt hrehrvnerver rb birgu ierbgreiubg eiurb erugbueg eribgeriubguierbguierb regergerhrt hrehver rb birgu ierbgreiubg eiurb erugbueg eribgeriubguierbguierb regergerhrt hreh",
@@ -30,7 +42,11 @@
       "punctuation": 9,
       "reviewer": "usertest4",
       "date": "10-26-2023",
-      "id": 4
+      "id": 4,
+      "favourite": 0,
+      "underrated": 1,
+      "overrated": 2,
+      "worst": 3
     },
     {
       "review": "mmvefionbi rfu9vine rvnerveigbue rigbieurbg eribgergherhgerhrt hreh mmvefionbi rfu9vine rvnerveigbue rigbieurbg eribgergherhgerhrt hreh mmvefionbi rfu9vine rvnerveigbue rigbieurbg eribgergherhgerhrt hreh mmvefionbi rfu9vine rvnerveigbue rigbieurbg eribgergherhgerhrt hreh mmvefionbi rfu9vine rvnerveigbue rigbieurbg eribgergherhgerhrt hreh mmvefionbi rfu9vine rvnerveigbue rigbieurbg eribgergherhgerhrt hreh mmvefionbi rfu9vine rvnerveigbue rigbieurbg eribgergherhgerhrt hreh",
@@ -38,7 +54,11 @@
       "punctuation": 10,
       "reviewer": "usertest",
       "date": "10-24-2023",
-      "id": 1
+      "id": 1,
+      "favourite": 0,
+      "underrated": 4,
+      "overrated": 7,
+      "worst": 9
     },
     {
       "review": "mmvefionbi rfu9vine rvnerveigbue rigbieurbg eribgergherhgerhrt hreh mmvefionbi rfu9vine rvnerveigbue rigbieurbg eribgergherhgerhrt hreh mmvefionbi rfu9vine rvnerveigbue rigbieurbg eribgergherhgerhrt hreh mmvefionbi rfu9vine rvnerveigbue rigbieurbg eribgergherhgerhrt hreh mmvefionbi rfu9vine rvnerveigbue rigbieurbg eribgergherhgerhrt hreh mmvefionbi rfu9vine rvnerveigbue rigbieurbg eribgergherhgerhrt hreh mmvefionbi rfu9vine rvnerveigbue rigbieurbg eribgergherhgerhrt hreh",
@@ -46,7 +66,11 @@
       "punctuation": 2,
       "reviewer": "usertest",
       "date": "10-24-2023",
-      "id": 1
+      "id": 1,
+      "favourite": 9,
+      "underrated": 7,
+      "overrated": 4,
+      "worst": 1
     }
   ],
   "users": [
