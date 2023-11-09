@@ -3,8 +3,7 @@
 <div class = "componentes">
     <app-album-tracks></app-album-tracks>
     <div class = "derecha" *ngIf="showButtons" class="fade-in">
-        <button class="boton-enviar" >Send review</button>
-        <button class="boton-reviews" routerLink="/album-reviews/{{idAlbum}}">Watch reviews</button>
+        <app-review-form></app-review-form>
     </div>
 </div>
 </div>

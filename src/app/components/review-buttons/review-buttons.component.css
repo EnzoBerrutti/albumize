@@ -1,20 +1,32 @@
-.whole{
-    padding-left: 8%;
-    padding-right: 8%;
+.whole {
+    display: flex;
+    align-items: center; 
+    width: 80%;
+    margin: 0 auto; 
 }
 
-.text{
-    padding-right: 1rem;
+.opciones-container {
+    width: 100%;
+}
+
+.text {
     font-size: x-large;
+    margin-right: 1rem;
 }
 
-button{
+button {
     font-size: x-large;
     border-radius: 5px;
-    float: right;
-    margin-left: 1rem;
 }
 
-.opciones{
+.opciones {
     font-size: large;
+}
+
+.write{
+    margin-left: 35rem;
+}
+
+.lista{
+    margin-left: 1rem;
 }

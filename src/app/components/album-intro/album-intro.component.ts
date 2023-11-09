@@ -235,7 +235,7 @@ export class AlbumIntroComponent implements OnInit{
   }
 
   truncateText(text: string): string {
-    const maxLength = 12;
+    const maxLength = 11;
     if (text && text.length > maxLength) {
         return text.slice(0, maxLength) + '...';
     }

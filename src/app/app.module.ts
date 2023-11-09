@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 import { SearchArtistComponent } from './components/search-artist/search-artist.component';
@@ -31,6 +31,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { ShareButtonsComponent } from './components/share-buttons/share-buttons.component';
 import { HomeLoggedinComponent } from './pages/home-loggedin/home-loggedin.component';
 import { Navbar2Component } from './components/navbar2/navbar2.component';
+import { ReviewFormComponent } from './components/review-form/review-form.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { Navbar2Component } from './components/navbar2/navbar2.component';
     ShareButtonsComponent,
     HomeLoggedinComponent,
     Navbar2Component,
+    ReviewFormComponent,
   ],
   imports: [
     BrowserModule,

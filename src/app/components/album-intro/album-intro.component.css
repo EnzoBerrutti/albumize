@@ -70,6 +70,7 @@
     grid-template-columns: repeat(2, 1fr);
     margin-top: 1rem;
     gap: 1.4rem;
+    margin-left: 3rem;
   }
 
 .list{
@@ -106,7 +107,7 @@
 }
   
 .score-4to7 {
-    background-color: rgb(246, 255, 0);
+    background-color: rgb(203, 208, 42);
 }
   
 .score-less-than-4 {
