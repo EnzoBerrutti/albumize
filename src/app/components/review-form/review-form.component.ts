@@ -20,6 +20,7 @@ export class ReviewFormComponent implements OnInit {
   selectedLeastFavouriteIndex: any = -1;
   selectedOverratedIndex: any = -1;
   selectedUnderratedIndex: any = -1;
+  maxLength = 25;
 
   constructor(private ruta:ActivatedRoute,private servicio:ServicioMusicaService){}
 
@@ -76,5 +77,9 @@ export class ReviewFormComponent implements OnInit {
 
   submitReview() {
     
+  }
+
+  limitarLongitud(cadena: string): string {
+    return cadena.length > this.maxLength ? cadena.substring(0, this.maxLength) + '...' : cadena;
   }
 }
