@@ -24,7 +24,7 @@
             <div  class="select">
                 <select name= "favourite">
                   <option selected>-- Choose a song --</option>
-                  <option *ngFor="let song of tracksWithNumbers, let i = index" [value]="i">{{ song.name }}</option>
+                  <option *ngFor="let song of tracksWithNumbers, let i = index" [value]="i">{{ limitarLongitud(song.name) }}</option>
               </select>
             </div>
               
@@ -34,7 +34,7 @@
             <div class = "select">
                 <select name="least-favourite">
                 <option selected>-- Choose a song --</option>
-                <option *ngFor="let song of tracksWithNumbers, let i = index" [value]="i">{{ song.name }}</option>
+                <option *ngFor="let song of tracksWithNumbers, let i = index" [value]="i">{{ limitarLongitud(song.name) }}</option>
                 </select>
             </div>
               
@@ -44,7 +44,7 @@
             <div class="select">
                 <select name="underrated">
                 <option selected>-- Choose a song --</option>
-                <option *ngFor="let song of tracksWithNumbers, let i = index" [value]="i">{{ song.name }}</option>
+                <option *ngFor="let song of tracksWithNumbers, let i = index" [value]="i">{{ limitarLongitud(song.name) }}</option>
                 </select>
             </div>  
 
@@ -54,7 +54,7 @@
             <div class="select">
                 <select name="overrated">
                 <option selected>-- Choose a song --</option>
-                <option *ngFor="let song of tracksWithNumbers, let i = index" [value]="i">{{ song.name }}</option>
+                <option *ngFor="let song of tracksWithNumbers, let i = index" [value]="i">{{ limitarLongitud(song.name) }}</option>
                 </select>
             </div>
         </div>
