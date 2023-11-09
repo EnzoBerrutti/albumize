@@ -13,13 +13,6 @@ html{
     margin-left: 5rem;
 }
 
-button{
-        font-size: x-large;
-        border-radius: 5px;
-        float: right;
-        margin-left: 1rem;
-}
-
 .fade-in {
     animation: fadeIn 1s ease;
   }

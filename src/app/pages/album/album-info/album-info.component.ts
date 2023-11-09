@@ -10,17 +10,9 @@ import { fadeInOut } from 'src/app/animations/animations';
 })
 export class AlbumInfoComponent implements OnInit{
 
-  idAlbum:String=""
-
   showButtons:boolean = false;
 
-  constructor(private ruta:ActivatedRoute){}
-
   async ngOnInit() {
-
-    this.ruta.params.subscribe(params => {
-      this.idAlbum = params["id"]
-    });
 
     setTimeout(() => {
       this.showButtons = true;
