@@ -1,0 +1,31 @@
+<nav class="navbar">
+    <ul class="nav-list">
+        <li>
+            <button class="logo-button" (click)="irHome()">
+                <img src="../../../../favicon.ico" alt="Mi Imagen" id="logo">
+            </button>
+        </li>
+        <li><a href="#" routerLink="home" id="albumize">albumize</a></li>
+        <li><a href="#" routerLink="home" class="btn-nav" id="">Home</a></li>
+        <li><a href="#" class="btn-nav">About</a></li>
+        <li><a href="#" class="btn-nav">Contact</a></li>
+    </ul>
+    <div class="search-bar">
+        <form [formGroup]="formulario" (ngSubmit)="search()" class="barra-busqueda">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Search an album or artist" formControlName="nombre">
+        </form>
+        <!-- Button trigger modal -->
+<div class="dropdown">
+        <button id="user-profile" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            LT
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" [routerLink]="['/account', '1', 'main']">Your Profile</a></li>
+            <li><a class="dropdown-item" routerLink="account/1/reviews">Your reviews</a></li>
+            <li><a class="dropdown-item" (click)="onLogout()">Logout</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>

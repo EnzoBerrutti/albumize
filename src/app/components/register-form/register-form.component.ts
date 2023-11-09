@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, numberAttribute } from '@angular/core';
 import { ServicioUsersService } from 'src/app/services/servicio-users.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { User } from 'src/app/interfaces/interfaces';
@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterFormComponent {
 
+  user = {} as User;
   constructor(private userAPI:ServicioUsersService, private formBuilder:FormBuilder, private router: Router){}
 
   formulario: FormGroup = this.formBuilder.group({
@@ -29,15 +30,22 @@ export class RegisterFormComponent {
       this.formulario.markAllAsTouched()
       return;
     }
-    const user: User = {
+  /*   const user: User = {
       nombre:this.formulario.controls['nombre'].value,
       apellido: this.formulario.controls['apellido'].value,
       email: this.formulario.controls['email'].value,
       username: this.formulario.controls['userName'].value,
-      password: this.formulario.controls['password'].value
-    }
+      password: this.formulario.controls['password'].value,
+      id : -1
+    } */
 
-    this.userAPI.postUser(user);
+    this.user.nombre = this.formulario.controls['nombre'].value;
+    this.user.apellido = this.formulario.controls['apellido'].value;
+    this.user.email = this.formulario.controls['email'].value;
+    this.user.username = this.formulario.controls['userName'].value;
+    this.user.password =  this.formulario.controls['password'].value;
+
+    this.userAPI.postUser(this.user);
 
     this.router.navigate(['home']);
   }

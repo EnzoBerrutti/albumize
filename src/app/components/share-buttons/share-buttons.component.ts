@@ -9,7 +9,7 @@ export class ShareButtonsComponent {
   postUrl:String = encodeURI(window.location.href);
 
   ngOnInit(){
-    console.log(this.postUrl)
+    /* console.log(this.postUrl) */
   }
   /* 
 

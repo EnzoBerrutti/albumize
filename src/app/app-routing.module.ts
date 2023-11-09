@@ -8,9 +8,12 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SearchResultPageComponent } from './pages/search-result-page/search-result-page.component';
 import { ProfileMainPageComponent } from './pages/profile-main-page/profile-main-page.component';
 import { ProfileReviewsPageComponent } from './pages/profile-reviews-page/profile-reviews-page.component';
+import { HomeLoggedinComponent } from './pages/home-loggedin/home-loggedin.component';
+import { authGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
+  {path:'home/:id',component:HomeLoggedinComponent, canActivate : [authGuard]},
   {path:'register',component:RegisterPageComponent},
   {path:'login',component:LoginPageComponent},
   {path:'search/:query', component:SearchResultPageComponent},

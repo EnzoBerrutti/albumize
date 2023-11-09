@@ -26,12 +26,10 @@ export class NewReleasesComponent implements OnInit {
     private fb: FormBuilder) { }
 
   async ngOnInit() {
-    console.log("Hello")
     const data = await this.api.getNewReleases()
     this.new_releases = data['albums']['items']
     this.getAlbumYear(this.new_releases)
     this.getDottedName(this.new_releases)
-    console.log(this.new_releases)
   }
 
   getAlbumYear(array: Album[]) {

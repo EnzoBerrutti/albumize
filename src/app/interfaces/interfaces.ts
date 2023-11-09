@@ -17,7 +17,7 @@ export interface User {
   email: string,
   password: string,
   reviewList?: Review[],
-  id?:number;
+  id:number;
 }
 
 export interface Images {
