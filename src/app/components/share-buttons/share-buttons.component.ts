@@ -8,29 +8,47 @@ import { Component } from '@angular/core';
 export class ShareButtonsComponent {
   postUrl:String = encodeURI(window.location.href);
 
+  url = 'www.youtube.com'
+  facebook = `https://www.facebook.com/sharer.php?u=${this.url}`
+
   ngOnInit(){
     /* console.log(this.postUrl) */
+    console.log(this.facebook)
+    
   }
   /* 
+  Social Share Links:
+  */
+    postFacebook(){
+      this.facebook = `https://www.facebook.com/sharer.php?u=${this.url}`
+    }
 
-Social Share Links:
+    postInstagram(){
 
-WhatsApp:
-https://wa.me/?text=[post-title] [post-url]
+    }
+    postWhatsapp(){
 
-Facebook:
-https://www.facebook.com/sharer.php?u=[post-url]
+/*       WhatsApp:
+      https://wa.me/?text=[post-title] [post-url] */
+    }
+    
+    postTwitter(){
+/*       Twitter:
+      https://twitter.com/share?url=[post-url]&text=[post-title] */
+    }
+    
+    postPinterest(){
+  /*     Pinterest:
+      https://pinterest.com/pin/create/bookmarklet/?media=[post-img]&url=[post-url]&is_video=[is_video]&description=[post-title] */
+    }
+    
+    postLinkedIn(){
+ /*      LinkedIn:
+      https://www.linkedin.com/shareArticle?url=[post-url]&title=[post-title] */
+    }
+    
+          
 
-Twitter:
-https://twitter.com/share?url=[post-url]&text=[post-title]
-
-Pinterest:
-https://pinterest.com/pin/create/bookmarklet/?media=[post-img]&url=[post-url]&is_video=[is_video]&description=[post-title]
-
-LinkedIn:
-https://www.linkedin.com/shareArticle?url=[post-url]&title=[post-title]
-
-*/
 
 
 }

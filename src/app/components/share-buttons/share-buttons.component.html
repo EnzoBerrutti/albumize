@@ -1,5 +1,5 @@
-<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Compartir <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+<button type="btn" class="btn" style="background-color: rgb(157, 0, 255);" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
       <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
     </svg></span>
   </button>
@@ -19,23 +19,23 @@
               <i class="fab fa-facebook"></i>
             </a>
            
-            <a href="#" class="twitter-btn">
+            <a [href]="facebook" class="twitter-btn">
               <i class="fab fa-twitter"></i>
             </a>
   
-            <a href="#" class="instagram-btn">
+            <a (click)="postInstagram()" class="instagram-btn">
               <i class="fab fa-instagram"></i>
             </a>
   
-            <a href="#" class="pinterest-btn">
+            <a (click)="postPinterest()" class="pinterest-btn">
               <i class="fab fa-pinterest"></i>
             </a>
   
-            <a href="#" class="linkedin-btn">
+            <a (click)="postTwitter()" class="linkedin-btn">
               <i class="fab fa-linkedin"></i>
             </a>
   
-            <a href="#" class="whatsapp-btn">
+            <a (click)="postWhatsapp()" class="whatsapp-btn">
               <i class="fab fa-whatsapp"></i>
             </a>
           </div>

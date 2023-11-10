@@ -9,6 +9,7 @@
             'score-4to7': review.punctuation < 7 && review.punctuation >= 4,
             'score-less-than-4': review.punctuation < 4
             }">{{review.punctuation}}</p>
+         <app-share-buttons class="share-buttons"></app-share-buttons>   
         <p class='date'>{{review.date}}</p>
     </div>
     <div class="body" *ngIf="review.review">

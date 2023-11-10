@@ -102,3 +102,8 @@
 .score-less-than-4 {
     background-color: rgb(255, 0, 0);
 }
+
+.share-buttons{
+
+    margin: auto 1rem;
+}
