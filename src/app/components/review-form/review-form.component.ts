@@ -1,8 +1,7 @@
 import { Component, ElementRef, OnInit, Renderer2, inject } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl, ValidationErrors } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Album, Review, Track, TracksResponse } from 'src/app/interfaces/interfaces';
-import { AuthService } from 'src/app/services/auth.service';
 import { ReviewsService } from 'src/app/services/reviews.service';
 import { ServicioMusicaService } from 'src/app/services/servicio-musica.service';
 import { ServicioUsersService } from 'src/app/services/servicio-users.service';
@@ -19,16 +18,11 @@ export class ReviewFormComponent implements OnInit {
   tracks!: TracksResponse
   tracksWithNumbers: Track[] = []
   listaReviews: Review[] = []
-  selectedFavouriteIndex: any = -1;
-  selectedLeastFavouriteIndex: any = -1;
-  selectedOverratedIndex: any = -1;
-  selectedUnderratedIndex: any = -1;
-  maxLength = 25;
-
   modalTarget: string = "#staticBackdrop";
 
-
-  constructor(private reviewsDB: ReviewsService,
+  constructor(
+    private reviewsDB: ReviewsService,
+    private formBuilder:FormBuilder,
     private ruta: ActivatedRoute,
     private servicio: ServicioMusicaService,
     private usuarios:ServicioUsersService,
@@ -39,7 +33,11 @@ export class ReviewFormComponent implements OnInit {
 
   reviewForm: FormGroup = new FormGroup({
     rating: new FormControl(7),
-    reviewBody: new FormControl('')
+    reviewBody: new FormControl(''),
+    favourite: new FormControl(null),
+    overrated: new FormControl(null),
+    underrated: new FormControl(null),
+    worst: new FormControl(null)
   });
 
   getColorForRating(rating: number | null): string {
@@ -63,12 +61,10 @@ export class ReviewFormComponent implements OnInit {
       this.idAlbum = params["id"]
       this.loadAlbumTracks(this.idAlbum);
 
-
       if (localStorage['token']) {
         this.modalTarget = ''
       }
     });
-
   }
 
   async loadAlbumTracks(id: string) {
@@ -101,16 +97,27 @@ export class ReviewFormComponent implements OnInit {
         albumUrl: this.idAlbum,
         punctuation: this.reviewForm.controls['rating'].value,
         reviewer: await this.usuarios.getUserID(localStorage['token']).then(u => u.username),
-        date: new Date(),
+        date: new Date()
       }
+
+      this.addOptionalField('favourite', review);
+      this.addOptionalField('overrated', review);
+      this.addOptionalField('underrated', review);
+      this.addOptionalField('worst', review);
+
       this.reviewsDB.postReview(review)
     }
 
   }
 
-  limitarLongitud(cadena: string): string {
-    return cadena.length > this.maxLength ? cadena.substring(0, this.maxLength) + '...' : cadena;
+  limitarLongitudA25(cadena: string): string {
+    return cadena.length > 25 ? cadena.substring(0, 25) + '...' : cadena;
   }
 
-
+  private addOptionalField(fieldName: string, review: Review) {
+    const fieldValue: string | number | null = this.reviewForm.controls[fieldName].value;
+    if (fieldValue !== null && fieldValue !== undefined) {
+      review[fieldName as keyof Review] = fieldValue as never; // o fieldValue as string | number si es aplicable a tu caso
+    }
+  }
 }

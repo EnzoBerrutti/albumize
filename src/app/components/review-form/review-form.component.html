@@ -24,10 +24,10 @@
                     <label for="favourite">Favourite song:</label>
                 </div>
                 <div class="select">
-                    <select name="favourite">
-                        <option selected>-- Choose a song --</option>
+                    <select name="favourite" formControlName="favourite">
+                        <option [value]="null" selected>-- Choose a song --</option>
                         <option *ngFor="let song of tracksWithNumbers, let i = index" [value]="i">{{
-                            limitarLongitud(song.name) }}</option>
+                            limitarLongitudA25(song.name) }}</option>
                     </select>
                 </div>
 
@@ -35,10 +35,10 @@
                     <label for="least-favourite">Least favourite song:</label>
                 </div>
                 <div class="select">
-                    <select name="least-favourite">
-                        <option disabled selected >-- Choose a song --</option>
+                    <select name="least-favourite" formControlName="worst">
+                        <option [value]="null" selected >-- Choose a song --</option>
                         <option *ngFor="let song of tracksWithNumbers, let i = index" [value]="i">{{
-                            limitarLongitud(song.name) }}</option>
+                            limitarLongitudA25(song.name) }}</option>
                     </select>
                 </div>
 
@@ -46,10 +46,10 @@
                     <label for="underrated">Underrated song:</label>
                 </div>
                 <div class="select">
-                    <select name="underrated">
-                        <option selected>-- Choose a song --</option>
+                    <select name="underrated" formControlName="underrated">
+                        <option [value]="null" selected>-- Choose a song --</option>
                         <option *ngFor="let song of tracksWithNumbers, let i = index" [value]="i">{{
-                            limitarLongitud(song.name) }}</option>
+                            limitarLongitudA25(song.name) }}</option>
                     </select>
                 </div>
 
@@ -57,10 +57,10 @@
                     <label for="overrrated">Overrated song:</label>
                 </div>
                 <div class="select">
-                    <select name="overrated">
-                        <option selected>-- Choose a song --</option>
+                    <select name="overrated" formControlName="overrated">
+                        <option [value]="null" selected>-- Choose a song --</option>
                         <option *ngFor="let song of tracksWithNumbers, let i = index" [value]="i">{{
-                            limitarLongitud(song.name) }}</option>
+                            limitarLongitudA25(song.name) }}</option>
                     </select>
                 </div>
             </div>

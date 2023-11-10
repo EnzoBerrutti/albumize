@@ -31,7 +31,7 @@ export class ReviewsService {
               headers: {"Content-type": "application/json"}
             })
       
-      this.router.navigate(['home'])
+            window.location.reload();
 
     }catch(err){
       console.log(err);

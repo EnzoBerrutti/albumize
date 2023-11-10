@@ -87,6 +87,17 @@ export class AlbumIntroComponent implements OnInit{
   
     // Filtrar las revisiones para que solo incluyan las del álbum actual
     const filteredReviews = reviews.filter((review) => review.albumUrl === albumId);
+
+    // Reducir para que solo divida por la cantidad de veces que alguien voto favorito
+    const totalFavouriteVotes = filteredReviews.reduce((total, review) => {
+      const favouriteNumber = review.favourite;
+    
+      if (favouriteNumber !== undefined && favouriteNumber !== null) {
+        return total + 1;
+      }
+    
+      return total;
+    }, 0);
   
     // Contar la frecuencia de cada favorito en las revisiones filtradas
     filteredReviews.forEach((review) => {
@@ -104,12 +115,11 @@ export class AlbumIntroComponent implements OnInit{
     const top3Indices = sortedCountMap.slice(0, 3).map((entry) => parseInt(entry[0], 10));
   
     // Obtener las canciones asociadas con los índices y calcular el porcentaje
-    const totalReviews = filteredReviews.length;
     const top3Songs: string[] = top3Indices.map((index) => {
       const track = tracks.find((track) => track.trackNumber === index + 1);
   
       if (track) {
-        const percentage = totalReviews !== 0 ? (countMap[index] / totalReviews) * 100 : 0;
+        const percentage = totalFavouriteVotes !== 0 ? (countMap[index] / totalFavouriteVotes) * 100 : 0;
         const truncatedTitle = this.truncateText(track.name);
         return `${truncatedTitle} ${percentage.toFixed(2)}%`;
       }
@@ -125,6 +135,17 @@ export class AlbumIntroComponent implements OnInit{
   
     // Filtrar las revisiones para que solo incluyan las del álbum actual
     const filteredReviews = reviews.filter((review) => review.albumUrl === albumId);
+
+    // Reducir para que solo divida por la cantidad de veces que alguien voto overrated
+    const totalOverratedVotes = filteredReviews.reduce((total, review) => {
+      const overratedNumber = review.overrated;
+    
+      if (overratedNumber !== undefined && overratedNumber !== null) {
+        return total + 1;
+      }
+    
+      return total;
+    }, 0);
   
     // Contar la frecuencia de cada favorito en las revisiones filtradas
     filteredReviews.forEach((review) => {
@@ -147,7 +168,7 @@ export class AlbumIntroComponent implements OnInit{
       const track = tracks.find((track) => track.trackNumber === index + 1);
   
       if (track) {
-        const percentage = totalReviews !== 0 ? (countMap[index] / totalReviews) * 100 : 0;
+        const percentage = totalOverratedVotes !== 0 ? (countMap[index] / totalOverratedVotes) * 100 : 0;
         const truncatedTitle = this.truncateText(track.name);
         return `${truncatedTitle} ${percentage.toFixed(2)}%`;
       }
@@ -163,6 +184,17 @@ export class AlbumIntroComponent implements OnInit{
   
     // Filtrar las revisiones para que solo incluyan las del álbum actual
     const filteredReviews = reviews.filter((review) => review.albumUrl === albumId);
+
+    // Reducir para que solo divida por la cantidad de veces que alguien voto underrated
+    const totalUnderratedVotes = filteredReviews.reduce((total, review) => {
+      const underratedNumber = review.underrated;
+    
+      if (underratedNumber !== undefined && underratedNumber !== null) {
+        return total + 1;
+      }
+    
+      return total;
+    }, 0);
   
     // Contar la frecuencia de cada favorito en las revisiones filtradas
     filteredReviews.forEach((review) => {
@@ -185,7 +217,7 @@ export class AlbumIntroComponent implements OnInit{
       const track = tracks.find((track) => track.trackNumber === index + 1);
   
       if (track) {
-        const percentage = totalReviews !== 0 ? (countMap[index] / totalReviews) * 100 : 0;
+        const percentage = totalUnderratedVotes !== 0 ? (countMap[index] / totalUnderratedVotes) * 100 : 0;
         const truncatedTitle = this.truncateText(track.name);
         return `${truncatedTitle} ${percentage.toFixed(2)}%`;
       }
@@ -201,6 +233,17 @@ export class AlbumIntroComponent implements OnInit{
   
     // Filtrar las revisiones para que solo incluyan las del álbum actual
     const filteredReviews = reviews.filter((review) => review.albumUrl === albumId);
+
+    // Reducir para que solo divida por la cantidad de veces que alguien voto favorito
+    const totalWorstVotes = filteredReviews.reduce((total, review) => {
+      const worstNumber = review.worst;
+    
+      if (worstNumber !== undefined && worstNumber !== null) {
+        return total + 1;
+      }
+    
+      return total;
+    }, 0);
   
     // Contar la frecuencia de cada favorito en las revisiones filtradas
     filteredReviews.forEach((review) => {
@@ -223,7 +266,7 @@ export class AlbumIntroComponent implements OnInit{
       const track = tracks.find((track) => track.trackNumber === index + 1);
   
       if (track) {
-        const percentage = totalReviews !== 0 ? (countMap[index] / totalReviews) * 100 : 0;
+        const percentage = totalWorstVotes !== 0 ? (countMap[index] / totalWorstVotes) * 100 : 0;
         const truncatedTitle = this.truncateText(track.name);
         return `${truncatedTitle} ${percentage.toFixed(2)}%`;
       }
@@ -235,7 +278,7 @@ export class AlbumIntroComponent implements OnInit{
   }
 
   truncateText(text: string): string {
-    const maxLength = 11;
+    const maxLength = 10;
     if (text && text.length > maxLength) {
         return text.slice(0, maxLength) + '...';
     }
