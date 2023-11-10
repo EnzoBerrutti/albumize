@@ -3,7 +3,7 @@ export interface Review {
   albumUrl: string,
   punctuation: number,
   reviewer: string, /*debe ser un username*/
-  date: Date;
+  date: string;
   favourite?: number;
   underrated?: number;
   overrated?: number;

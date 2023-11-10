@@ -8,15 +8,26 @@
     src: url('/assets/fonts/Raleway-Medium.ttf') format('truetype');
 }
 
+.contenedor{
+    display: flex;
+    justify-self: center;
+    width: 75%;
+    margin-left: 9rem;
+}
+
 .review{
-    width: 80%;
-    margin: 0 auto;
-    border: 0.5px solid black;
+    width: 100%;
     padding: 0.5rem;
-    border-radius: 5px;
-    margin-bottom: 1rem;
+    border-top: 2px solid rgb(63,63,63);
+    border-bottom: 2px solid rgb(63,63,63);
     margin-top: 2rem;
-    background-color: rgb(63,63,63);
+    transition: 0.6s ease;
+}
+
+.review:hover{
+    background-color: rgb(42, 42, 42);
+    transition: 0.6s ease;
+    box-shadow: 0 0 20px rgba(53, 53, 53, 1);
 }
 
 .details{
@@ -42,14 +53,17 @@
     border: 2px solid black;
 }
 
-.score{
-    padding: 0.25rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    border: 2px solid black;
-    border-radius: 1000px;
+.score {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    padding: 0;
+    border: 2px solid rgb(62, 62, 62);
+    border-radius: 50%;
     margin-bottom: 0.2rem;
-    font-size: x-large;
+    font-size: large;
     color: azure;
     background-color: rgb(20, 225, 37);
 }
@@ -65,11 +79,26 @@
 }
 
 .body{
-    padding: 0.4rem;
-    border: 0.5px solid rgb(66, 61, 61);
-    border-radius: 5px;
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
-    background-color: rgb(25,25,25);
+    padding: 0.8rem;
+    border: 0.5px solid rgb(42,42,42);
+    border-radius: 3px;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: rgb(34, 34, 34);
 }
 
+.score-10 {
+    background-color: rgb(23, 162, 255);
+}
+  
+.score-7to10 {
+    background-color: rgb(20, 225, 37);
+}
+  
+.score-4to7 {
+    background-color: rgb(203, 208, 42);
+}
+  
+.score-less-than-4 {
+    background-color: rgb(255, 0, 0);
+}

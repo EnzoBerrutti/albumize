@@ -148,6 +148,18 @@
       "reviewer": "letosoni1",
       "date": "2023-11-10T14:58:43.943Z",
       "id": 13
+    },
+    {
+      "review": "prueba prueba",
+      "albumUrl": "2ODvWsOgouMbaA5xf0RkJe",
+      "punctuation": 9.4,
+      "reviewer": "letosoni1",
+      "date": "11/10/2023",
+      "favourite": "16",
+      "overrated": "0",
+      "underrated": "3",
+      "worst": "5",
+      "id": 14
     }
   ],
   "users": [
@@ -182,214 +194,6 @@
       "username": "enzo",
       "password": "asdadsadada",
       "id": 4
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "asdadsadada",
-      "id": 5
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "asdadsadada",
-      "id": 6
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "asdadsadada",
-      "id": 7
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "asddsasdasdasdadsa",
-      "id": 8
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "asddsasdasdasdadsa",
-      "id": 9
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "asddsasdasdasdadsa",
-      "id": 10
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "asddsasdasdasdadsa",
-      "id": 11
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "asddsasdasdasdadsa",
-      "id": 12
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "asddsasdasdasdadsa",
-      "id": 13
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "asddsasdasdasdadsa",
-      "id": 14
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "asddsasdasdasdadsa",
-      "id": 15
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "asddsasdasdasdadsa",
-      "id": 16
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "asddsasdasdasdadsa",
-      "id": 17
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "asddsasdasdasdadsa",
-      "id": 18
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "asddsasdasdasdadsa",
-      "id": 19
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "asddsasdasdasdadsa",
-      "id": 20
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "asddsasdasdasdadsa",
-      "id": 21
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "asddsasdasdasdadsa",
-      "id": 22
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "asddsasdasdasdadsa",
-      "id": 23
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "asddsasdasdasdadsa",
-      "id": 24
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "enzo12345",
-      "id": 25
-    },
-    {
-      "nombre": "tom",
-      "apellido": "tom",
-      "email": "tom@gmail.com",
-      "username": "tom",
-      "password": "tom",
-      "id": 26
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "enzo",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "es",
-      "id": 27
-    },
-    {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "dsadsada",
-      "id": 28
-    },
-    {
-      "nombre": "tomas",
-      "apellido": "tomas",
-      "email": "tomas@gmail.com",
-      "username": "Tomas",
-      "password": "tomas1234567",
-      "id": 29
-    },
-    {
-      "nombre": "Pepe",
-      "apellido": "Argento",
-      "email": "pepeargento@gmail.com",
-      "username": "pepearg",
-      "password": "pepearg1",
-      "id": 30
     }
   ]
 }

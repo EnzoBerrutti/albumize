@@ -91,13 +91,17 @@ export class ReviewFormComponent implements OnInit {
 
   async submitReview() {
     if(localStorage['token']){
-      console.log("esta autenticado")
+      console.log("esta autenticado");
+
+      const currentDate = new Date();
+      const formattedDate = `${currentDate.getMonth() + 1}-${currentDate.getDate()}-${currentDate.getFullYear()}`;
+
       const review : Review = {
         review: this.reviewForm.controls['reviewBody'].value,
         albumUrl: this.idAlbum,
         punctuation: this.reviewForm.controls['rating'].value,
         reviewer: await this.usuarios.getUserID(localStorage['token']).then(u => u.username),
-        date: new Date()
+        date: formattedDate
       }
 
       this.addOptionalField('favourite', review);
