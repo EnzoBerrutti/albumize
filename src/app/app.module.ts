@@ -18,7 +18,6 @@ import { AlbumInfoComponent } from './pages/album/album-info/album-info.componen
 import { AlbumIntroComponent } from './components/album-intro/album-intro.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
-import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SearchResultPageComponent } from './pages/search-result-page/search-result-page.component';
 import { NewReleasesComponent } from './components/new-releases/new-releases.component';
 import { ProfileMainComponent } from './components/profile/profile-main/profile-main.component';
@@ -47,7 +46,6 @@ import { ReviewFormComponent } from './components/review-form/review-form.compon
     AlbumIntroComponent,
     RegisterFormComponent,
     RegisterPageComponent,
-    LoginPageComponent,
     SearchResultPageComponent,
     NewReleasesComponent,
     ProfileMainComponent,

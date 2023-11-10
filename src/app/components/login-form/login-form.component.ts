@@ -1,3 +1,4 @@
+import { identifierName } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
@@ -9,6 +10,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginFormComponent {
 
+  isHidden:boolean = false;
   constructor(private fb:FormBuilder,
               private auth: AuthService){}
 
@@ -20,10 +22,12 @@ export class LoginFormComponent {
   onLogin(){
     if(this.formLogin.invalid) return;
 
+    this.isHidden = !this.isHidden
     this.auth.verificarUserAndPass(
-      this.formLogin.controls['email'].value,
-      this.formLogin.controls['password'].value
+    this.formLogin.controls['email'].value,
+    this.formLogin.controls['password'].value
     )
+
   }
 
 

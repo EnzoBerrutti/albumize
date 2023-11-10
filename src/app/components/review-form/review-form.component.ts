@@ -1,8 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, inject } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Album, Review, Track, TracksResponse } from 'src/app/interfaces/interfaces';
+import { AuthService } from 'src/app/services/auth.service';
+import { ReviewsService } from 'src/app/services/reviews.service';
 import { ServicioMusicaService } from 'src/app/services/servicio-musica.service';
+import { ServicioUsersService } from 'src/app/services/servicio-users.service';
 
 @Component({
   selector: 'app-review-form',
@@ -12,9 +15,9 @@ import { ServicioMusicaService } from 'src/app/services/servicio-musica.service'
 export class ReviewFormComponent implements OnInit {
 
   album: Album | undefined
-  idAlbum:string=""
-  tracks!:TracksResponse
-  tracksWithNumbers: Track [] = []
+  idAlbum: string = ""
+  tracks!: TracksResponse
+  tracksWithNumbers: Track[] = []
   listaReviews: Review[] = []
   selectedFavouriteIndex: any = -1;
   selectedLeastFavouriteIndex: any = -1;
@@ -22,7 +25,17 @@ export class ReviewFormComponent implements OnInit {
   selectedUnderratedIndex: any = -1;
   maxLength = 25;
 
-  constructor(private ruta:ActivatedRoute,private servicio:ServicioMusicaService){}
+  modalTarget: string = "#staticBackdrop";
+
+
+  constructor(private reviewsDB: ReviewsService,
+    private ruta: ActivatedRoute,
+    private servicio: ServicioMusicaService,
+    private usuarios:ServicioUsersService,
+    private router: Router,
+    private renderer: Renderer2,
+    private elementRef: ElementRef
+  ) { }
 
   reviewForm: FormGroup = new FormGroup({
     rating: new FormControl(7),
@@ -33,14 +46,14 @@ export class ReviewFormComponent implements OnInit {
     if (rating === null || rating === undefined) {
       return 'rgba(0, 0, 0, 1)';
     }
-  
+
     if (rating < 4) {
       return 'rgb(255, 0, 0)';
     } else if (rating < 7) {
       return 'rgb(203, 208, 42)';
-    } else if (rating < 10){
+    } else if (rating < 10) {
       return 'rgb(20, 225, 37)';
-    } else{
+    } else {
       return 'rgb(23, 162, 255)';
     }
   }
@@ -49,6 +62,11 @@ export class ReviewFormComponent implements OnInit {
     this.ruta.params.subscribe(params => {
       this.idAlbum = params["id"]
       this.loadAlbumTracks(this.idAlbum);
+
+
+      if (localStorage['token']) {
+        this.modalTarget = ''
+      }
     });
 
   }
@@ -75,11 +93,21 @@ export class ReviewFormComponent implements OnInit {
     console.log(`Validating ${fieldName} with index: ${selectedIndex}`);
   }
 
-  submitReview() {
-    
+  async submitReview() {
+    const review : Review = {
+      review: this.reviewForm.controls['reviewBody'].value,
+      albumUrl: this.idAlbum,
+      punctuation: this.reviewForm.controls['rating'].value,
+      reviewer: await this.usuarios.getUserID(localStorage['token']).then(u => u.username),
+      date: new Date(),
+    }
+    this.reviewsDB.postReview(review)
+
   }
 
   limitarLongitud(cadena: string): string {
     return cadena.length > this.maxLength ? cadena.substring(0, this.maxLength) + '...' : cadena;
   }
+
+
 }

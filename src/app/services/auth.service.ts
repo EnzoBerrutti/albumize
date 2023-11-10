@@ -18,7 +18,7 @@ export class AuthService {
   get currentUser(): User | undefined {
     if (!this.user) return undefined
     //structuredClone(this.user)
-    return { ...this.user };
+   else return { ...this.user };
   }
 
   getUsers(): Observable<User[]> {
@@ -32,7 +32,9 @@ export class AuthService {
           this.user = u;
    
           localStorage.setItem('token', u.id.toString())
+          window.location.reload()
           this.router.navigate(['home', u.id.toString()])
+
         }
       });
     });
@@ -54,6 +56,7 @@ export class AuthService {
   logout() {
     this.user = undefined;
     localStorage.clear()
+    
   }
 
 

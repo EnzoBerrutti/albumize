@@ -6,7 +6,7 @@
       </button>
     </li >
     <li><a href="#" routerLink="home" id="albumize">albumize</a></li>
-    <li ><a href="#" routerLink="home" class="btn-nav" id="">Home</a></li>
+    <li ><a href="#" [routerLink]="['/home']" class="btn-nav" id="">Home</a></li>
     <li ><a href="#" class="btn-nav">About</a></li>
     <li ><a href="#" class="btn-nav">Contact</a></li>
   </ul>
@@ -16,7 +16,7 @@
         <input type="text" placeholder="Search an album or artist" formControlName="nombre">
         </form>
         <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="register-button">
+          <button type="button"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="register-button">
            Login
           </button>
     </div>

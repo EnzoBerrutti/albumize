@@ -15,11 +15,12 @@ function checkAuthStatus(): boolean | Observable<boolean>{
                         if(!estaAutenticado) 
                         {
                           console.log(estaAutenticado)
-                          router.navigate(['home/1'])
+                          console.log("hola")
+                          router.navigate(['home'])
                         }
                       } )
                     )
 }
 export const authGuard = () => {
-  return true;
+  return checkAuthStatus();
 };

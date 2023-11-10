@@ -119,7 +119,7 @@
 }
 
 .image-button {
-    margin-top: 10rem;
+    margin-top: 0rem;
     width: 140px;
     height: auto;
     transition: transform 0.5s ease;
