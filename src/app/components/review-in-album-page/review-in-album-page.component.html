@@ -14,16 +14,16 @@
     <div class="body" *ngIf="review.review">
         <p>{{review.review}}</p>
     </div>
-    <div *ngIf="review.favourite">
+    <div *ngIf="review.favourite !== undefined && review.favourite !== null">
         <p>Favourite song: {{tracksWithNumbers[review.favourite].name}}</p>
     </div>
-    <div *ngIf="review.worst">
+    <div *ngIf="review.worst !== undefined && review.worst !== null">
         <p>Least favourite song: {{tracksWithNumbers[review.worst].name}}</p>
     </div>
-    <div *ngIf="review.underrated">
+    <div *ngIf="review.underrated !== undefined && review.underrated !== null">
         <p>Underrated song: {{tracksWithNumbers[review.underrated].name}}</p>
     </div>
-    <div *ngIf="review.overrated">
+    <div *ngIf="review.overrated !== undefined && review.overrated !== null">
         <p>Overrated song: {{tracksWithNumbers[review.overrated].name}}</p>
     </div>
 </div>
