@@ -94,14 +94,17 @@ export class ReviewFormComponent implements OnInit {
   }
 
   async submitReview() {
-    const review : Review = {
-      review: this.reviewForm.controls['reviewBody'].value,
-      albumUrl: this.idAlbum,
-      punctuation: this.reviewForm.controls['rating'].value,
-      reviewer: await this.usuarios.getUserID(localStorage['token']).then(u => u.username),
-      date: new Date(),
+    if(localStorage['token']){
+      console.log("esta autenticado")
+      const review : Review = {
+        review: this.reviewForm.controls['reviewBody'].value,
+        albumUrl: this.idAlbum,
+        punctuation: this.reviewForm.controls['rating'].value,
+        reviewer: await this.usuarios.getUserID(localStorage['token']).then(u => u.username),
+        date: new Date(),
+      }
+      this.reviewsDB.postReview(review)
     }
-    this.reviewsDB.postReview(review)
 
   }
 
