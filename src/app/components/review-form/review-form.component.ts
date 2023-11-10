@@ -52,7 +52,7 @@ export class ReviewFormComponent implements OnInit {
     } else if (rating < 10) {
       return 'rgb(20, 225, 37)';
     } else {
-      return 'rgb(23, 162, 255)';
+      return '#AC01F8';
     }
   }
 
