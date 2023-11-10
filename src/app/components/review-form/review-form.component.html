@@ -25,7 +25,7 @@
                 </div>
                 <div class="select">
                     <select name="favourite" formControlName="favourite">
-                        <option [value]="null" selected>-- Choose a song --</option>
+                        <option [value]="null" selected>-- No selection --</option>
                         <option *ngFor="let song of tracksWithNumbers, let i = index" [value]="i">{{
                             limitarLongitudA25(song.name) }}</option>
                     </select>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="select">
                     <select name="least-favourite" formControlName="worst">
-                        <option [value]="null" selected >-- Choose a song --</option>
+                        <option [value]="null" selected >-- No selection --</option>
                         <option *ngFor="let song of tracksWithNumbers, let i = index" [value]="i">{{
                             limitarLongitudA25(song.name) }}</option>
                     </select>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="select">
                     <select name="underrated" formControlName="underrated">
-                        <option [value]="null" selected>-- Choose a song --</option>
+                        <option [value]="null" selected>-- No selection --</option>
                         <option *ngFor="let song of tracksWithNumbers, let i = index" [value]="i">{{
                             limitarLongitudA25(song.name) }}</option>
                     </select>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="select">
                     <select name="overrated" formControlName="overrated">
-                        <option [value]="null" selected>-- Choose a song --</option>
+                        <option [value]="null" selected>-- No selection --</option>
                         <option *ngFor="let song of tracksWithNumbers, let i = index" [value]="i">{{
                             limitarLongitudA25(song.name) }}</option>
                     </select>

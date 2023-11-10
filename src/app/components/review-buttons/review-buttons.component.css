@@ -25,7 +25,7 @@ button {
 }
 
 button:hover{
-    background-color: rgb(63, 63, 63);
+    background-color: #AC01F8;
     transition: 0.3s ease;
   }
 
@@ -50,6 +50,6 @@ select{
 }
 
 select:hover{
-    background-color: rgb(63, 63, 63);
+    background-color: #AC01F8;
     transition: 0.3s ease;
 }

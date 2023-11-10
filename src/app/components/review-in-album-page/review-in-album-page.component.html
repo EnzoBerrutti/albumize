@@ -11,7 +11,9 @@
             }">{{review.punctuation}}</p>
         <p class='date'>{{review.date}}</p>
     </div>
-    <p class="body">{{review.review}}</p>
+    <div class="body" *ngIf="review.review">
+        <p>{{review.review}}</p>
+    </div>
     <div *ngIf="review.favourite">
         <p>Favourite song: {{tracksWithNumbers[review.favourite].name}}</p>
     </div>
