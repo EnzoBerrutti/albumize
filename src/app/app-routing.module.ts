@@ -9,6 +9,7 @@ import { ProfileMainPageComponent } from './pages/profile-main-page/profile-main
 import { ProfileReviewsPageComponent } from './pages/profile-reviews-page/profile-reviews-page.component';
 import { HomeLoggedinComponent } from './pages/home-loggedin/home-loggedin.component';
 import { authGuard } from './guards/auth.guard';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:'album-reviews/:id', component:AlbumReviewsComponent},
   {path:'account/:idUser/main', component: ProfileMainPageComponent, canActivate : [authGuard]},
   {path:'account/:idUser/reviews', component: ProfileReviewsPageComponent, canActivate : [authGuard]},
+  {path:'about',component:AboutPageComponent},
   {path:'**',redirectTo:'home'}
 ];
 

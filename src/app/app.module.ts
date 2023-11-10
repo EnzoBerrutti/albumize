@@ -31,6 +31,8 @@ import { ShareButtonsComponent } from './components/share-buttons/share-buttons.
 import { HomeLoggedinComponent } from './pages/home-loggedin/home-loggedin.component';
 import { Navbar2Component } from './components/navbar2/navbar2.component';
 import { ReviewFormComponent } from './components/review-form/review-form.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +60,8 @@ import { ReviewFormComponent } from './components/review-form/review-form.compon
     HomeLoggedinComponent,
     Navbar2Component,
     ReviewFormComponent,
+    FooterComponent,
+    AboutPageComponent,
   ],
   imports: [
     BrowserModule,
