@@ -15,18 +15,41 @@
 }
 
 button {
-    font-size: x-large;
+    font-size: large;
     border-radius: 5px;
+    color:white;
+    background-color: rgb(42,42,42);
+    border: none;
+    width: 10.5rem;
+    height: 2.5rem;
 }
+
+button:hover{
+    background-color: rgb(63, 63, 63);
+    transition: 0.3s ease;
+  }
 
 .opciones {
     font-size: large;
 }
 
 .write{
-    margin-left: 35rem;
+    margin-left: 30rem;
 }
 
 .lista{
     margin-left: 1rem;
+}
+
+select{
+    background-color: rgb(42,42,42);
+    color: white;
+    border: none;
+    height: 2.5rem;
+    border-radius: 3px;
+}
+
+select:hover{
+    background-color: rgb(63, 63, 63);
+    transition: 0.3s ease;
 }

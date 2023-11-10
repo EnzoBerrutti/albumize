@@ -1,12 +1,22 @@
 button{
-    font-size: x-large;
+    font-size: large;
     border-radius: 5px;
     margin-left: 1rem;
     margin-right: 0;
+    color: white;
+    background-color: rgb(42, 42, 42);
+    border: none;
+    width: 10.5rem;
+    height: 2.5rem;
+  }
+
+  button:hover{
+    background-color: rgb(63, 63, 63);
+    transition: 0.3s ease;
   }
   
   .boton-enviar{
-    margin-left: 12rem;
+    margin-left: 10rem;
   }
 
 .container {
@@ -15,6 +25,15 @@ button{
     margin-top: 2rem;
     border-top: 1px solid #9e9e9e4e;
     border-left: 1px solid #9e9e9e4e;
+}
+
+select{
+    background-color: rgb(42, 42, 42);
+    color: white;
+    border: none;
+    height: 2rem;
+    border-radius: 3px;
+    text-align: center;
 }
 
 form {
@@ -56,6 +75,8 @@ form {
 #review-body {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+    border: none;
+    border-radius: 5px;
     background-color: rgb(42, 42, 42);
     color: white;
     height: 15rem;
@@ -70,6 +91,11 @@ form {
     display: grid;
     grid-template-columns: auto 1fr; /* Dos columnas: la primera con ancho automático */
     grid-gap: 1rem; /* Espacio entre las columnas */
+}
+
+select:hover{
+    background-color: rgb(63, 63, 63);
+    transition: 0.3s ease;
 }
 
 .selection-row {
