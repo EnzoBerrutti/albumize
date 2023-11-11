@@ -22,7 +22,6 @@ export class ReviewInProfilePageComponent {
   async ngOnInit() {
     
     this.idAlbum = this.review.albumUrl
-    console.log(this.idAlbum);
     this.album = await this.api.getAlbumByID(this.idAlbum)
     this.albumImg = this.album.images[0].url
     await this.loadAlbumTracks(this.idAlbum)

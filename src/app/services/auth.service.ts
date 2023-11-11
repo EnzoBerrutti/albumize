@@ -10,7 +10,7 @@ import { Observable, catchError, map, of, tap } from 'rxjs';
 export class AuthService {
 
   private url = "http://localhost:4000/users";
-  private user?:User; 
+  user?:User; 
   private id?:number;
 
   constructor(private http: HttpClient, private router: Router) { }
@@ -58,6 +58,5 @@ export class AuthService {
     localStorage.clear()
     
   }
-
 
 }

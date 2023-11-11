@@ -1,10 +1,18 @@
 
 <div [@fadeInOut]>
-<app-album-intro></app-album-intro>
-<div class = "componentes">
-    <app-album-tracks></app-album-tracks>
-    <div class = "derecha" *ngIf="showButtons" class="fade-in">
-        <app-review-form></app-review-form>
+    <app-album-intro></app-album-intro>
+    <div class="componentes">
+      <app-album-tracks></app-album-tracks>
+      <div class="derecha" *ngIf="showButtons" class="fade-in">
+        <ng-container *ngIf="!hasReview; else hasReviewTemplate">
+          <!-- Mostrar el componente app-review-form si el usuario no tiene una revisión -->
+          <app-review-form></app-review-form>
+        </ng-container>
+        <ng-template #hasReviewTemplate>
+          <!-- Mostrar el componente already-has-a-review si el usuario tiene una revisión -->
+          <app-already-has-a-review [userReview]="userReview"></app-already-has-a-review>
+        </ng-template>
+      </div>
     </div>
-</div>
-</div>
+  </div>
+  

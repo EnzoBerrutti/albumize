@@ -101,7 +101,8 @@ export class ReviewFormComponent implements OnInit {
         albumUrl: this.idAlbum,
         punctuation: this.reviewForm.controls['rating'].value,
         reviewer: await this.usuarios.getUserID(localStorage['token']).then(u => u.username),
-        date: formattedDate
+        date: formattedDate,
+        reviewerId: (localStorage['token'])
       }
 
       this.addOptionalField('favourite', review);

@@ -34,6 +34,7 @@ import { ReviewFormComponent } from './components/review-form/review-form.compon
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ReviewInProfilePageComponent } from './components/review-in-profile-page/review-in-profile-page.component';
+import { AlreadyHasAReviewComponent } from './components/already-has-a-review/already-has-a-review.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { ReviewInProfilePageComponent } from './components/review-in-profile-pag
     FooterComponent,
     AboutPageComponent,
     ReviewInProfilePageComponent,
+    AlreadyHasAReviewComponent,
   ],
   imports: [
     BrowserModule,
