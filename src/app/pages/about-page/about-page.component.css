@@ -217,7 +217,7 @@ p{
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 10px rgba(15, 15, 15, 0.5); 
-    color: black;
+    color: white;
 
 }
 .circulo-puntaje3{
@@ -230,7 +230,7 @@ p{
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 10px rgba(15, 15, 15, 0.5); 
-    color: black;
+    color: white;
 
 }
 .circulo-puntaje4{
@@ -344,7 +344,7 @@ p{
     background-color: #00ce7a;
     width: 100%;
     height: 100%;
-   color: black;
+   color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -354,7 +354,7 @@ p{
     background-color: #ffbd3f;
     width: 100%;
     height: 100%;
-    color:black;
+    color:white;
    
     display: flex;
     justify-content: center;
