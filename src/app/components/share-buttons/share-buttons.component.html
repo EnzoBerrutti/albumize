@@ -15,27 +15,28 @@
         </div>
         <div class="modal-body d-flex flex-column justify-content-center">
           <div class="share-btn-container">
-            <a href="https://www.facebook.com/sharer.php?u={{postUrl}}" class="facebook-btn">
+            
+            <a [href]="facebook" class="facebook-btn">
               <i class="fab fa-facebook"></i>
             </a>
            
-            <a [href]="facebook" class="twitter-btn">
+            <a [href]="twitter" class="twitter-btn">
               <i class="fab fa-twitter"></i>
             </a>
   
-            <a (click)="postInstagram()" class="instagram-btn">
+            <a [href]="instagram" class="instagram-btn">
               <i class="fab fa-instagram"></i>
             </a>
   
-            <a (click)="postPinterest()" class="pinterest-btn">
+            <a [href]="pinterest" class="pinterest-btn">
               <i class="fab fa-pinterest"></i>
             </a>
   
-            <a (click)="postTwitter()" class="linkedin-btn">
+            <a [href]="linkedin" class="linkedin-btn">
               <i class="fab fa-linkedin"></i>
             </a>
   
-            <a (click)="postWhatsapp()" class="whatsapp-btn">
+            <a [href]="whatsapp" class="whatsapp-btn">
               <i class="fab fa-whatsapp"></i>
             </a>
           </div>
