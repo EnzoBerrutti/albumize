@@ -27,7 +27,7 @@ export class ProfileReviewsComponent {
       this.user = await this.userAPI.getUserID(this.idUser);
 
       const allreviews = await this.reviewsDB.getReviews()
-      this.reviewsArray = allreviews.filter((r:Review) => r.reviewer === this.user.username)
+      this.reviewsArray = await allreviews.filter((r:Review) => r.reviewer === this.user.username)
       console.log(this.reviewsArray)
   }
 

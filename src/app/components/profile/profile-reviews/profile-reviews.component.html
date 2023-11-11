@@ -1,18 +1,17 @@
 <div class="row border border-secondary contenedor profile-user">
     <div class="col">
-        <h4 class="text-center">Your Reviews</h4>
-
+        <h4 class="text-left">Your Reviews</h4>
+        <hr>
         <ng-container class="fade-in">
             <ul *ngIf="reviewsArray.length > 0">
                 <li *ngFor="let review of reviewsArray">
-                    <app-review-in-album-page [review]="review"></app-review-in-album-page>
+                    <app-review-in-profile-page [review]="review"></app-review-in-profile-page>
                 </li>
-            </ul>
+            </ul>            
         </ng-container>
         <ng-container *ngIf="reviewsArray.length === 0" class="fade-in">
             <h3>There are not reviews yet!</h3>
         </ng-container>
             
-        
     </div>
 </div>

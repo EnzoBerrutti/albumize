@@ -8,3 +8,13 @@
     list-style: none;
 
 }
+
+.btn-outline-warning{
+    border-color: #AC01F8;
+    color: #AC01F8;
+}
+
+.btn-outline-warning:hover{
+    background-color: #AC01F8;
+    color: black;
+}

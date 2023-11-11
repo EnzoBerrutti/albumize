@@ -1,0 +1,33 @@
+<div class="contenedor" [routerLink]="'/album/' + album.id">
+    <div class='review'>
+        <div class='details' *ngIf="review">
+            <img class="userIcon" [src]="albumImg" alt="imagenDelAlbum">
+            <p class='albumTitle'>{{album.name}}</p>
+            <p class='artistName'>{{album.artists[0].name}}</p>
+            <p class='score' [ngClass]="{
+                'score-10': review.punctuation == 10,
+                'score-7to10': review.punctuation < 10 && review.punctuation >= 7,
+                'score-4to7': review.punctuation < 7 && review.punctuation >= 4,
+                'score-less-than-4': review.punctuation < 4
+                }">{{review.punctuation}}</p>
+             <app-share-buttons class="share-buttons"></app-share-buttons>   
+            <p class='date'>{{review.date}}</p>
+        </div>
+        <div class="body" *ngIf="review.review">
+            <p>{{review.review}}</p>
+        </div>
+        <div *ngIf="review.favourite !== undefined && review.favourite !== null">
+            <p>Favourite song: {{tracksWithNumbers[review.favourite].name}}</p>
+        </div>
+        <div *ngIf="review.worst !== undefined && review.worst !== null">
+            <p>Least favourite song: {{tracksWithNumbers[review.worst].name}}</p>
+        </div>
+        <div *ngIf="review.underrated !== undefined && review.underrated !== null">
+            <p>Underrated song: {{tracksWithNumbers[review.underrated].name}}</p>
+        </div>
+        <div *ngIf="review.overrated !== undefined && review.overrated !== null">
+            <p>Overrated song: {{tracksWithNumbers[review.overrated].name}}</p>
+        </div>
+    </div>
+</div>
+    

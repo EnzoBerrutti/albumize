@@ -33,6 +33,7 @@ import { Navbar2Component } from './components/navbar2/navbar2.component';
 import { ReviewFormComponent } from './components/review-form/review-form.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { ReviewInProfilePageComponent } from './components/review-in-profile-page/review-in-profile-page.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
     ReviewFormComponent,
     FooterComponent,
     AboutPageComponent,
+    ReviewInProfilePageComponent,
   ],
   imports: [
     BrowserModule,
