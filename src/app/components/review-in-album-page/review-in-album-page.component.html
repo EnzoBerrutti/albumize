@@ -15,6 +15,7 @@
     <div class="body" *ngIf="review.review">
         <p>{{review.review}}</p>
     </div>
+    <div class="selections">
     <div *ngIf="review.favourite !== undefined && review.favourite !== null">
         <p>Favourite song: {{tracksWithNumbers[review.favourite].name}}</p>
     </div>
@@ -26,6 +27,7 @@
     </div>
     <div *ngIf="review.overrated !== undefined && review.overrated !== null">
         <p>Overrated song: {{tracksWithNumbers[review.overrated].name}}</p>
+    </div>
     </div>
 </div>
 </div>

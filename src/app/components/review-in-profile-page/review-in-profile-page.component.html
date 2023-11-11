@@ -1,9 +1,9 @@
-<div class="contenedor" [routerLink]="'/album/' + album.id">
+<div class="contenedor">
     <div class='review'>
         <div class='details' *ngIf="review">
-            <img class="userIcon" [src]="albumImg" alt="imagenDelAlbum">
-            <p class='albumTitle'>{{album.name}}</p>
-            <p class='artistName'>{{album.artists[0].name}}</p>
+            <img class="albumIcon" [src]="albumImg" alt="imagenDelAlbum" [routerLink]="'/album/' + album.id">
+            <p class='albumTitle' [routerLink]="'/album/' + album.id">{{album.name}}</p>
+            <p class='artistName' [routerLink]="'/album/' + album.id">{{album.artists[0].name}}</p>
             <p class='score' [ngClass]="{
                 'score-10': review.punctuation == 10,
                 'score-7to10': review.punctuation < 10 && review.punctuation >= 7,
@@ -16,18 +16,20 @@
         <div class="body" *ngIf="review.review">
             <p>{{review.review}}</p>
         </div>
-        <div *ngIf="review.favourite !== undefined && review.favourite !== null">
-            <p>Favourite song: {{tracksWithNumbers[review.favourite].name}}</p>
-        </div>
-        <div *ngIf="review.worst !== undefined && review.worst !== null">
-            <p>Least favourite song: {{tracksWithNumbers[review.worst].name}}</p>
-        </div>
-        <div *ngIf="review.underrated !== undefined && review.underrated !== null">
-            <p>Underrated song: {{tracksWithNumbers[review.underrated].name}}</p>
-        </div>
-        <div *ngIf="review.overrated !== undefined && review.overrated !== null">
-            <p>Overrated song: {{tracksWithNumbers[review.overrated].name}}</p>
-        </div>
+        <div class = "selections">
+            <div *ngIf="review.favourite !== undefined && review.favourite !== null">
+                <p class="favorite">Favourite song: {{tracksWithNumbers[review.favourite].name}}</p>
+            </div>
+            <div *ngIf="review.worst !== undefined && review.worst !== null">
+                <p class="worst">Least favourite song: {{tracksWithNumbers[review.worst].name}}</p>
+            </div>
+            <div *ngIf="review.underrated !== undefined && review.underrated !== null">
+                <p class="underrated">Underrated song: {{tracksWithNumbers[review.underrated].name}}</p>
+            </div>
+            <div *ngIf="review.overrated !== undefined && review.overrated !== null">
+                <p class="overrated">Overrated song: {{tracksWithNumbers[review.overrated].name}}</p>
+            </div>
+        </div>            
     </div>
 </div>
     
