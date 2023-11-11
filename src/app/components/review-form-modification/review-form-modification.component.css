@@ -1,0 +1,110 @@
+button{
+    font-size: large;
+    border-radius: 5px;
+    margin-left: 1rem;
+    margin-right: 0;
+    color: white;
+    background-color: rgb(42, 42, 42);
+    border: none;
+    width: 10.5rem;
+    height: 2.5rem;
+  }
+
+  button:hover{
+    background-color: #AC01F8;
+    transition: 0.3s ease;
+  }
+  
+  .boton-enviar{
+    margin-left: 10rem;
+  }
+
+.container {
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid #9e9e9e4e;
+    border-left: 1px solid #9e9e9e4e;
+}
+
+select{
+    background-color: rgb(42, 42, 42);
+    color: white;
+    border: none;
+    height: 2rem;
+    border-radius: 3px;
+    text-align: center;
+}
+
+form {
+    padding: 1rem;
+}
+
+.rating-container {
+    display: flex;
+    align-items: center;
+}
+
+.rating-input {
+    display: flex;
+    align-items: center;
+}
+
+.rating-input input[type="range"] {
+    width: 15rem; /* Ajusta el ancho según tus necesidades */
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgb(63, 63, 63);
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.5s ease;
+}
+
+.text {
+    margin-right: 1rem;
+}
+
+#review-body {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(42, 42, 42);
+    color: white;
+    height: 15rem;
+    width: 100%;
+    resize: vertical;
+    padding: 0;
+    padding: 10px;
+}
+
+.selections {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: auto 1fr; /* Dos columnas: la primera con ancho automático */
+    grid-gap: 1rem; /* Espacio entre las columnas */
+}
+
+select:hover{
+    background-color: #AC01F8;
+    transition: 0.3s ease;
+}
+
+.selection-row {
+    display: grid;
+    grid-template-columns: 1fr; /* Una sola columna para cada fila */
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.selection-row label {
+    margin-right: 1rem;
+}

@@ -10,6 +10,7 @@ import { ProfileReviewsPageComponent } from './pages/profile-reviews-page/profil
 import { HomeLoggedinComponent } from './pages/home-loggedin/home-loggedin.component';
 import { authGuard } from './guards/auth.guard';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { AlbumModifyReviewComponent } from './pages/album/album-modify-review/album-modify-review.component';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path:'register',component:RegisterPageComponent},
   {path:'search/:query', component:SearchResultPageComponent},
   {path:'album/:id', component: AlbumInfoComponent},
+  {path: 'album/modify-review/:id', component: AlbumModifyReviewComponent},
   {path:'album-reviews/:id', component:AlbumReviewsComponent},
   {path:'account/:idUser/main', component: ProfileMainPageComponent, canActivate : [authGuard]},
   {path:'account/:idUser/reviews', component: ProfileReviewsPageComponent, canActivate : [authGuard]},

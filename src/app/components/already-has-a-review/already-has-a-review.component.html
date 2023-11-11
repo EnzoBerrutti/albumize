@@ -1,4 +1,4 @@
-<button class="boton-enviar" >Modify review</button>
+<button class="boton-enviar" [routerLink]="['/album/modify-review/', idAlbum]" [state]="{ review: userReview }">Modify review</button>
 <button class="boton-reviews" routerLink="/album-reviews/{{idAlbum}}">Watch reviews</button>
 <div class="container">
     <div class='review'>
@@ -18,18 +18,18 @@
             <p>{{userReview.review}}</p>
         </div>
         <div class="selections">
-        <div *ngIf="userReview.favourite !== undefined && userReview.favourite !== null">
-            <p>Favourite song: {{tracksWithNumbers[userReview.favourite].name}}</p>
-        </div>
-        <div *ngIf="userReview.worst !== undefined && userReview.worst !== null">
-            <p>Least favourite song: {{tracksWithNumbers[userReview.worst].name}}</p>
-        </div>
-        <div *ngIf="userReview.underrated !== undefined && userReview.underrated !== null">
-            <p>Underrated song: {{tracksWithNumbers[userReview.underrated].name}}</p>
-        </div>
-        <div *ngIf="userReview.overrated !== undefined && userReview.overrated !== null">
-            <p>Overrated song: {{tracksWithNumbers[userReview.overrated].name}}</p>
-        </div>
+            <div *ngIf="userReview.favourite !== undefined && userReview.favourite !== null">
+                <p>Favourite song: {{truncateSongName(tracksWithNumbers[userReview.favourite].name)}}</p>
+            </div>
+            <div *ngIf="userReview.worst !== undefined && userReview.worst !== null">
+                <p>Least favourite song: {{truncateSongName(tracksWithNumbers[userReview.worst].name)}}</p>
+            </div>
+            <div *ngIf="userReview.underrated !== undefined && userReview.underrated !== null">
+                <p>Underrated song: {{truncateSongName(tracksWithNumbers[userReview.underrated].name)}}</p>
+            </div>
+            <div *ngIf="userReview.overrated !== undefined && userReview.overrated !== null">
+                <p>Overrated song: {{truncateSongName(tracksWithNumbers[userReview.overrated].name)}}</p>
+            </div>
         </div>
     </div>
 </div>

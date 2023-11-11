@@ -55,4 +55,11 @@ export class AlreadyHasAReviewComponent {
       trackNumber: index + 1
     }));
   }
+
+  truncateSongName(songName: string): string {
+  const maxLength = 35; // Puedes ajustar la longitud máxima según tus necesidades
+  return songName.length > maxLength ? songName.substring(0, maxLength) + '...' : songName;
+  }
 }
+
+

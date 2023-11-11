@@ -1,0 +1,9 @@
+<div [@fadeInOut]>
+    <app-album-intro></app-album-intro>
+    <div class="componentes">
+      <app-album-tracks></app-album-tracks>
+      <div class="derecha" *ngIf="showButtons" class="fade-in">
+          <app-review-form-modification [userReview]="userReview"></app-review-form-modification>
+      </div>
+    </div>
+  </div>
