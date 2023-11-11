@@ -1,0 +1,205 @@
+.linea-negra{
+    height: 2rem;
+    width: 100%;
+}
+.linea-footer{
+    width: 100%;
+    height: 1rem;
+    display: flex;
+}
+.linea1{
+    width: 33.33%;
+    height: 100%;
+    background-color: #AC01F8;
+}
+.linea2{
+    width: 33.33%;
+    height: 100%;
+    background-color: rgb(218, 26, 243);
+}
+.linea3{
+    width: 33.33%;
+    height: 100%;
+    background-color: #821dad;
+}
+
+.container-footer{
+    width: 100%;
+    height: 30rem;
+    background-color: black;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+.titulo-footer{
+    width: 100%;
+    height: 8rem;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.albumize{
+    margin: 0.5rem;
+    font-family: 'Nunito';
+    font-weight: 700;
+    font-size: 25px;
+}
+.logo-albumize{
+ 
+    border: 2px solid #AC01F8; 
+    background-color: #AC01F8;
+    border-radius: 50%;
+}
+.seccion-33{
+    display: flex;
+    justify-content: center;
+
+}
+.container-datos-seccion{
+    
+    width: 60%;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+
+}
+.seccion-follow1{
+    width: 33.33%;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+   
+
+}
+.seccion-follow2{
+    width: 33.33%;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    
+
+}
+
+.seccion-follow3{
+    width: 33.33%;
+   
+    height: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.div-logos{
+ 
+    width: 100%;
+    height: 2.5rem;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.div-follow{
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    align-items: center;
+}
+.parrafo-follow{
+    height: 4rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-family: 'Roboto';
+}
+.fa-instagram{
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.fa-x-twitter{
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.fa-facebook-f{
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.fa-copyright{
+    margin: 0.5rem;
+}
+.albumize-inc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+}
+.reserved-text{
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 100;
+
+}
+.div-contact{
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    align-items: center;
+}
+.parrafo-contact{
+    font-size: 1.5rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-family: 'Roboto';
+}
+.div-descripcion-contact{
+    font-family: 'Roboto';
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 100;
+}
+.parrafo-descripcion-contact{
+    width:70%;
+    margin-bottom: 0;
+    margin-top: 0.8rem;
+    
+}
+.contenedor-logo-copy{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.parrafo-descripcion-explore{
+    margin-bottom: 0;
+    margin-top: 0.8rem;
+    width: 40%;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    
+
+}
