@@ -2,7 +2,7 @@
 <div class='review'>
     <div class='details' *ngIf="review">
         <p class='username'>{{review.reviewer}}</p>
-        <img class="userIcon" src="assets/images/european-shorthair-8267220_1280.jpg" alt="imagenPrueba">
+        <img class="userIcon" [src]="albumImg" alt="imagenPrueba">
         <p class='score' [ngClass]="{
             'score-10': review.punctuation == 10,
             'score-7to10': review.punctuation < 10 && review.punctuation >= 7,

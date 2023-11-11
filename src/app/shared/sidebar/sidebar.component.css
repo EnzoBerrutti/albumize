@@ -1,6 +1,7 @@
 .contenedor-sidebar{
     padding-top: 3rem;
-    height: 100vh;
+    border-top: 1px solid grey;
+
 }
 
 .lista-sidebar{

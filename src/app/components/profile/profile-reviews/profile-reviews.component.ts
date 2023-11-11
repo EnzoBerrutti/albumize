@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { User } from 'src/app/interfaces/interfaces';
+import { Review, User } from 'src/app/interfaces/interfaces';
+import { ReviewsService } from 'src/app/services/reviews.service';
 import { ServicioUsersService } from 'src/app/services/servicio-users.service';
 
 @Component({
@@ -13,15 +14,21 @@ export class ProfileReviewsComponent {
   idUser = {} as number;
   user = {} as User;
 
+  reviewsArray:Review[] = []
+
   constructor(private activatedRoute:ActivatedRoute,
-              private userAPI: ServicioUsersService){
+              private userAPI: ServicioUsersService,
+              private reviewsDB: ReviewsService){
 
   }
  async ngOnInit() {
     this.activatedRoute.params.subscribe((params:Params) =>{
       this.idUser = +params['idUser']})
       this.user = await this.userAPI.getUserID(this.idUser);
-  }
 
+      const allreviews = await this.reviewsDB.getReviews()
+      this.reviewsArray = allreviews.filter((r:Review) => r.reviewer === this.user.username)
+      console.log(this.reviewsArray)
+  }
 
 }

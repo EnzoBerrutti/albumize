@@ -1,6 +1,6 @@
 import { Component,Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Review, Track, TracksResponse } from 'src/app/interfaces/interfaces';
+import { Review, Track, TracksResponse, Album } from 'src/app/interfaces/interfaces';
 import { ServicioMusicaService } from 'src/app/services/servicio-musica.service';
 
 @Component({
@@ -13,6 +13,8 @@ export class ReviewInAlbumPageComponent {
   idAlbum : string = ''
   tracks!:TracksResponse
   tracksWithNumbers: Track [] = []
+  albumImg?:string;
+
 
   constructor(private api:ServicioMusicaService, private ruta:ActivatedRoute){}
 
@@ -21,6 +23,9 @@ export class ReviewInAlbumPageComponent {
       this.idAlbum = params["id"]
       this.loadAlbumTracks(this.idAlbum);
     });
+
+    const album:Album = await this.api.getAlbumByID(this.idAlbum)
+    this.albumImg = album.images[0].url
   }
 
   async loadAlbumTracks(id: string) {
