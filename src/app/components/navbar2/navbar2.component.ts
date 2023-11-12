@@ -39,9 +39,21 @@ export class Navbar2Component implements OnInit{
   }
 
 
-  onLogout(){
+/*   onLogout(){
     this.auth.logout();
     this.router.navigate(['home'])
     window.location.reload()
-  }
+  } */
+
+  onLogout() {
+    // Navega a la ruta "about"
+    this.auth.logout();
+    this.router.navigate(['home'])
+      .then(() => {
+        // Espera 100 milisegundos (ajusta según sea necesario) y luego recarga la página
+        setTimeout(() => {
+          window.location.reload();
+        }, 100);
+      });
+}
 }

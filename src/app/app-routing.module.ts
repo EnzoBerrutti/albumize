@@ -7,14 +7,12 @@ import { RegisterPageComponent } from './pages/register-page/register-page.compo
 import { SearchResultPageComponent } from './pages/search-result-page/search-result-page.component';
 import { ProfileMainPageComponent } from './pages/profile-main-page/profile-main-page.component';
 import { ProfileReviewsPageComponent } from './pages/profile-reviews-page/profile-reviews-page.component';
-import { HomeLoggedinComponent } from './pages/home-loggedin/home-loggedin.component';
 import { authGuard } from './guards/auth.guard';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { AlbumModifyReviewComponent } from './pages/album/album-modify-review/album-modify-review.component';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
- /*  {path:'home/:id',component:HomeLoggedinComponent, canActivate : [authGuard]}, */
   {path:'register',component:RegisterPageComponent},
   {path:'search/:query', component:SearchResultPageComponent},
   {path:'album/:id', component: AlbumInfoComponent},

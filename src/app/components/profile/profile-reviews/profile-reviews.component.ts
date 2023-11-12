@@ -27,8 +27,16 @@ export class ProfileReviewsComponent {
       this.user = await this.userAPI.getUserID(this.idUser);
 
       const allreviews = await this.reviewsDB.getReviews()
+      
+
       this.reviewsArray = await allreviews.filter((r:Review) => r.reviewer === this.user.username)
-      console.log(this.reviewsArray)
+
+      this.reviewsArray.sort((b, a) => +new Date(a.date) - +new Date(b.date));
+
+      this.reviewsArray.forEach(element => {
+        console.log(element.date)
+        
+      });
   }
 
 }

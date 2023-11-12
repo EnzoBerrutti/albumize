@@ -1,5 +1,5 @@
-<button class="boton-enviar" [routerLink]="['/album/modify-review/', idAlbum]" [state]="{ review: userReview }">Modify review</button>
-<button class="boton-reviews" routerLink="/album-reviews/{{idAlbum}}">Watch reviews</button>
+<button class="boton-enviar" [routerLink]="['/album/modify-review/', idAlbum]" [state]="{ review: userReview }">Edit review</button>
+<button class="boton-reviews" routerLink="/album-reviews/{{idAlbum}}">See all reviews</button>
 <div class="container">
     <div class='review'>
         <div class='details' *ngIf="userReview">

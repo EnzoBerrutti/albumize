@@ -82,11 +82,11 @@
       "albumUrl": "2ODvWsOgouMbaA5xf0RkJe",
       "date": "11-11-2023",
       "punctuation": 9.4,
-      "review": "Es album esta genialisimo!!! Lo super recomiendov weugib ewbuctngwdvsctew67 ctewngew 7fcngweygfudb vuidbog yergnewcgme ntentgqer",
+      "review": "Es album esta genialisimo!!! Lo super recomiendov weugib ewbuctngwdvsctew67 ctewngew 7fcngweygfudb vuidbog yergnewcgme ntentgqer modificada",
       "reviewer": "letosoni1",
       "reviewerId": "1",
       "id": 6,
-      "favourite": "10",
+      "favourite": "16",
       "overrated": "6",
       "underrated": "0",
       "worst": "5"
@@ -223,6 +223,29 @@
       "reviewerId": "1",
       "favourite": "0",
       "id": 107
+    },
+    {
+      "albumUrl": "6JJ0dHtZQWNZP2kDd7j4Dv",
+      "date": "11-11-2023",
+      "punctuation": 8.7,
+      "review": "Primera review modif",
+      "reviewer": "letosoni1",
+      "reviewerId": "1",
+      "id": 108,
+      "favourite": "0"
+    },
+    {
+      "albumUrl": "2ANVost0y2y52ema1E9xAZ",
+      "date": "11-12-2023",
+      "punctuation": 10,
+      "review": "Awesome Album",
+      "reviewer": "letosoni1",
+      "reviewerId": "1",
+      "favourite": "1",
+      "overrated": "2",
+      "underrated": "4",
+      "worst": "6",
+      "id": 109
     }
   ],
   "users": [
