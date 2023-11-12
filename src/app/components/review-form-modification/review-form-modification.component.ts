@@ -85,11 +85,11 @@ export class ReviewFormModificationComponent {
       }
 
       if (this.userReview.worst !== undefined && this.userReview.worst !== null) {
-        this.formulario.patchValue({worst: this.userReview.favourite}) 
+        this.formulario.patchValue({worst: this.userReview.worst}) 
       }
 
       if (this.userReview.underrated !== undefined && this.userReview.underrated !== null) {
-        this.formulario.patchValue({underrated: this.userReview.favourite}) 
+        this.formulario.patchValue({underrated: this.userReview.underrated}) 
       }
     });
   }
