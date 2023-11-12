@@ -28,8 +28,6 @@ export class ReviewFormComponent implements OnInit {
     private servicio: ServicioMusicaService,
     private usuarios:ServicioUsersService,
     private router: Router,
-    private renderer: Renderer2,
-    private elementRef: ElementRef
   ) { }
 
   formulario: FormGroup = this.formBuilder.group({
@@ -100,7 +98,7 @@ export class ReviewFormComponent implements OnInit {
       this.review.albumUrl = this.idAlbum;
       this.review.date = formattedDate;
       this.review.punctuation = this.formulario.controls['rating'].value;
-      this.review.review = this.formulario.controls['userName'].value;
+      this.review.review = this.formulario.controls['reviewBody'].value;
       this.review.reviewer =  await this.usuarios.getUserID(localStorage['token']).then(u => u.username);
       this.review.reviewerId = (localStorage['token']);
 
@@ -110,6 +108,12 @@ export class ReviewFormComponent implements OnInit {
       this.addOptionalField('worst', this.review);
 
       this.reviewsDB.postReview(this.review)
+      .then(() => {
+        window.location.reload();
+      })
+      .catch(error => {
+        console.error('Error al actualizar la revisión:', error);
+       });
     }
 
   }
