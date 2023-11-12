@@ -30,8 +30,6 @@ export class ReviewsService {
               body:JSON.stringify(review),
               headers: {"Content-type": "application/json"}
             })
-      
-            this.router.navigate(['/album/',review.albumUrl])
 
     }catch(err){
       console.log(err);
