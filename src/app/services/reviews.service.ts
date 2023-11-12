@@ -43,7 +43,7 @@ export class ReviewsService {
                     method:"DELETE",
                   })
 
-      window.location.href="index.html"
+      window.location.reload()
 
     }catch(err){
       console.log(err);

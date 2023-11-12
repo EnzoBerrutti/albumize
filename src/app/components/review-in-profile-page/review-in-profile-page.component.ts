@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Album, Review, Track, TracksResponse } from 'src/app/interfaces/interfaces';
+import { ReviewsService } from 'src/app/services/reviews.service';
 import { ServicioMusicaService } from 'src/app/services/servicio-musica.service';
 
 @Component({
@@ -17,7 +18,7 @@ export class ReviewInProfilePageComponent {
   albumImg?:string;
   album!:Album 
 
-  constructor(private api:ServicioMusicaService, private ruta:ActivatedRoute){}
+  constructor(private api:ServicioMusicaService, private ruta:ActivatedRoute, private reviewDB:ReviewsService){}
 
   async ngOnInit() {
     
@@ -42,6 +43,11 @@ export class ReviewInProfilePageComponent {
       ...track,
       trackNumber: index + 1
     }));
+  }
+
+   deleteReview(){
+    console.log(this.review.id)
+this.reviewDB.deleteReview(this.review.id)
   }
 
 }

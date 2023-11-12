@@ -9,7 +9,8 @@ import { ServicioUsersService } from 'src/app/services/servicio-users.service';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
-
+  hayFoto: boolean = false
+  ishidden:boolean = true
   idUser = {} as number;
   user = {} as User;
 
@@ -23,4 +24,16 @@ export class SidebarComponent {
       this.user = await this.userAPI.getUserID(this.idUser);
   }
 
+  onFileSelected(event:Event){
+    if(event){
+      console.log(event)
+    }
+  }
+  showEditPhoto(){
+    this.ishidden = false
+  }
+
+  hideEditPhoto(){
+    this.ishidden = true
+  }
 }

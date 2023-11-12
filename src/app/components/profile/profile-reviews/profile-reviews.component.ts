@@ -33,10 +33,6 @@ export class ProfileReviewsComponent {
 
       this.reviewsArray.sort((b, a) => +new Date(a.date) - +new Date(b.date));
 
-      this.reviewsArray.forEach(element => {
-        console.log(element.date)
-        
-      });
   }
 
 }

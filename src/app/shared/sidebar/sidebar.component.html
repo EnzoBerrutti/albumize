@@ -1,8 +1,25 @@
 <div class="row  contenedor-sidebar">
-    <div class="col">
-        <ul class="lista-sidebar btn-group btn-group-lg d-flex flex-column">
-            <li><a [routerLink]="['/account', idUser, 'main']" class="mb-4 btn btn-outline-warning">Your profile </a></li>
-            <li><a [routerLink]="['/account', idUser, 'reviews']" class="btn btn-outline-warning">Your reviews</a></li>
+
+    <div *ngIf="hayFoto" class="row d-flex flex-column align-items-center">
+        <div (mouseleave)="hideEditPhoto()" (mouseover)="showEditPhoto()" class="profile-img profile-shape"><button
+                [hidden]='ishidden' class="btn btn-outline-warning">Edit photo</button>
+        </div>
+    </div>
+
+
+
+    <div class="row d-flex flex-column align-items-center">
+        <div *ngIf="!hayFoto" class="profile-shape">{{user.nombre.substring(0,1)}}{{user.apellido.substring(0,1) }}
+        </div>
+        <input type="file" hidden (change)="onFileSelected($event)" #fileInput>
+        <button (click)="fileInput.click()" *ngIf="!hayFoto" type="button"
+            class="upload-btn mb-4 btn btn-outline-warning">Upload photo</button>
+    </div>
+    <div class="row">
+        <ul class="lista-sidebar btn-group btn-group-lg d-flex flex-column align-items-center">
+            <li><a [routerLink]="['/account', idUser, 'main']" class="mb fixed-width btn btn-lg btn-outline-warning">Your profile </a>
+            </li>
+            <li><a [routerLink]="['/account', idUser, 'reviews']" class="btn fixed-width btn-lg btn-outline-warning">Your reviews</a></li>
         </ul>
     </div>
 </div>

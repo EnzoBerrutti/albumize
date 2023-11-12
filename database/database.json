@@ -79,19 +79,6 @@
       "worst": 1
     },
     {
-      "albumUrl": "2ODvWsOgouMbaA5xf0RkJe",
-      "date": "11-11-2023",
-      "punctuation": 9.4,
-      "review": "Es album esta genialisimo!!! Lo super recomiendov weugib ewbuctngwdvsctew67 ctewngew 7fcngweygfudb vuidbog yergnewcgme ntentgqer modificada",
-      "reviewer": "letosoni1",
-      "reviewerId": "1",
-      "id": 6,
-      "favourite": "16",
-      "overrated": "6",
-      "underrated": "0",
-      "worst": "5"
-    },
-    {
       "review": "Me encanta tu albuuuuuuuuuuuuuum! Te amo!!",
       "albumUrl": "0Lg1uZvI312TPqxNWShFXL",
       "punctuation": 9.4,
@@ -99,32 +86,6 @@
       "reviewerId": 1,
       "date": "11-10-2023",
       "id": 7
-    },
-    {
-      "albumUrl": "1AxMcdQRLguJqSZMxvRNdO",
-      "date": "11-11-2023",
-      "punctuation": 10,
-      "review": "herhrehreqhrehre haerhaerhntrantr hntrqndfznfdn vc ",
-      "reviewer": "letosoni1",
-      "reviewerId": "1",
-      "id": 12,
-      "favourite": "6",
-      "overrated": "10",
-      "underrated": "6",
-      "worst": "6"
-    },
-    {
-      "review": "Genial, me encanto!!!!",
-      "albumUrl": "5MzwGwnO9gkh0z6Nl4FF8h",
-      "punctuation": 9.6,
-      "reviewer": "letosoni1",
-      "reviewerId": 1,
-      "date": "11-11-2023",
-      "favourite": "15",
-      "overrated": "11",
-      "underrated": "9",
-      "worst": "11",
-      "id": 15
     },
     {
       "review": "Hermoso el album",
@@ -135,84 +96,6 @@
       "date": "11-11-2023",
       "favourite": "0",
       "id": 16
-    },
-    {
-      "review": "ewjonfuiewbfiewbgfg",
-      "albumUrl": "1OteY9OFTmoZ0vmZT89wPd",
-      "punctuation": 5.7,
-      "reviewer": "letosoni1",
-      "reviewerId": 1,
-      "date": "11-11-2023",
-      "favourite": "10",
-      "overrated": "16",
-      "underrated": "14",
-      "worst": "8",
-      "id": 17
-    },
-    {
-      "review": "ewtwegewgwegwegw",
-      "albumUrl": "4yP0hdKOZPNshxUOjY0cZj",
-      "punctuation": 8.6,
-      "reviewer": "letosoni1",
-      "reviewerId": 1,
-      "date": "11-11-2023",
-      "favourite": "10",
-      "overrated": "12",
-      "underrated": "12",
-      "worst": "7",
-      "id": 18
-    },
-    {
-      "review": "pruebita",
-      "albumUrl": "4NMv3cMkDwkkR6EdLloQDB",
-      "punctuation": 6,
-      "reviewer": "letosoni1",
-      "date": "11-11-2023",
-      "reviewerId": "1",
-      "favourite": "1",
-      "overrated": "4",
-      "underrated": "3",
-      "worst": "0",
-      "id": 101
-    },
-    {
-      "review": "prueba",
-      "albumUrl": "7CPux4iLNEQ1KGVzmE9CKz",
-      "punctuation": 8.1,
-      "reviewer": "letosoni1",
-      "date": "11-11-2023",
-      "reviewerId": "1",
-      "id": 103
-    },
-    {
-      "review": "prueba 43",
-      "albumUrl": "3kwh1wumBMqfivrWVKEGNO",
-      "punctuation": 7,
-      "reviewer": "letosoni1",
-      "date": "11-11-2023",
-      "reviewerId": "1",
-      "worst": "0",
-      "id": 104
-    },
-    {
-      "albumUrl": "6nQnNie5sdURxPiMW9cp0Y",
-      "date": "11-11-2023",
-      "punctuation": 8.4,
-      "review": "ewggewgerqhqerherqhqer",
-      "reviewer": "letosoni1",
-      "reviewerId": "1",
-      "underrated": "13",
-      "id": 105
-    },
-    {
-      "albumUrl": "2EQEyysFgYJwR1H2XpJDr3",
-      "date": "11-11-2023",
-      "punctuation": 10,
-      "review": "bfgherhreqherqheq",
-      "reviewer": "letosoni1",
-      "reviewerId": "1",
-      "favourite": "0",
-      "id": 106
     },
     {
       "albumUrl": "7AVLk5G6gJXtgqaUJDKyF2",
@@ -235,16 +118,12 @@
       "favourite": "0"
     },
     {
-      "albumUrl": "2ANVost0y2y52ema1E9xAZ",
+      "albumUrl": "2ODvWsOgouMbaA5xf0RkJe",
       "date": "11-12-2023",
-      "punctuation": 10,
-      "review": "Awesome Album",
+      "punctuation": 7,
+      "review": "Primera review",
       "reviewer": "letosoni1",
       "reviewerId": "1",
-      "favourite": "1",
-      "overrated": "2",
-      "underrated": "4",
-      "worst": "6",
       "id": 109
     }
   ],

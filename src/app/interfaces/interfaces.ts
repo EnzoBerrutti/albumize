@@ -17,6 +17,7 @@ export interface User {
   apellido: string,
   username: string,
   email: string,
+  imgbase64?:string,
   password: string,
   reviewList?: Review[],
   id:number;

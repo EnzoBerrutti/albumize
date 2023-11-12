@@ -30,7 +30,7 @@ export class AlbumReviewsComponent implements OnInit {
         await this.leer();
           this.listaReviewsFiltrada = this.listaReviews.filter(review =>
           review.albumUrl === albumId);
-        console.log(this.listaReviewsFiltrada);
+ 
       }
     });
 

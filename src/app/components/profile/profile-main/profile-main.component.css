@@ -1,5 +1,5 @@
 .profile-user{
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 .contenedor{
     padding: 3rem 0 0 3rem;
@@ -12,11 +12,27 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.profile-shape{
+    font-family: Roboto, sans-serif;
+    font-size: 8rem;
+    background-color: rgb(142, 4, 142);
     border-radius: 100%;
     width: 200px;
     height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
-label{
-    font-weight: 700;
+.btn-outline-warning{
+    border-color: #AC01F8;
+    color: #AC01F8;
+}
+
+.btn-outline-warning:hover{
+    background-color: #AC01F8;
+    color: black;
 }

@@ -9,6 +9,40 @@
 
 }
 
+
+.profile-img{
+    background-image: url("../../../assets/images/profile-leo.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile-img:hover{
+    background-image: url("../../../assets/images/profile-leo.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.profile-shape{
+    font-family: Roboto, sans-serif;
+    font-size: 8rem;
+    background-color: rgb(142, 4, 142);
+    border-radius: 100%;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.upload-btn{
+    margin: 1rem auto;
+    width: 10rem;
+
+}
 .btn-outline-warning{
     border-color: #AC01F8;
     color: #AC01F8;
@@ -17,4 +51,18 @@
 .btn-outline-warning:hover{
     background-color: #AC01F8;
     color: black;
+}
+
+.btn-center{
+    margin: 0 auto;
+    width: auto;
+    padding: 0;
+}
+
+.fixed-width{
+    width: 15rem;
+}
+
+.fixed-width:first-child{
+    margin-bottom: 1px;
 }

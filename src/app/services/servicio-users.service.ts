@@ -53,7 +53,7 @@ export class ServicioUsersService {
     }
   }
 
-  async putCliente(user: User) {
+  async putUser(user: User) {
     try {
       await fetch(`${this.url}/${user.id}`, {
         method: "PUT",
