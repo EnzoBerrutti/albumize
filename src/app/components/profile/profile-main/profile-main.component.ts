@@ -10,6 +10,7 @@ import { ServicioUsersService } from 'src/app/services/servicio-users.service';
 })
 export class ProfileMainComponent implements OnInit{
 
+  isReadOnly:boolean = true
   idUser = {} as number;
   user = {} as User;
 
@@ -23,6 +24,9 @@ export class ProfileMainComponent implements OnInit{
       this.user = await this.userAPI.getUserID(this.idUser);
   }
 
+  modificarUser(){
+    this.isReadOnly = !this.isReadOnly
+  }
 
 
 }

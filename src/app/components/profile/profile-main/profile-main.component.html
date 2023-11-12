@@ -2,35 +2,46 @@
     <div class="col">
         <div>
             <div class="profile-img"></div>
+            <button (click)="modificarUser()">Edit User</button>
             <hr class="col-11">
-            <div class="mb-3 row">
-                <label for="nombre" class="col-sm-3 col-form-label">Nombre</label>
-                <div class="col-sm-8">
-                    <input type="text" readonly class="form-control-plaintext text-white" id="nombre"
-                        value={{user.nombre}}>
+            
+            <div class="row g-3 align-items-center">
+                <div class="col-3">
+                  <label for="nombre" class="col-form-label">Nombre</label>
                 </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="apellido" class="col-sm-3 col-form-label">Apellido</label>
-                <div class="col-sm-8">
-                    <input type="text" readonly class="form-control-plaintext text-white" id="apellido"
-                        [value]="user.apellido">
+                <div class="col-3">
+                  <input type="text" id="nombre" [readonly] = 'isReadOnly' value={{user.nombre}} class="form-control bg-dark text-white" aria-describedby="passwordHelpInline">
                 </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="username" class="col-sm-3 col-form-label">Nombre de usuario</label>
-                <div class="col-sm-8">
-                    <input type="text" readonly class="form-control-plaintext text-white" id="username"
-                        [value]="user.username">
+              </div>
+
+              <div class="row g-3 align-items-center">
+                <div class="col-3">
+                  <label for="apellido" class="col-form-label">Apellido</label>
                 </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="email" class="col-sm-3 col-form-label">Email</label>
-                <div class="col-sm-8">
-                    <input type="text" readonly class="form-control-plaintext text-white" id="email"
-                        [value]="user.email">
+                <div class="col-3">
+                  <input type="text" id="apellido" readonly value={{user.apellido}} class="form-control bg-dark text-white" aria-describedby="passwordHelpInline">
                 </div>
-            </div>
+              </div>
+
+              <div class="row g-3 align-items-center">
+                <div class="col-3">
+                  <label for="email" class="col-form-label">Email</label>
+                </div>
+                <div class="col-3">
+                  <input type="email" id="email" readonly value={{user.email}} class="form-control bg-dark text-white" aria-describedby="passwordHelpInline">
+                </div>
+              </div>
+
+              <div class="row g-3 align-items-center">
+                <div class="col-3">
+                  <label for="username" class="col-form-label">Nombre de usuario</label>
+                </div>
+                <div class="col-3">
+                  <input type="text" id="username" readonly value={{user.username}} class="form-control bg-dark text-white" aria-describedby="passwordHelpInline">
+                </div>
+              </div>
+
+            
         </div>
     </div>
 </div>
