@@ -39,9 +39,9 @@ export class AlbumModifyReviewComponent {
 
          this.reviewsList = await this.reviewsService.getReviews()
 
-        this.userReviews = this.reviewsList.filter(review => review.reviewerId === this.userId);
+        this.userReviews = this.reviewsList.filter(review => review.reviewerId == this.userId);
 
-        this.userReview = this.userReviews.find(review => review.albumUrl === this.albumId) as Review;
+        this.userReview = this.userReviews.find(review => review.albumUrl == this.albumId) as Review;
 
         if(this.userReview === undefined)
         {

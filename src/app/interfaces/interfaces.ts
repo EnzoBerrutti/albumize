@@ -9,6 +9,7 @@ export interface Review {
   underrated?: number;
   overrated?: number;
   worst?: number;
+  id:number;
 }
 
 export interface User {

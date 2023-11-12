@@ -19,6 +19,7 @@ export class ReviewFormComponent implements OnInit {
   tracksWithNumbers: Track[] = []
   listaReviews: Review[] = []
   modalTarget: string = "#staticBackdrop";
+  review = {} as Review;
 
   constructor(
     private reviewsDB: ReviewsService,
@@ -31,13 +32,13 @@ export class ReviewFormComponent implements OnInit {
     private elementRef: ElementRef
   ) { }
 
-  reviewForm: FormGroup = new FormGroup({
-    rating: new FormControl(7),
-    reviewBody: new FormControl(''),
-    favourite: new FormControl(null),
-    overrated: new FormControl(null),
-    underrated: new FormControl(null),
-    worst: new FormControl(null)
+  formulario: FormGroup = this.formBuilder.group({
+    rating:[7],
+    reviewBody:[''],
+    favourite:null,
+    overrated:null,
+    underrated:null,
+    worst:null
   });
 
   getColorForRating(rating: number | null): string {
@@ -96,21 +97,19 @@ export class ReviewFormComponent implements OnInit {
       const currentDate = new Date();
       const formattedDate = `${currentDate.getMonth() + 1}-${currentDate.getDate()}-${currentDate.getFullYear()}`;
 
-      const review : Review = {
-        review: this.reviewForm.controls['reviewBody'].value,
-        albumUrl: this.idAlbum,
-        punctuation: this.reviewForm.controls['rating'].value,
-        reviewer: await this.usuarios.getUserID(localStorage['token']).then(u => u.username),
-        date: formattedDate,
-        reviewerId: (localStorage['token'])
-      }
+      this.review.albumUrl = this.idAlbum;
+      this.review.date = formattedDate;
+      this.review.punctuation = this.formulario.controls['rating'].value;
+      this.review.review = this.formulario.controls['userName'].value;
+      this.review.reviewer =  await this.usuarios.getUserID(localStorage['token']).then(u => u.username);
+      this.review.reviewerId = (localStorage['token']);
 
-      this.addOptionalField('favourite', review);
-      this.addOptionalField('overrated', review);
-      this.addOptionalField('underrated', review);
-      this.addOptionalField('worst', review);
+      this.addOptionalField('favourite', this.review);
+      this.addOptionalField('overrated', this.review);
+      this.addOptionalField('underrated', this.review);
+      this.addOptionalField('worst', this.review);
 
-      this.reviewsDB.postReview(review)
+      this.reviewsDB.postReview(this.review)
     }
 
   }
@@ -120,9 +119,9 @@ export class ReviewFormComponent implements OnInit {
   }
 
   private addOptionalField(fieldName: string, review: Review) {
-    const fieldValue: string | number | null = this.reviewForm.controls[fieldName].value;
+    const fieldValue: string | number | null = this.formulario.controls[fieldName].value;
     if (fieldValue !== null && fieldValue !== undefined) {
-      review[fieldName as keyof Review] = fieldValue as never; // o fieldValue as string | number si es aplicable a tu caso
+      review[fieldName as keyof Review] = fieldValue as never;
     }
   }
 }

@@ -40,11 +40,14 @@ export class AlbumInfoComponent implements OnInit {
          this.userId = token ? parseInt(token, 10) : -1;
          console.log(this.userId);
 
-         this.reviewsList = await this.reviewsService.getReviews()
+        this.reviewsList = await this.reviewsService.getReviews()
+        console.log(this.reviewsList);
 
-        this.userReviews = this.reviewsList.filter(review => review.reviewerId === this.userId);
+        this.userReviews = this.reviewsList.filter(review => review.reviewerId == this.userId);
 
-        this.userReview = this.userReviews.find(review => review.albumUrl === this.albumId) as Review;
+        console.log(this.userReviews);
+
+        this.userReview = this.userReviews.find(review => review.albumUrl == this.albumId) as Review;
 
         if(this.userReview === undefined)
         {

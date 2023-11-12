@@ -31,7 +31,7 @@ export class ReviewsService {
               headers: {"Content-type": "application/json"}
             })
       
-            window.location.reload();
+            this.router.navigate(['/album/',review.albumUrl])
 
     }catch(err){
       console.log(err);
@@ -62,5 +62,18 @@ export class ReviewsService {
     }
 
     return undefined;
+  }
+
+  async updateReview(review: Review) {
+    try {
+      await fetch(`${this.url}/${review.id}`, {
+        method: 'PUT',
+        body: JSON.stringify(review),
+        headers: { 'Content-Type': 'application/json' }
+      });
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }

@@ -1,16 +1,16 @@
 <button type="button" [attr.data-bs-toggle]="'modal'" [attr.data-bs-target]="modalTarget" id="register-button"
-    class="boton-enviar" (click)="submitReview()">Send review</button>
+    class="boton-enviar" (click)="submitReview()">Commit changes</button>
 <button class="boton-reviews" routerLink="/album-reviews/{{idAlbum}}">Watch reviews</button>
 <div class="container">
-    <form [formGroup]="reviewForm">
+    <form [formGroup]="formulario">
         <fieldset>
             <div class="rating-container">
                 <label for="rating" class="text">Rating:</label>
                 <div class="rating-input">
                     <input type="range" id="rating" formControlName="rating" min="1" max="10" step="0.1">
                     <div class="circle" id="circle"
-                        [ngStyle]="{ 'background-color': getColorForRating(reviewForm.get('rating')?.value) }">
-                        <span id="rating-value">{{ reviewForm.get('rating')?.value }}</span>
+                        [ngStyle]="{ 'background-color': getColorForRating(formulario.get('rating')?.value) }">
+                        <span id="rating-value">{{ formulario.get('rating')?.value }}</span>
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                 </div>
                 <div class="select">
                     <select name="favourite" formControlName="favourite">
-                        <option [value]="null" selected>-- No selection --</option>
+                        <option [value]="null" selected>-- No Selection --</option>
                         <option *ngFor="let song of tracksWithNumbers, let i = index" [value]="i">{{
                             limitarLongitudA25(song.name) }}</option>
                     </select>
