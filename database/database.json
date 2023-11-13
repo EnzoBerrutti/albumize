@@ -147,6 +147,19 @@
       "reviewer": "manumanu",
       "reviewerId": "2",
       "id": 112
+    },
+    {
+      "albumUrl": "7aDBFWp72Pz4NZEtVBANi9",
+      "date": "11-13-2023",
+      "punctuation": 10,
+      "review": "Best album in the world!!!",
+      "reviewer": "tutin",
+      "reviewerId": "23",
+      "favourite": "11",
+      "overrated": "0",
+      "underrated": "6",
+      "worst": "10",
+      "id": 113
     }
   ],
   "users": [
@@ -325,6 +338,14 @@
       "username": "marialdb",
       "password": "maria",
       "id": 22
+    },
+    {
+      "nombre": "Tutin",
+      "apellido": "Blanco",
+      "email": "justin.white.dancer@gmail.com",
+      "username": "tutin",
+      "password": "ofcoursenot",
+      "id": 23
     }
   ]
 }
