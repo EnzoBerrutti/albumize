@@ -12,6 +12,9 @@ export class NewReleasesComponent implements OnInit {
   img: string[] = []
   new_releases: Album[] = []
 
+  new_releases2: Album[] = []
+
+
   idArtist = {} as number
   busqueda = {} as string
 
@@ -27,9 +30,18 @@ export class NewReleasesComponent implements OnInit {
 
   async ngOnInit() {
     const data = await this.api.getNewReleases()
-    this.new_releases = data['albums']['items']
-    this.getAlbumYear(this.new_releases)
-    this.getDottedName(this.new_releases)
+    this.new_releases = await data['albums']['items'].slice(0,4)
+    await this.getAlbumYear(this.new_releases)
+    await this.getDottedName(this.new_releases)
+
+
+
+    this.new_releases2 = await data['albums']['items'].slice(4,8)
+    await this.getAlbumYear(this.new_releases2)
+    await this.getDottedName(this.new_releases2)
+
+
+
   }
 
   getAlbumYear(array: Album[]) {
@@ -40,8 +52,8 @@ export class NewReleasesComponent implements OnInit {
 
   getDottedName(array: Album[]) {
     array.forEach((item: Album) => {
-      if (item.name.length > 12) {
-        item.name = item.name.slice(0, 12) + '...'
+      if (item.name.length > 22) {
+        item.name = item.name.slice(0, 22) + '...'
       }
     })
 

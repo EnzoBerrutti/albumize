@@ -27,9 +27,6 @@ export class ReviewInAlbumPageComponent {
     const album:Album = await this.api.getAlbumByID(this.idAlbum)
     this.albumImg = album.images[0].url
 
-    
-
-
   }
 
   async loadAlbumTracks(id: string) {
