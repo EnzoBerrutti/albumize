@@ -52,8 +52,8 @@ export class NewReleasesComponent implements OnInit {
 
   getDottedName(array: Album[]) {
     array.forEach((item: Album) => {
-      if (item.name.length > 22) {
-        item.name = item.name.slice(0, 22) + '...'
+      if (item.name.length > 10) {
+        item.name = item.name.slice(0, 10) + '...'
       }
     })
 
