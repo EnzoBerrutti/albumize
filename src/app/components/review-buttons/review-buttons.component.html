@@ -1,11 +1,13 @@
 <div class = "whole">
     <label for="opciones" class="text">Sort by:</label>
-        <select class="opciones" name="opciones">
-            <option value="opcion1">Most recent</option>
+    <form  [formGroup]="formulario">
+        <select (change)="onSortBy($event)" class="opciones" name="opciones" formControlName="selectedSort">
+            <option selected value="opcion1">Most recent</option>
             <option value="opcion2">Oldest</option>
             <option value="opcion3">From highest to lowest</option>
             <option value="opcion4">From lowest to highest</option>
         </select>
+    </form>
     <button class="write" routerLink="/album/{{idAlbum}}">Write a review</button>
     <button class="lista" routerLink="/album/{{idAlbum}}">View tracklist</button>
 </div>

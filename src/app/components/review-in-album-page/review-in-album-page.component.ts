@@ -15,6 +15,7 @@ export class ReviewInAlbumPageComponent {
   tracksWithNumbers: Track [] = []
   albumImg?:string;
 
+
   constructor(private api:ServicioMusicaService, private ruta:ActivatedRoute){}
 
   async ngOnInit() {
@@ -25,6 +26,10 @@ export class ReviewInAlbumPageComponent {
 
     const album:Album = await this.api.getAlbumByID(this.idAlbum)
     this.albumImg = album.images[0].url
+
+    
+
+
   }
 
   async loadAlbumTracks(id: string) {

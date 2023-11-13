@@ -3,7 +3,8 @@ import { async } from '@angular/core/testing';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, Params } from '@angular/router';
-import { User } from 'src/app/interfaces/interfaces';
+import { Review, User } from 'src/app/interfaces/interfaces';
+import { ReviewsService } from 'src/app/services/reviews.service';
 import { ServicioUsersService } from 'src/app/services/servicio-users.service';
 
 @Component({
@@ -30,7 +31,8 @@ export class ProfileMainComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute,
     private userAPI: ServicioUsersService,
     private formbuilder: FormBuilder,
-    private sanitizer: DomSanitizer) {
+    private sanitizer: DomSanitizer,
+    private reviewDB:ReviewsService) {
 
   }
   async ngOnInit() {
@@ -136,7 +138,15 @@ export class ProfileMainComponent implements OnInit {
     console.log(this.user)
     this.userAPI.putUser(this.user);
     this.isReadOnly = !this.isReadOnly
-    /* window.location.reload(); */
+
+
+    const arrayReviews :Review[] = await this.reviewDB.getReviews()
+    arrayReviews.forEach((r:Review)=>{
+      if(r.reviewerId === this.user.id){
+        r.reviewer = this.user.username
+        this.reviewDB.updateReview(r)
+      }
+    })
   }
 
 

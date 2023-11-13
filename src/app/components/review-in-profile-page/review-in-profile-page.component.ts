@@ -47,7 +47,7 @@ export class ReviewInProfilePageComponent {
 
    deleteReview(){
     console.log(this.review.id)
-this.reviewDB.deleteReview(this.review.id)
+  this.reviewDB.deleteReview(this.review.id)
   }
 
 }

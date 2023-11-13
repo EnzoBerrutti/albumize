@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 import { SearchArtistComponent } from './components/search-artist/search-artist.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlbumTracksComponent } from './components/album-tracks/album-tracks.component';
 import { ReviewButtonsComponent } from './components/review-buttons/review-buttons.component';
 import { ReviewInAlbumPageComponent } from './components/review-in-album-page/review-in-album-page.component';
@@ -77,6 +77,7 @@ import { ReviewFormModificationComponent } from './components/review-form-modifi
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
