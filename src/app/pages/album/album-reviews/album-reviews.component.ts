@@ -34,8 +34,9 @@ export class AlbumReviewsComponent implements OnInit {
 
       if (albumId) {
         await this.leer();
-        this.listaReviewsFiltrada = this.listaReviews.filter(review =>
-          review.albumUrl === albumId);
+        this.listaReviewsFiltrada = this.listaReviews.filter(review => review.albumUrl === albumId);
+
+        this.sortByMostRecent();
       }
     });
 
@@ -74,16 +75,6 @@ export class AlbumReviewsComponent implements OnInit {
     this.listaReviews = await this.reviews.getReviews();
   }
 
-  sortByMostRecent() {
-    this.listaReviewsFiltrada.sort((a, b) => +new Date(a.date) - +new Date(b.date));
-    console.log(this.listaReviewsFiltrada)
-  }
-
-  sortByOldest() {
-    this.listaReviewsFiltrada.sort((b, a) => +new Date(a.date) - +new Date(b.date));
-    console.log(this.listaReviewsFiltrada)
-  }
-
   sortFromHighToLow() {
     this.listaReviewsFiltrada.sort((a, b) => b.punctuation - a.punctuation);
   }
@@ -92,7 +83,25 @@ export class AlbumReviewsComponent implements OnInit {
     this.listaReviewsFiltrada.sort((a, b) => a.punctuation - b.punctuation);
   }
 
-
-
-
+  sortByMostRecent() {
+    this.listaReviewsFiltrada.sort((a, b) => this.compareDates(b.date, a.date));
+    console.log(this.listaReviewsFiltrada);
+  }
+  
+  sortByOldest() {
+    this.listaReviewsFiltrada.sort((a, b) => this.compareDates(a.date, b.date));
+    console.log(this.listaReviewsFiltrada);
+  }
+  
+  private compareDates(date1: string, date2: string): number {
+    const parsedDate1 = this.parseDateString(date1);
+    const parsedDate2 = this.parseDateString(date2);
+  
+    return +parsedDate1 - +parsedDate2;
+  }
+  
+  private parseDateString(dateString: string): Date {
+    const [month, day, year] = dateString.split('-').map(Number);
+    return new Date(year, month - 1, day);
+  }
 }

@@ -28,7 +28,7 @@ export class ReviewButtonsComponent implements OnInit{
 
 
       this.formulario = this.fb.group({
-        selectedSort: 'opcion1' // Set the default value here
+        selectedSort: 'opcion1'
       });
 
   }
