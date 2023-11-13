@@ -54,13 +54,16 @@
                             <label for="inputEmail" class="label-title">E-mail</label>
                         </div>
                         <div>
-                            <input type="email" class="form-control" id="inputEmail" placeholder="Write your e-mail" formControlName="email">
+                            <input type="email" (change)="validarEmail()" class="form-control" id="inputEmail" placeholder="Write your e-mail" formControlName="email">
                         </div>
                         <div class="mb-3 text-warning" *ngIf="validar('email', 'email')">
                             <p class="mensaje-alerta">Enter a valid e-mail address. Ex.: my_email@gmail.com</p>
                         </div>
                         <div class="mb-3 text-warning" *ngIf="validar('email', 'required')">
                             <p class="mensaje-alerta">You must enter your e-mail</p>
+                        </div>
+                        <div class="mb-3 text-warning" *ngIf="isValidEmail">
+                            <p class="mensaje-alerta">E-mail already exists</p>
                         </div>
                         
                     </div>
@@ -69,10 +72,13 @@
                             <label for="inputUser" class="label-title">Username</label>
                         </div>
                        <div>
-                        <input type="text" class="form-control" id="inputUser" placeholder="Create a username" formControlName="userName">
+                        <input (change)="validarUserName()" type="text" class="form-control" id="inputUser" placeholder="Create a username" formControlName="userName">
                        </div>
                        <div class="mb-3 text-warning" *ngIf="validar('userName', 'required')">
                         <p class="mensaje-alerta">You must enter a username</p>
+                    </div>
+                    <div class="mb-3 text-warning" *ngIf="isValidUserName">
+                        <p class="mensaje-alerta">User name already exists</p>
                     </div>
                      
                     </div>
@@ -93,7 +99,7 @@
                     
                 
                 
-                <button type="submit" class="btn btn-primary" id="btn-sign" data-bs-dismiss="modal" aria-label="Close" [disabled]="formulario.invalid" >Register</button>
+                <button type="submit" class="btn btn-primary" id="btn-sign" data-bs-dismiss="modal" aria-label="Close" [disabled]="formulario.invalid || isValidEmail || isValidUserName" >Register</button>
                 <div class="mb-3 text-warning" *ngIf="formulario.invalid && formulario.touched">
                     <p class="mensaje-alerta">You must complete all the fields to register</p>
                   </div>

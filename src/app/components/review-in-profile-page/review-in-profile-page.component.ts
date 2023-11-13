@@ -17,6 +17,7 @@ export class ReviewInProfilePageComponent {
   tracksWithNumbers: Track [] = []
   albumImg?:string;
   album!:Album 
+  idReview?:number
 
   constructor(private api:ServicioMusicaService, private ruta:ActivatedRoute, private reviewDB:ReviewsService){}
 
@@ -26,6 +27,7 @@ export class ReviewInProfilePageComponent {
     this.album = await this.api.getAlbumByID(this.idAlbum)
     this.albumImg = this.album.images[0].url
     await this.loadAlbumTracks(this.idAlbum)
+    this.idReview = this.review.id
   }
 
   async loadAlbumTracks(id: string) {
@@ -45,9 +47,9 @@ export class ReviewInProfilePageComponent {
     }));
   }
 
-   deleteReview(){
-    console.log(this.review.id)
-  this.reviewDB.deleteReview(this.review.id)
+   deleteReview(id:number){
+    console.log(id)
+/*     this.reviewDB.deleteReview(this.review.id) */
   }
 
 }

@@ -146,3 +146,17 @@
    outline: none;
    border: 0px;
 }
+
+.text-warning{
+    width: 400px;
+    margin: 0;
+    padding: 0;
+}
+.mensaje-alerta{
+    color: red;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    font-size: 1rem;
+    text-align: center;
+}

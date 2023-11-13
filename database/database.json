@@ -116,6 +116,42 @@
       "reviewerId": "1",
       "id": 108,
       "favourite": "0"
+    },
+    {
+      "albumUrl": "1AxMcdQRLguJqSZMxvRNdO",
+      "date": "11-12-2023",
+      "punctuation": 9.5,
+      "review": "review prueba\n",
+      "reviewer": "leotosoni35",
+      "reviewerId": "1",
+      "id": 109
+    },
+    {
+      "albumUrl": "7CPux4iLNEQ1KGVzmE9CKz",
+      "date": "11-12-2023",
+      "punctuation": 9,
+      "review": "Malsdhjasga",
+      "reviewer": "leotosoni35",
+      "reviewerId": "1",
+      "id": 110
+    },
+    {
+      "albumUrl": "2ODvWsOgouMbaA5xf0RkJe",
+      "date": "11-12-2023",
+      "punctuation": 1,
+      "review": "adfadf",
+      "reviewer": "leotosoni35",
+      "reviewerId": "1",
+      "id": 111
+    },
+    {
+      "albumUrl": "1AxMcdQRLguJqSZMxvRNdO",
+      "date": "11-13-2023",
+      "punctuation": 1.9,
+      "review": "Muy mala",
+      "reviewer": "manumanu",
+      "reviewerId": "2",
+      "id": 112
     }
   ],
   "users": [
@@ -150,6 +186,150 @@
       "username": "enzo",
       "password": "asdadsadada",
       "id": 4
+    },
+    {
+      "nombre": "Carlos",
+      "apellido": "Ajaccio",
+      "email": "carlosajaccio@gmail.com",
+      "username": "carlos",
+      "password": "elcarlos23",
+      "id": 5
+    },
+    {
+      "nombre": "Carlos",
+      "apellido": "Ajaccio",
+      "email": "carlos@ajaccio.com",
+      "username": "carlitos",
+      "password": "elcarlos",
+      "id": 6
+    },
+    {
+      "nombre": "Carlos",
+      "apellido": "Ajaccio",
+      "email": "carlos@ajaccio.coma",
+      "username": "carlitos",
+      "password": "elcarlos",
+      "id": 7
+    },
+    {
+      "nombre": "adf",
+      "apellido": "adf",
+      "email": "leotosoni@hotmail.coma",
+      "username": "adf",
+      "password": "adfaf",
+      "id": 8
+    },
+    {
+      "nombre": "adf",
+      "apellido": "adf",
+      "email": "leotosoni@hotmail.com",
+      "username": "adf",
+      "password": "adf",
+      "id": 9
+    },
+    {
+      "nombre": "adf",
+      "apellido": "adf",
+      "email": "leotosoni@hotmail.com",
+      "username": "adf",
+      "password": "adf",
+      "id": 10
+    },
+    {
+      "nombre": "adf",
+      "apellido": "adf",
+      "email": "leotosoni@hotmail.com",
+      "username": "manumanu",
+      "password": "adf",
+      "id": 11
+    },
+    {
+      "nombre": "adf",
+      "apellido": "adf",
+      "email": "leotosoni@hotmail.com",
+      "username": "manumanu",
+      "password": "adf",
+      "id": 12
+    },
+    {
+      "nombre": "adf",
+      "apellido": "adf",
+      "email": "leotosoni@hotmail.comdf",
+      "username": "manumanu",
+      "password": "adf",
+      "id": 13
+    },
+    {
+      "nombre": "adf",
+      "apellido": "adf",
+      "email": "leotosoni@hotmail.comdf",
+      "username": "manumanuf",
+      "password": "adf",
+      "id": 14
+    },
+    {
+      "nombre": "adf",
+      "apellido": "adf",
+      "email": "leotosoni@hotmail.comdf",
+      "username": "manumanuf",
+      "password": "adf",
+      "id": 15
+    },
+    {
+      "nombre": "adf",
+      "apellido": "adf",
+      "email": "leotosoni@hotmail.comdf",
+      "username": "manumanuf",
+      "password": "adf",
+      "id": 16
+    },
+    {
+      "nombre": "adf",
+      "apellido": "adf",
+      "email": "leotosoni@hotmail.comdf",
+      "username": "manumanuf",
+      "password": "adf",
+      "id": 17
+    },
+    {
+      "nombre": "adf",
+      "apellido": "adf",
+      "email": "leotosoni@hotmail.comdf",
+      "username": "manumanuf",
+      "password": "adf",
+      "id": 18
+    },
+    {
+      "nombre": "adf",
+      "apellido": "adf",
+      "email": "leotosoni@hotmail.comdf",
+      "username": "manumanuf",
+      "password": "adf",
+      "id": 19
+    },
+    {
+      "nombre": "afadf",
+      "apellido": "adfa",
+      "email": "leotosoni@hotmail.com",
+      "username": "manumanu",
+      "password": "sadf",
+      "id": 20
+    },
+    {
+      "nombre": "afadf",
+      "apellido": "adfa",
+      "email": "leotosoni@hotmail.com",
+      "username": "manumanu",
+      "password": "sadf",
+      "id": 21
+    },
+    {
+      "nombre": "Maria",
+      "apellido": "La del Barrio",
+      "email": "ladelbarrio@gmail.com",
+      "username": "marialdb",
+      "password": "maria",
+      "id": 22
     }
   ]
 }

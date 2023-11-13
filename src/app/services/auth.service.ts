@@ -32,8 +32,7 @@ export class AuthService {
           this.user = u;
    
           localStorage.setItem('token', u.id.toString())
-          window.location.reload()
-          this.router.navigate(['home', u.id.toString()])
+          
 
         }
       });

@@ -1,13 +1,13 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CommonVariablesService {
 
-  selectedSortOption:string = ''
-
+  selectedSortOption = new EventEmitter<string>()
+  
   constructor() { }
 
-  
+
 }

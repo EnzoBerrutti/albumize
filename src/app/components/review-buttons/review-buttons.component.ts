@@ -11,10 +11,9 @@ import { CommonVariablesService } from 'src/app/services/common-variables.servic
 export class ReviewButtonsComponent implements OnInit{
 
   idAlbum:String=""
-  selectedChoice:string = 'option1'
 
   formulario:FormGroup = this.fb.group({
-    selectedSort : null
+    selectedSort : ''
   })
 
   constructor(private ruta:ActivatedRoute,
@@ -34,9 +33,8 @@ export class ReviewButtonsComponent implements OnInit{
 
   }
 
-  onSortBy(event:Event){
-    this.cv.selectedSortOption = this.formulario.controls['selectedSort'].value
-    console.log(this.cv.selectedSortOption)
+  onSortBy(){
+    this.cv.selectedSortOption.emit(this.formulario.controls['selectedSort'].value)
   }
 
 }

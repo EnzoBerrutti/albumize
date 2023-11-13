@@ -15,7 +15,7 @@ import { ServicioUsersService } from 'src/app/services/servicio-users.service';
 export class ProfileMainComponent implements OnInit {
   preview:string = ''
   imagenCapturada: any = []
-  hayFoto: boolean = true
+ 
   isReadOnly: boolean = true
   idUser = {} as number;
   user = {} as User;
@@ -114,7 +114,6 @@ export class ProfileMainComponent implements OnInit {
 
     if (this.formulario.invalid) {
       this.formulario.markAllAsTouched()
-      console.log("hola")
       return;
     }
 

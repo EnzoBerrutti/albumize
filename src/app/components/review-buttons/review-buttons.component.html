@@ -1,7 +1,7 @@
 <div class = "whole">
     <label for="opciones" class="text">Sort by:</label>
     <form  [formGroup]="formulario">
-        <select (change)="onSortBy($event)" class="opciones" name="opciones" formControlName="selectedSort">
+        <select (change)="onSortBy()" class="opciones" name="opciones" formControlName="selectedSort">
             <option selected value="opcion1">Most recent</option>
             <option value="opcion2">Oldest</option>
             <option value="opcion3">From highest to lowest</option>
