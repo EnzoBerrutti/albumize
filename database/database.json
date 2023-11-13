@@ -79,15 +79,6 @@
       "worst": 1
     },
     {
-      "review": "Me encanta tu albuuuuuuuuuuuuuum! Te amo!!",
-      "albumUrl": "0Lg1uZvI312TPqxNWShFXL",
-      "punctuation": 9.4,
-      "reviewer": "leotosoni35",
-      "reviewerId": 1,
-      "date": "11-10-2023",
-      "id": 7
-    },
-    {
       "review": "Hermoso el album",
       "albumUrl": "6Boi6nNfxwJz0mfXSbqzXy",
       "punctuation": 8.6,
@@ -137,12 +128,16 @@
     },
     {
       "albumUrl": "2ODvWsOgouMbaA5xf0RkJe",
-      "date": "11-12-2023",
-      "punctuation": 1,
+      "date": "11-13-2023",
+      "punctuation": 10,
       "review": "adfadf",
       "reviewer": "leotosoni35",
       "reviewerId": "1",
-      "id": 111
+      "id": 111,
+      "favourite": "10",
+      "overrated": "0",
+      "underrated": "5",
+      "worst": "9"
     },
     {
       "albumUrl": "1AxMcdQRLguJqSZMxvRNdO",

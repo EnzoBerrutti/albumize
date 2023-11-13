@@ -110,7 +110,7 @@
 }
 
 .artistName{
-    margin-top: 1.6rem;
+    margin-top: 1.59rem;
     color: rgb(94, 94, 94);
     margin-right: 1rem;
     margin-bottom: 0.2rem;
@@ -146,22 +146,4 @@
 
 .share-buttons{
     margin-top: 0.9rem;
-}
-
-.deleteBtn{
-    background-color: none;
-    padding: 0 0.5rem;
-    color: #AC01F8;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-}
-
-
-
-
-.deleteBtn:hover{
-    color: #ce76f3;
 }

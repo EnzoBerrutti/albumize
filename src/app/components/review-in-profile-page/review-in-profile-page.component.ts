@@ -47,9 +47,4 @@ export class ReviewInProfilePageComponent {
     }));
   }
 
-   deleteReview(id:number){
-    console.log(id)
-/*     this.reviewDB.deleteReview(this.review.id) */
-  }
-
 }

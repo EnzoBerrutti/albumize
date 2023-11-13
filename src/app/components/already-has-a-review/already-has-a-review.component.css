@@ -148,3 +148,22 @@ button:hover{
   margin-top: 1.1rem;
   margin-bottom: 0;
 }
+
+.deleteBtn{
+  background-color: none;
+  padding: 0 0.5rem;
+  color: #AC01F8;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.deleteBtn:hover{
+  color: #ce76f3;
+}
+
+.btn-close-custom {
+  width: 2.5rem; /* Ajusta el ancho según tus necesidades */
+}

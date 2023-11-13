@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Album, Review, Track, TracksResponse } from 'src/app/interfaces/interfaces';
+import { ReviewsService } from 'src/app/services/reviews.service';
 import { ServicioMusicaService } from 'src/app/services/servicio-musica.service';
 
 @Component({
@@ -19,8 +20,8 @@ export class AlreadyHasAReviewComponent {
 
   constructor(
     private ruta: ActivatedRoute,
-    private servicio: ServicioMusicaService,
     private api: ServicioMusicaService,
+    private reviewService: ReviewsService
   ) { }
 
   ngOnInit() {
@@ -41,7 +42,7 @@ export class AlreadyHasAReviewComponent {
 
   async loadAlbumTracks(id: string) {
     try {
-      const respuesta = await this.servicio.getAlbumSongs(id);
+      const respuesta = await this.api.getAlbumSongs(id);
       this.tracks = respuesta;
       this.addNumbersToTracks(this.tracks.items);
     } catch (error) {
@@ -59,6 +60,10 @@ export class AlreadyHasAReviewComponent {
   truncateSongName(songName: string): string {
   const maxLength = 35; // Puedes ajustar la longitud máxima según tus necesidades
   return songName.length > maxLength ? songName.substring(0, maxLength) + '...' : songName;
+  }
+
+  deleteReview(){
+    this.reviewService.deleteReview(this.userReview.id)
   }
 }
 
