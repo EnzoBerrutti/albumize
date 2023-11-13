@@ -38,3 +38,32 @@ hr{
 h4{
     margin-left: 0.5rem;
 }
+
+.sort{
+    margin-top: 1rem;
+    display: flex;
+}
+
+.opciones{
+    margin-left: 1rem;
+}
+
+select{
+    margin-top: 0.4rem;
+    background-color: rgb(42,42,42);
+    color: white;
+    border: none;
+    height: 2.5rem;
+    border-radius: 3px;
+}
+
+select:hover{
+    background-color: #AC01F8;
+    transition: 0.3s ease;
+}
+
+.text {
+    font-size: x-large;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
