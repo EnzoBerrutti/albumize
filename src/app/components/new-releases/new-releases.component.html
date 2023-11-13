@@ -1,22 +1,148 @@
 
-<div style="background-color: rgb(25, 25, 25);" class="row mt-3" id="todo">
-    <h4 class="titulo">New Releases</h4>
-    <hr>
-    <div class="col-10">
-        <div class="albums">
-            <div *ngFor="let album of new_releases;">
-                <a class="album-link" routerLink="/album/{{album.id}}">
-                    <div class="album-content">
-                        <div class="img-album">
-                            <img class="imagen-album" [src]="album.images[1].url" alt="">
-                        </div>
-                        <div class="info-album">
-                            <p class="info-album-name">{{album.name}}</p>
-                            <p class="info-album-artist">{{album.release_date}} • {{album.artists[0].name}}</p>
-                        </div>
-                    </div>
-                </a>
+<div class="contenedor-foto-fondo">
+        
+</div>
+<div id="todo-home">
+    
+    <div class="contenedor-titulo-tarjetas">
+        <div class="contenedor-titulo">
+            <div class="titulo">
+                <p class="parrafo-titulo">New Releases</p>
+            </div>
+            <div class="linea-titulo"></div>
+            
+        </div>
+        <div class="container-tarjetas">
+            <div class="tarjetas">
+                <div *ngFor="let album of new_releases;">
+                    <a class="album-content" routerLink="/album/{{album.id}}">
+                        
+                        
+                            <div class="div-imagen">
+                                <img class="imagen-album" [src]="album.images[1].url" alt="">
+                            </div>
+                            <div class="contenedor-toda-info">
+                                <div class="info-album">
+                                    <div class="div-info">
+                                        <div class="div-parrafo-name">
+                                            <p class="parrafo-name">{{album.name}}</p>
+                                        </div>
+                                        <div class="div-parrafo-artist">
+                                            <p class="parrafo-artist">{{album.release_date}} • {{album.artists[0].name}}</p>
+    
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="album-puntaje">
+                                    <div class="contenedor-based-circulo">
+                                        <div class="contenedor-based">
+                                            <div class="alineacion-circulo">
+                                                <div class="div-score">
+                                                    <p class="parrafo-score">Albumize Score</p>
+                                                </div>
+                                                
+                                                <div class="div-based">
+                                                    <p class="parrafo-based">Based on member reviews</p>
+                                                </div>
+        
+
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="circulo-puntaje-contenedor">
+                                            <div class="circulo-puntaje">
+                                                <p class="parrafo-circulo-puntaje">10</p>
+                                            </div>           
+                                        </div>                                       
+                                    </div>
+                                    
+                                </div>
+                                <div class="div-linea">
+                                    <div class="linea-3colores">
+                                        <div class="linea-color1"></div>
+                                        <div class="linea-color2"></div>
+                                        <div class="linea-color3"></div>
+                                    </div>
+    
+                                </div>
+
+                            </div>
+                            
+                            
+                            
+                        
+                    </a>
+                </div>
             </div>
         </div>
+        <div class="container-tarjetas">
+            <div class="tarjetas">
+                <div *ngFor="let album of new_releases2;">
+                    <a class="album-content" routerLink="/album/{{album.id}}">
+                        
+                            <div class="div-imagen">
+                                <img class="imagen-album" [src]="album.images[1].url" alt="">
+                            </div>
+                            
+                            <div class="contenedor-toda-info">
+                                <div class="info-album">
+                                    <div class="div-info">
+                                        <div class="div-parrafo-name">
+                                            <p class="parrafo-name">{{album.name}}</p>
+                                        </div>
+                                        <div class="div-parrafo-artist">
+                                            <p class="parrafo-artist">{{album.release_date}} • {{album.artists[0].name}}</p>
+    
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="album-puntaje">
+                                    <div class="contenedor-based-circulo">
+                                        <div class="contenedor-based">
+                                            <div class="alineacion-circulo">
+                                                <div class="div-score">
+                                                    <p class="parrafo-score">Albumize Score</p>
+                                                </div>
+                                                
+                                                <div class="div-based">
+                                                    <p class="parrafo-based">Based on member reviews</p>
+                                                </div>
+        
+
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="circulo-puntaje-contenedor">
+                                            <div class="circulo-puntaje">
+                                                <p class="parrafo-circulo-puntaje">10</p>
+                                            </div>
+            
+
+                                        </div>
+                                        
+                                        
+
+                                    </div>
+                                    
+                                </div>
+                                <div class="div-linea">
+                                    <div class="linea-3colores">
+                                        <div class="linea-color1"></div>
+                                        <div class="linea-color2"></div>
+                                        <div class="linea-color3"></div>
+                                    </div>
+    
+                                </div>
+
+                            </div>
+                       
+                    </a>
+                </div>
+            </div>
+        </div>
+
     </div>
+    
 </div>

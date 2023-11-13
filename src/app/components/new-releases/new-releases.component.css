@@ -1,83 +1,287 @@
-.title-new-releases{
-    font-family: 'Playpen Sans', cursive;
+
+/* .contenedor-foto-fondo{
+    width: 100%;
+    height: 100vh;
+    
+    background-color: black;
+    background-image: url(src\assets\images\asd.jpg); 
+
+} */
+.contenedor-titulo{
+    width: 100%;
+    
+    border-bottom:1px solid  white;
+}
+.parrafo-titulo{
+    margin: 0;
+    color: white;
+    font-family: proxima-nova, sans-serif;
+    font-style: normal;
+    font-size: 1.2rem;
+
+}
+#todo-home{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.contenedor-titulo-tarjetas{
+    width: 80%;
+    height: 70rem;
+
 }
 
-img{
-    width: 50px;
-    height: 50px;
-}
 
-h1{
-    font-weight: 700;
-}
 
-.albums{
+.tarjetas{
     background-color: rgb(25, 25, 25);
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    justify-content: space-between;
+   
+   
 
 }
-
-.album-link{
-    text-decoration: none;
+.container-tarjetas{
+    width:100%;
+    margin: 0;
 }
-
 
 .album-content{
-    background-color: rgb(24, 24, 24);
-    margin: 0;
-    width: 15rem;
-    height: 320px;
-    padding: 1rem;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
+    background-color: #f2f2f2;
     border-radius: 7px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    width: 20rem;
+    height: 30rem;
+    padding: 0;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Roboto';
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    
+
+   
 }
 
-.album-content:hover{
-    background-color: rgb(63, 63, 63);
+.div-imagen{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    /* border-radius:7px 7px 0 0 ;
+    background-color: #AC01F8; */
+    justify-content: center;
+    align-items: center;
+   
+ 
+   
 }
+.imagen-album{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    border-radius:4px 4px 0 0 ;
+}
+.div-linea{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    height: 0.7rem;
+    display: flex;
+    justify-content: center;
+}
+.linea-3colores{
+    
+    width: 92%;
+    height: 100%;
+   
+    border-radius: 5px;
+    display: flex;
+
+}
+.linea-color1{
+    width: 33.33%;
+    background-color: #AC01F8;
+    border-radius: 5px 0 0 5px;
+
+}
+.linea-color2{
+    width: 33.33%;
+    background-color: rgb(218, 26, 243);
+}
+.linea-color3{
+    width: 33.33%;
+    background-color: #821dad;
+    border-radius: 0 5px 5px 0;
+}
+
 
 .info-album{
     display: flex;
-    flex-direction: column; 
+    justify-content: center;
+    height: 45%;
+    margin: 0;
+ 
+    
+    width: 100%;
+}
+.div-info{
+    width: 92%;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin: 0;
+    
+    flex-direction: column;
+    
+}
+.div-parrafo-artist{
+    display: flex;
+    width: 100%;
+    /* justify-content: center; */
+    height: 50%;
+    border-bottom: 1px solid #808080;
+    margin-bottom: 0.5rem;
+    
+}
+.div-parrafo-name{
+    
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
 }
 
-.info-album p{
-    margin: 2px 0;
-    color: white;
-}
 
-.info-album-name{
+.parrafo-name{
     font-size: 25px;
-    font-weight: 500;
+    font-weight: bold;
+    font-family: proxima-nova, sans-serif;
+font-style: normal;
+
+    margin: 0;
+   
+    color: black;
+    
 }
-.imagen-album{
-    width: 13rem;
-    height: auto;
-    border-radius: 7px;
+.parrafo-artist{
+ 
+   margin:0;
+   font-family: proxima-nova, sans-serif;
+   font-style: normal;
+   font-weight: 100;
+    color: #808080;
+    display: flex;
+    align-items: center;
+    
 }
 
-.img-album{
-    text-align: center;
-}
 
-h4{
-    width: 80%;
-    margin-top: 1rem;
-}
 
-hr{
-    width: 81%;
-    margin-bottom: 1rem;
-}
 
-.col-10{
-    width: 83%;
-}
 
-#todo{
+.album-puntaje{
+    height: 45%;
+    width: 100%;
+   
     display: flex;
     justify-content: center;
+}
+.contenedor-based{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.alineacion-circulo{
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+}
+.contenedor-based-circulo{
+    width: 92%;
+    height: 100%;
+ 
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-toda-info{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.circulo-puntaje-contenedor{
+    height: 100%;
+    width: 30%;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circulo-puntaje{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #AC01F8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(15, 15, 15, 0.5); 
+
+}
+.parrafo-circulo-puntaje{
+    margin: 0;
+    font-family: proxima-nova, sans-serif;
+    font-size: 2rem;
+    color: white;
+}
+.div-score{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    align-items: center;
+    margin: 0;
+}
+.div-based{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    
+    align-items: center;
+    margin: 0;
+
+}
+.parrafo-score{
+    margin-top: 1rem;
+    font-family: proxima-nova, sans-serif;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 1rem;
+    color: black;
+    line-height: 1.25rem;
+    
+
+
+}
+.parrafo-based{
+   
+    margin: 0;
+    font-family: proxima-nova, sans-serif;
+   font-style: normal;
+   font-weight: 100;
+   font-size: 1rem;
+   color: black;
+    
+   
+
 }
