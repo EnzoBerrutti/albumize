@@ -27,7 +27,8 @@ ul {
 h3 {
     color: white;
     margin-top: 8rem;
-    margin-left: 38rem;
+    margin-bottom: 8rem;
+    margin-left: 24rem;
 }
 
 hr{
@@ -67,3 +68,21 @@ select:hover{
     margin-top: 0.5rem;
     margin-left: 1rem;
 }
+
+p{
+    margin-left: 1rem;
+    font-size: large;
+    margin-top: 2rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+@keyframes colorChange {
+    0% { color: #ffffff; }
+    50% { color: #818181; }
+    100% { color: #ffffff; }
+  }
+  
+  .loading-message {
+    animation: colorChange 1.5s infinite;
+  }

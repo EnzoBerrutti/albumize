@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Review, User } from 'src/app/interfaces/interfaces';
-import { CommonVariablesService } from 'src/app/services/common-variables.service';
 import { ReviewsService } from 'src/app/services/reviews.service';
 import { ServicioUsersService } from 'src/app/services/servicio-users.service';
 
@@ -15,8 +14,10 @@ export class ProfileReviewsComponent {
 
   idUser = {} as number;
   user = {} as User;
-
   reviewsArray:Review[] = []
+  allReviewsRendered = false;
+  originalOrder: Review[] = [];
+  reversedOrder: Review[] = [];
 
   formulario:FormGroup = this.fb.group({
     selectedSort : 'opcion1'
@@ -33,12 +34,14 @@ export class ProfileReviewsComponent {
       this.user = await this.userAPI.getUserID(this.idUser);
 
       const allreviews = await this.reviewsDB.getReviews()
-      
 
       this.reviewsArray = await allreviews.filter((r:Review) => r.reviewer === this.user.username)
 
-      this.sortByMostRecent();
+      this.originalOrder = [...this.reviewsArray]
+      this.reversedOrder = [...this.reviewsArray.reverse()]
 
+      this.sortByMostRecent()
+      
   }
 
   onSortBy() {
@@ -57,9 +60,6 @@ export class ProfileReviewsComponent {
       case 'opcion4':
         this.sortFromLowToHigh();
         break;
-      default:
-        this.sortByMostRecent();
-        break;
     }
   }
 
@@ -72,23 +72,15 @@ export class ProfileReviewsComponent {
   }
 
   sortByMostRecent() {
-    this.reviewsArray.sort((a, b) => this.compareDates(b.date, a.date));
+    this.reviewsArray = [...this.reversedOrder];
   }
   
   sortByOldest() {
-    this.reviewsArray.sort((a, b) => this.compareDates(a.date, b.date));
+    this.reviewsArray = [...this.originalOrder];
   }
-  
-  private compareDates(date1: string, date2: string): number {
-    const parsedDate1 = this.parseDateString(date1);
-    const parsedDate2 = this.parseDateString(date2);
-  
-    return +parsedDate1 - +parsedDate2;
-  }
-  
-  private parseDateString(dateString: string): Date {
-    const [month, day, year] = dateString.split('-').map(Number);
-    return new Date(year, month - 1, day);
+
+  onLastReviewRendered(){
+    this.allReviewsRendered= true;
   }
 
 }

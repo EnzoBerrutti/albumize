@@ -3,11 +3,14 @@
         <h2 class="text-left">Your Reviews</h2>
         <p>In order to edit or delete a specific review, go to the album page by clicking on the album icon of the review</p>
         <hr>
-        <div class = 'sort'>
+        <div class = 'loading' *ngIf=!allReviewsRendered >
+            <p class = 'loading-message'>Loading your reviews...</p>
+        </div>
+        <div class = 'sort' *ngIf=allReviewsRendered >
         <label for="opciones" class="text">Sort by:</label>
             <form  [formGroup]="formulario">
                 <select (change)="onSortBy()" class="opciones" name="opciones" formControlName="selectedSort">
-                     <option selected value="opcion1">Most recent</option>
+                    <option value="opcion1">Most recent</option>
                     <option value="opcion2">Oldest</option>
                     <option value="opcion3">From highest to lowest</option>
                     <option value="opcion4">From lowest to highest</option>
@@ -16,13 +19,16 @@
         </div>
         <ng-container class="fade-in">
             <ul *ngIf="reviewsArray.length > 0">
-                <li *ngFor="let review of reviewsArray">
-                    <app-review-in-profile-page [review]="review"></app-review-in-profile-page>
-                </li>
-            </ul>            
+              <li *ngFor="let review of reviewsArray; let last = last">
+                <app-review-in-profile-page [review]="review"></app-review-in-profile-page>
+                <ng-container *ngIf="last">
+                    {{onLastReviewRendered()}}
+                  </ng-container>
+              </li>
+            </ul>
         </ng-container>
         <ng-container *ngIf="reviewsArray.length === 0" class="fade-in">
-            <h3>There are not reviews yet!</h3>
+            <h3>You have no reviews yet!</h3>
         </ng-container>    
     </div>
 </div>
