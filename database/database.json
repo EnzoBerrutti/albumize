@@ -89,57 +89,6 @@
       "id": 16
     },
     {
-      "albumUrl": "7AVLk5G6gJXtgqaUJDKyF2",
-      "date": "11-11-2023",
-      "punctuation": 4.2,
-      "review": "rtshhtwtrhwr",
-      "reviewer": "letosoni1",
-      "reviewerId": "1",
-      "favourite": "0",
-      "id": 107
-    },
-    {
-      "albumUrl": "6JJ0dHtZQWNZP2kDd7j4Dv",
-      "date": "11-11-2023",
-      "punctuation": 8.7,
-      "review": "Primera review modif",
-      "reviewer": "letosoni1",
-      "reviewerId": "1",
-      "id": 108,
-      "favourite": "0"
-    },
-    {
-      "albumUrl": "1AxMcdQRLguJqSZMxvRNdO",
-      "date": "11-12-2023",
-      "punctuation": 9.5,
-      "review": "review prueba\n",
-      "reviewer": "leotosoni35",
-      "reviewerId": "1",
-      "id": 109
-    },
-    {
-      "albumUrl": "7CPux4iLNEQ1KGVzmE9CKz",
-      "date": "11-12-2023",
-      "punctuation": 9,
-      "review": "Malsdhjasga",
-      "reviewer": "leotosoni35",
-      "reviewerId": "1",
-      "id": 110
-    },
-    {
-      "albumUrl": "2ODvWsOgouMbaA5xf0RkJe",
-      "date": "11-13-2023",
-      "punctuation": 9.7,
-      "review": "adfadfbdiswgvuwgw",
-      "reviewer": "leotosoni35",
-      "reviewerId": "1",
-      "id": 111,
-      "favourite": "10",
-      "overrated": "0",
-      "underrated": "5",
-      "worst": "9"
-    },
-    {
       "albumUrl": "1AxMcdQRLguJqSZMxvRNdO",
       "date": "11-13-2023",
       "punctuation": 1.9,
@@ -149,17 +98,30 @@
       "id": 112
     },
     {
-      "albumUrl": "0bCAjiUamIFqKJsekOYuRw",
+      "albumUrl": "7aDBFWp72Pz4NZEtVBANi9",
       "date": "11-13-2023",
       "punctuation": 10,
+      "review": "Best album in the world!!!",
+      "reviewer": "tutin",
+      "reviewerId": "23",
+      "favourite": "11",
+      "overrated": "0",
+      "underrated": "6",
+      "worst": "10",
+      "id": 113
+    },
+    {
+      "albumUrl": "0ETFjACtuP2ADo6LFhL6HN",
+      "date": "11-13-2023",
+      "punctuation": 9.5,
       "review": "",
       "reviewer": "lucas.ga97",
       "reviewerId": "23",
-      "favourite": "0",
-      "overrated": "3",
-      "underrated": "2",
-      "worst": "1",
-      "id": 113
+      "id": 114,
+      "favourite": "3",
+      "overrated": "6",
+      "underrated": "13",
+      "worst": "15"
     },
     {
       "albumUrl": "2ODvWsOgouMbaA5xf0RkJe",
@@ -171,7 +133,7 @@
       "id": 115,
       "favourite": "17",
       "overrated": "3",
-      "underrated": "11",
+      "underrated": "10",
       "worst": "9"
     },
     {
@@ -352,215 +314,106 @@
     },
     {
       "albumUrl": "5OZ44LaqZbpP3m9B3oT8br",
-      "date": "11-14-2023",
+      "date": "11-13-2023",
       "punctuation": 7.6,
       "review": "",
       "reviewer": "lucas.ga97",
       "reviewerId": "23",
-      "id": 130,
-      "favourite": "13",
+      "favourite": "4",
       "overrated": "1",
       "underrated": "4",
-      "worst": "7"
-    },
-    {
-      "albumUrl": "0ETFjACtuP2ADo6LFhL6HN",
-      "date": "11-14-2023",
-      "punctuation": 9.5,
-      "review": "",
-      "reviewer": "lucas.ga97",
-      "reviewerId": "23",
-      "id": 131,
-      "favourite": "3",
-      "overrated": "6",
-      "underrated": "13",
-      "worst": "11"
+      "worst": "7",
+      "id": 130
     }
   ],
   "users": [
     {
       "apellido": "Tosoni",
       "nombre": "Leonardo",
-      "username": "leotosoni35",
+      "username": "leotosoni31",
       "email": "leotosoni@hotmail.com",
       "password": "leonardo33",
       "id": 1
     },
     {
-      "apellido": "Vallejos",
-      "nombre": "Manuel",
-      "username": "manumanu",
-      "email": "vallejosmanuel@gmail.com",
-      "password": "manuvallejos23",
+      "nombre": "Susana",
+      "apellido": "Mansur",
+      "email": "susanamansur5@hotmail.com",
+      "username": "susimansur",
+      "password": "susi2023",
       "id": 2
     },
     {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "asdadsadada",
+      "nombre": "Cristian",
+      "apellido": "Toloza",
+      "email": "cristoloza@gmail.com",
+      "username": "cris23",
+      "password": "toloza_cris",
       "id": 3
     },
     {
-      "nombre": "Enzo",
-      "apellido": "Berrutti",
-      "email": "enzo.berrutti@gmail.com",
-      "username": "enzo",
-      "password": "asdadsadada",
+      "nombre": "Barbara",
+      "apellido": "Luro",
+      "email": "barbiluro@hotmail.com",
+      "username": "barbiboca",
+      "password": "abc123",
       "id": 4
     },
     {
-      "nombre": "Carlos",
-      "apellido": "Ajaccio",
-      "email": "carlosajaccio@gmail.com",
-      "username": "carlos",
-      "password": "elcarlos23",
+      "nombre": "Brenda",
+      "apellido": "Malgor",
+      "email": "bmalgor@gmail.com",
+      "username": "brenduchis",
+      "password": "malgor123",
       "id": 5
     },
     {
-      "nombre": "Carlos",
-      "apellido": "Ajaccio",
-      "email": "carlos@ajaccio.com",
-      "username": "carlitos",
-      "password": "elcarlos",
+      "nombre": "Javier",
+      "apellido": "Betucci",
+      "email": "elbetu@hotmail.com",
+      "username": "javi_betu",
+      "password": "javito19",
       "id": 6
     },
     {
-      "nombre": "Carlos",
-      "apellido": "Ajaccio",
-      "email": "carlos@ajaccio.coma",
-      "username": "carlitos",
-      "password": "elcarlos",
+      "nombre": "Andrea",
+      "apellido": "Moldavia",
+      "email": "andream@hotmail.com",
+      "username": "andre4578",
+      "password": "moldavia478",
       "id": 7
     },
     {
-      "nombre": "adf",
-      "apellido": "adf",
-      "email": "leotosoni@hotmail.coma",
-      "username": "adf",
-      "password": "adfaf",
+      "nombre": "Marcela",
+      "apellido": "Tauro",
+      "email": "latauro@gmail.com",
+      "username": "marce12",
+      "password": "latauro10",
       "id": 8
     },
     {
-      "nombre": "adf",
-      "apellido": "adf",
-      "email": "leotosoni@hotmail.com",
-      "username": "adf",
-      "password": "adf",
+      "nombre": "Diego",
+      "apellido": "Diaz",
+      "email": "batman@hotmail.com",
+      "username": "dieguito",
+      "password": "soybatman",
       "id": 9
     },
     {
-      "nombre": "adf",
-      "apellido": "adf",
-      "email": "leotosoni@hotmail.com",
-      "username": "adf",
-      "password": "adf",
+      "nombre": "Marianela",
+      "apellido": "Nuñez",
+      "email": "nelaballet@gmail.com",
+      "username": "nelapilates",
+      "password": "royalballet",
       "id": 10
     },
     {
-      "nombre": "adf",
-      "apellido": "adf",
-      "email": "leotosoni@hotmail.com",
-      "username": "manumanu",
-      "password": "adf",
+      "nombre": "Justin",
+      "apellido": "White",
+      "email": "justin.white.dancer@gmail.com",
+      "username": "tutin",
+      "password": "tutinblanco",
       "id": 11
-    },
-    {
-      "nombre": "adf",
-      "apellido": "adf",
-      "email": "leotosoni@hotmail.com",
-      "username": "manumanu",
-      "password": "adf",
-      "id": 12
-    },
-    {
-      "nombre": "adf",
-      "apellido": "adf",
-      "email": "leotosoni@hotmail.comdf",
-      "username": "manumanu",
-      "password": "adf",
-      "id": 13
-    },
-    {
-      "nombre": "adf",
-      "apellido": "adf",
-      "email": "leotosoni@hotmail.comdf",
-      "username": "manumanuf",
-      "password": "adf",
-      "id": 14
-    },
-    {
-      "nombre": "adf",
-      "apellido": "adf",
-      "email": "leotosoni@hotmail.comdf",
-      "username": "manumanuf",
-      "password": "adf",
-      "id": 15
-    },
-    {
-      "nombre": "adf",
-      "apellido": "adf",
-      "email": "leotosoni@hotmail.comdf",
-      "username": "manumanuf",
-      "password": "adf",
-      "id": 16
-    },
-    {
-      "nombre": "adf",
-      "apellido": "adf",
-      "email": "leotosoni@hotmail.comdf",
-      "username": "manumanuf",
-      "password": "adf",
-      "id": 17
-    },
-    {
-      "nombre": "adf",
-      "apellido": "adf",
-      "email": "leotosoni@hotmail.comdf",
-      "username": "manumanuf",
-      "password": "adf",
-      "id": 18
-    },
-    {
-      "nombre": "adf",
-      "apellido": "adf",
-      "email": "leotosoni@hotmail.comdf",
-      "username": "manumanuf",
-      "password": "adf",
-      "id": 19
-    },
-    {
-      "nombre": "afadf",
-      "apellido": "adfa",
-      "email": "leotosoni@hotmail.com",
-      "username": "manumanu",
-      "password": "sadf",
-      "id": 20
-    },
-    {
-      "nombre": "afadf",
-      "apellido": "adfa",
-      "email": "leotosoni@hotmail.com",
-      "username": "manumanu",
-      "password": "sadf",
-      "id": 21
-    },
-    {
-      "nombre": "Maria",
-      "apellido": "La del Barrio",
-      "email": "ladelbarrio@gmail.com",
-      "username": "marialdb",
-      "password": "maria",
-      "id": 22
-    },
-    {
-      "nombre": "Lucas",
-      "apellido": "Gauna Dasmi",
-      "email": "lucasgauna1997@gmail.com",
-      "username": "lucas.ga97",
-      "password": "lucasgauna97",
-      "id": 23
     }
   ]
 }

@@ -1,3 +1,4 @@
+import { identifierName } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -11,6 +12,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginFormComponent {
 
   isHidden:boolean = false;
+  passwordVisible: boolean = false;
   constructor(private fb:FormBuilder,
               private auth: AuthService,
               private router:Router){}
@@ -19,6 +21,11 @@ export class LoginFormComponent {
     email: ['', Validators.required, Validators.email],
     password: ['', Validators.required]
   })
+
+  togglePasswordVisibility() {
+    this.passwordVisible = !this.passwordVisible;
+
+  }
 
   onLogin(){
     this.isHidden = false
@@ -39,5 +46,8 @@ export class LoginFormComponent {
     else{
       this.isHidden = true
     }
+
   }
+
+
 }

@@ -3,7 +3,20 @@
     <hr>
     <div class="col-10 offset-1">
         <div class="albums">
-            <div *ngFor="let album of albums;">
+            <div *ngFor="let album of albums1;">
+                <a class="album-link" routerLink="/album/{{album.id}}">
+                    <div class="album-content">
+                        <div class="img-album">
+                            <img class="imagen-album" [src]="album.images[1].url" alt="">
+                        </div>
+                        <div class="info-album">
+                            <p class="info-album-name">{{album.name}}</p>
+                            <p class="info-album-artist">{{album.release_date}} • {{album.artists[0].name}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div *ngFor="let album of albums2;">
                 <a class="album-link" routerLink="/album/{{album.id}}">
                     <div class="album-content">
                         <div class="img-album">

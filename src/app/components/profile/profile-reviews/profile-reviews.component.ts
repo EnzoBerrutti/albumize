@@ -35,7 +35,10 @@ export class ProfileReviewsComponent {
 
       const allreviews = await this.reviewsDB.getReviews()
 
-      this.reviewsArray = await allreviews.filter((r:Review) => r.reviewer === this.user.username)
+      console.log(allreviews)
+
+      this.reviewsArray = await allreviews.filter((r:Review) => +r.reviewerId === this.user.id)
+      console.log(this.reviewsArray)
 
       this.originalOrder = [...this.reviewsArray]
       this.reversedOrder = [...this.reviewsArray.reverse()]

@@ -3,6 +3,7 @@ import { ServicioUsersService } from 'src/app/services/servicio-users.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { User } from 'src/app/interfaces/interfaces';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 
 
@@ -15,18 +16,21 @@ export class RegisterFormComponent implements OnInit {
 
   isValidEmail: boolean = false;
   isValidUserName: boolean = false;
+  passwordVisible: boolean = false;
+
   user = {} as User;
   users: User[] = []
 
-  constructor(private userAPI: ServicioUsersService, 
-    private formBuilder: FormBuilder, 
-    private router: Router) { }
+  constructor(private userAPI: ServicioUsersService,
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private auth: AuthService) { }
 
-   async ngOnInit() {
-      this.users = await this.userAPI.getUsers()
-    }
-    
-  
+  async ngOnInit() {
+    this.users = await this.userAPI.getUsers()
+  }
+
+
   formulario: FormGroup = this.formBuilder.group({
     apellido: ['', [Validators.required, Validators.minLength(3)]],
     nombre: ['', [Validators.required, Validators.minLength(3)]],
@@ -34,6 +38,10 @@ export class RegisterFormComponent implements OnInit {
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required]]
   })
+
+  togglePasswordVisibility() {
+    this.passwordVisible = !this.passwordVisible;
+  }
 
   async newUser() {
 
@@ -50,7 +58,15 @@ export class RegisterFormComponent implements OnInit {
 
     this.userAPI.postUser(this.user);
 
-    this.router.navigate(['home']) ;
+    this.auth.verificarUserAndPass(
+      this.formulario.controls['email'].value,
+      this.formulario.controls['password'].value
+    )
+
+    if(localStorage['token']){
+      window.location.reload()
+/*       this.router.navigate(['home'])
+ */    }
   }
 
   validar(field: string, error: string) {
@@ -59,7 +75,7 @@ export class RegisterFormComponent implements OnInit {
       this.formulario.controls[field].touched;
   }
 
-   validarEmail() {
+  validarEmail() {
     this.isValidEmail = false
     this.users.forEach((u: User) => {
       if (u.email === this.formulario.controls['email'].value) {
@@ -69,7 +85,7 @@ export class RegisterFormComponent implements OnInit {
     });
   }
 
-  async validarUserName() {
+  validarUserName() {
     this.isValidUserName = false
     this.users.forEach((u: User) => {
       if (u.username === this.formulario.controls['userName'].value) {

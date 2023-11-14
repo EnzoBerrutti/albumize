@@ -47,6 +47,19 @@ export class ServicioMusicaService {
     }
   }
 
+  async getAlbumsWithLimitOffset(querySearch:string, limit:string, offset:string){
+    try {
+      const token = await this.getTokenSpotify()
+      const request = await fetch(`${this.urlSpotifyRequests}/search?q=${querySearch}&type=album&limit=${limit}&offset=${offset}`, {
+        headers : {"Authorization" : "Bearer  " + token }
+      })
+      const response = request.json()
+      return response
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   async getAlbumByID(id:string){
     try {
       const token = await this.getTokenSpotify()
