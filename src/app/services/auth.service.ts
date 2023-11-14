@@ -33,7 +33,6 @@ export class AuthService {
    
           localStorage.setItem('token', u.id.toString())
           
-
         }
       });
     });

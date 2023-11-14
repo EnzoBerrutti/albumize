@@ -1,4 +1,3 @@
-import { identifierName } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -40,8 +39,5 @@ export class LoginFormComponent {
     else{
       this.isHidden = true
     }
-
   }
-
-
 }

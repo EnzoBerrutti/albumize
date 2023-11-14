@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { async } from '@angular/core/testing';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, Params } from '@angular/router';
@@ -57,22 +56,16 @@ export class ProfileMainComponent implements OnInit {
       this.formulario.patchValue({userName : this.user.username}) 
     }
   }
-  
-
 
   modificarUser() {
     this.isReadOnly = !this.isReadOnly
   }
 
   capturarFile(event: any) {
-   
-
       const archivo = event.target.files[0];
       this.extraerbase64(archivo).then((img:any)  => 
       this.preview = img.base)
       this.imagenCapturada.push(archivo); 
-  
-
   }
 
   extraerbase64 = async ($event: any) => new Promise((resolve, reject) => {
@@ -110,6 +103,7 @@ export class ProfileMainComponent implements OnInit {
       
     }
   }
+
   async guardarCambios() {
 
     if (this.formulario.invalid) {
@@ -121,14 +115,7 @@ export class ProfileMainComponent implements OnInit {
     if(this.isValidUserName){
       return;
     }
-    /*   const user: User = {
-      nombre:this.formulario.controls['nombre'].value,
-      apellido: this.formulario.controls['apellido'].value,
-      email: this.formulario.controls['email'].value,
-      username: this.formulario.controls['userName'].value,
-      password: this.formulario.controls['password'].value,
-      id : -1
-    } */
+    
     this.user.nombre = this.formulario.controls['nombre'].touched ? this.formulario.controls['nombre'].value : this.user.nombre;
     this.user.apellido = this.formulario.controls['apellido'].touched ? this.formulario.controls['apellido'].value : this.user.apellido;
     this.user.email = this.formulario.controls['email'].touched ? this.formulario.controls['email'].value : this.user.email;
@@ -138,7 +125,6 @@ export class ProfileMainComponent implements OnInit {
     this.userAPI.putUser(this.user);
     this.isReadOnly = !this.isReadOnly
 
-
     const arrayReviews :Review[] = await this.reviewDB.getReviews()
     arrayReviews.forEach((r:Review)=>{
       if(r.reviewerId === this.user.id){
@@ -147,7 +133,6 @@ export class ProfileMainComponent implements OnInit {
       }
     })
   }
-
 
   validar(field: string, error: string) {
     return this.formulario.controls[field].getError(error)
@@ -161,10 +146,7 @@ export class ProfileMainComponent implements OnInit {
     users.forEach((u:User) => {
       if(u.id != localStorage['token'] && u.username === this.formulario.controls['userName'].value){
         this.isValidUserName = true
-
       } 
-      
     });
   }
-
 }

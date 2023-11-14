@@ -1,4 +1,4 @@
-import { Component,Input, OnInit } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Review, Track, TracksResponse, Album } from 'src/app/interfaces/interfaces';
 import { ServicioMusicaService } from 'src/app/services/servicio-musica.service';
@@ -16,7 +16,10 @@ export class ReviewInAlbumPageComponent {
   albumImg?:string;
 
 
-  constructor(private api:ServicioMusicaService, private ruta:ActivatedRoute){}
+  constructor(
+    private api:ServicioMusicaService, 
+    private ruta:ActivatedRoute
+  ){}
 
   async ngOnInit() {
     this.ruta.params.subscribe(params => {

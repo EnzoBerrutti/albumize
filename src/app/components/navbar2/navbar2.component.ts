@@ -38,13 +38,6 @@ export class Navbar2Component implements OnInit{
     this.router.navigate(['home'])
   }
 
-
-/*   onLogout(){
-    this.auth.logout();
-    this.router.navigate(['home'])
-    window.location.reload()
-  } */
-
   onLogout() {
     // Navega a la ruta "about"
     this.auth.logout();

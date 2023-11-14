@@ -40,8 +40,6 @@ export class NewReleasesComponent implements OnInit {
     await this.getAlbumYear(this.new_releases2)
     await this.getDottedName(this.new_releases2)
 
-
-
   }
 
   getAlbumYear(array: Album[]) {

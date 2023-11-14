@@ -1,36 +1,38 @@
 <div class="row border border-secondary contenedor profile-user">
-    <div class="col">
-        <div>
-          <h2>Your account </h2>
-            <hr class="col-11">
-            <form  [formGroup]="formulario" (ngSubmit)="guardarCambios()">
-              <div class="col-8 mt-2 align-items-center">
-                <label for="nombre" class="col-form-label">First Name</label>
-                <input formControlName="nombre" type="text" id="nombre" [readonly] = 'isReadOnly' [ngClass]="{'form-control': true, 'bg-dark': isReadOnly, 'text-white': isReadOnly}" aria-describedby="passwordHelpInline">
-              </div>
-              
-              <div class="col-8 mt-4 align-items-center">
-                <label for="apellido" class="col-form-label">Last Name</label>
-                <input formControlName="apellido" type="text" id="apellido" [readonly] = 'isReadOnly' [value]="user.apellido" [ngClass]="{'form-control': true, 'bg-dark': isReadOnly, 'text-white': isReadOnly}" aria-describedby="passwordHelpInline">
-              </div>
-              
-              <div class="col-8 mt-4 align-items-center">
-                  <label for="email" class="col-form-label">Email</label>
-                  <input formControlName="email" type="email" id="email" [readonly] = 'isReadOnly' [value]="user.email" [ngClass]="{'form-control': true, 'bg-dark': isReadOnly, 'text-white': isReadOnly}" aria-describedby="passwordHelpInline">
-              </div>
-              
-              <div class="col-8 mt-4 align-items-center">
-                <label for="username" class="col-form-label">Username</label>
-                <input formControlName="userName" type="text" id="username" [readonly] = 'isReadOnly' [value]="user.username" [ngClass]="{'form-control': true, 'bg-dark': isReadOnly, 'text-white': isReadOnly}" aria-describedby="passwordHelpInline">
-              </div>
+  <div class="col">
+    <div>
+      <h2>Your account </h2>
+      <hr class="col-11">
+      <form  [formGroup]="formulario" (ngSubmit)="guardarCambios()">
 
-              <div *ngIf="isValidUserName" class="text-light" >
-              User name already exist</div>
-              
-              <button *ngIf="isReadOnly" class="mt-4 btn btn-outline-warning" (click)="modificarUser()">Edit Profile</button>
-              <button type="submit" class="mt-4 btn btn-outline-warning" *ngIf="!isReadOnly">Save Changes</button>
-              
-            </form>
-          </div>
+        <div class="col-8 mt-2 align-items-center">
+          <label for="nombre" class="col-form-label">First Name</label>
+          <input formControlName="nombre" type="text" id="nombre" [readonly] = 'isReadOnly' [ngClass]="{'form-control': true, 'bg-dark': isReadOnly, 'text-white': isReadOnly}" aria-describedby="passwordHelpInline">
         </div>
-      </div>
+              
+        <div class="col-8 mt-4 align-items-center">
+          <label for="apellido" class="col-form-label">Last Name</label>
+          <input formControlName="apellido" type="text" id="apellido" [readonly] = 'isReadOnly' [value]="user.apellido" [ngClass]="{'form-control': true, 'bg-dark': isReadOnly, 'text-white': isReadOnly}" aria-describedby="passwordHelpInline">
+        </div>
+              
+        <div class="col-8 mt-4 align-items-center">
+          <label for="email" class="col-form-label">Email</label>
+          <input formControlName="email" type="email" id="email" [readonly] = 'isReadOnly' [value]="user.email" [ngClass]="{'form-control': true, 'bg-dark': isReadOnly, 'text-white': isReadOnly}" aria-describedby="passwordHelpInline">
+        </div>
+              
+        <div class="col-8 mt-4 align-items-center">
+          <label for="username" class="col-form-label">Username</label>
+          <input formControlName="userName" type="text" id="username" [readonly] = 'isReadOnly' [value]="user.username" [ngClass]="{'form-control': true, 'bg-dark': isReadOnly, 'text-white': isReadOnly}" aria-describedby="passwordHelpInline">
+        </div>
+
+        <div *ngIf="isValidUserName" class="text-light" >
+              User name already exist
+        </div>
+
+        <button *ngIf="isReadOnly" class="mt-4 btn btn-outline-warning" (click)="modificarUser()">Edit Profile</button>
+        <button type="submit" class="mt-4 btn btn-outline-warning" *ngIf="!isReadOnly">Save Changes</button>
+              
+      </form>
+    </div>
+  </div>
+</div>

@@ -13,7 +13,6 @@ export class AlbumModifyReviewComponent {
 
   constructor(
     private reviewsService: ReviewsService,
-    private users: ServicioUsersService,
     private route:ActivatedRoute
   ) {}
 

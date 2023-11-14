@@ -81,8 +81,8 @@ button:hover{
   width: 3rem;
   height: 3rem;
   display: flex;
-  align-items: center; /* Centra verticalmente el contenido */
-  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; 
+  justify-content: center;
   padding: 0;
   border: 2px solid rgb(62, 62, 62);
   border-radius: 50%;

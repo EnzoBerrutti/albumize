@@ -1,11 +1,3 @@
-<!-- <div class="col-4 mb-3">
-    <form (ngSubmit)="getAlbums()" [formGroup]="formulario" action="">
-        <label for="nombre" class="form-label">Buscar Nombre de Artista</label>
-        <input type="text" class="form-control" id="nombre" formControlName="nombre">
-        <button type="submit" class="btn btn-primary">Buscar</button>
-    </form>
-</div>
- -->
 <div class="row mt-3">
     <h5 class="titulo">Showing results for: "{{querySearch}}"</h5>
     <hr>
@@ -27,26 +19,3 @@
         </div>
     </div>
 </div>
-
-
-<!-- 
-<div style="background-color: rgb(25, 25, 25);" class="row">
-    <h1 class="text-center">New Releases</h1>
-    <div class="col-10 offset-1">
-        <div class="albums">
-            <div *ngFor="let album of new_releases;">
-                <a class="album-link" routerLink="/album/{{album.id}}">
-                    <div class="album-content">
-                        <div class="img-album">
-                            <img class="imagen-album" [src]="album.images[1].url" alt="">
-                        </div>
-                        <div class="info-album">
-                            <p class="info-album-name">{{album.name}}</p>
-                            <p class="info-album-artist">{{album.release_date}} • {{album.artists[0].name}}</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</div> -->

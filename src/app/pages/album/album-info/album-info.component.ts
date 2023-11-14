@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { fadeInOut } from 'src/app/animations/animations';
-import { Review, User } from 'src/app/interfaces/interfaces';
+import { Review } from 'src/app/interfaces/interfaces';
 import { ReviewsService } from 'src/app/services/reviews.service';
-import { AuthService } from 'src/app/services/auth.service';
 import { ServicioUsersService } from 'src/app/services/servicio-users.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -16,7 +15,6 @@ export class AlbumInfoComponent implements OnInit {
 
   constructor(
     private reviewsService: ReviewsService,
-    private users: ServicioUsersService,
     private route:ActivatedRoute
   ) {}
 

@@ -1,51 +1,48 @@
 .share-btn-container {
-    display: flex;
-    gap: 2rem;
-    padding: 0;
-  }
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+}
   
-  .share-btn-container a i {
-    font-size: 35px;
-  }
+.share-btn-container a i {
+  font-size: 35px;
+}
   
-  .share-btn-container a {
-    border-radius: 20%;
-    padding: 0.5rem;
-    margin: 12px 0;
-    transition: 500ms;
-  }
+.share-btn-container a {
+  border-radius: 20%;
+  padding: 0.5rem;
+  margin: 12px 0;
+  transition: 500ms;
+}
   
-  .share-btn-container a:hover {
-    transform: scale(1.2);
-  }
+.share-btn-container a:hover {
+  transform: scale(1.2);
+}
   
-  .facebook-btn {
-    background-color: #3b5998;
+.facebook-btn {
+  background-color: #3b5998;
+}
+  
+.twitter-btn {
+  background-color: #1da1f2;
+}
 
-  }
+.instagram-btn{
+  background-color: #f21d1d;
+}
   
-  .twitter-btn {
-    background-color: #1da1f2;
-  }
+.linkedin-btn {
+  background-color: #0077b5;
+}
 
+.pinterest-btn {
+  background-color: #bd081c;
+}  
 
-  .instagram-btn{
-    background-color: #f21d1d;
-  }
-  
-  .linkedin-btn {
-    background-color: #0077b5;
-  }
-  
-  .pinterest-btn {
-    background-color: #bd081c;
-  }
-  
+.whatsapp-btn {
+  background-color: #15c81e;
+}
 
-  .whatsapp-btn {
-    background-color: #15c81e;
-  }
-
-  i{
-    color: white;
-  }
+i{
+  color: white;
+}

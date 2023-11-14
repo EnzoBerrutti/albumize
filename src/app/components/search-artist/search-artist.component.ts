@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Album } from 'src/app/interfaces/interfaces';
 import { ServicioMusicaService } from 'src/app/services/servicio-musica.service';
@@ -18,9 +17,10 @@ export class SearchArtistComponent implements OnInit {
 
   querySearch: string = ''
 
-  constructor(private api: ServicioMusicaService,
-    private fb: FormBuilder, private activatedRoute: ActivatedRoute) {
-     }
+  constructor(
+    private api: ServicioMusicaService,
+    private activatedRoute: ActivatedRoute
+    ) {}
 
   async ngOnInit() {
       this.activatedRoute.params.subscribe((params: Params) => {
@@ -50,7 +50,6 @@ export class SearchArtistComponent implements OnInit {
         item.name = item.name.slice(0, 12) + '...'
       }
     })
-
   }
   
 }

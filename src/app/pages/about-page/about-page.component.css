@@ -1,27 +1,20 @@
 .full-width-div {
     width: 100vw; 
-
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .todo{
     width: 100%;
 }
+
 .contenedor{
-   
-    /* width: 99rem;
-   height: 50rem; */
-   width: 100%;
-   height: 100vh;
- 
-
-    
-    /* background-color: #AC01F8; */
-
+    width: 100%;
+    height: 100vh;
     display: flex;
-    
 }
+
 .parrafo-cont{
     width: 50%;
     display: flex;
@@ -29,28 +22,32 @@
     justify-content: center;
     align-items: center;
 }
+
 .cont-parrafo{
     display: flex;
     justify-content: center;
     height: 20%;
 }
+
 h1{
     font-family: ivypresto-display, serif;
     font-style: normal;
     font-weight: 100;
     font-size: 4rem;
 }
+
 h2{
     font-family: ivypresto-display, serif;
     font-style: normal;
     font-weight: 100;
     font-size:3rem;
 }
+
 .texto-titulo{
     width: 80%;
-    text-align: center;
-    
+    text-align: center;  
 }
+
 .foto-cont{
     display: flex;
     justify-content: center;
@@ -62,12 +59,11 @@ h2{
 .foto{
     background-image: url("src\assets\images\foto editada.jpg");
     width: 100%;
-    height: 100%;
-    
+    height: 100%; 
     background-size: cover;
     background-position: center;
-   
 }
+
 .foto2{
     background-image: url(src\assets\images\albumes-fondo2.jpg);
     width: 100%;
@@ -82,15 +78,14 @@ h2{
     align-items: center;
     width: 80%;
     height: 20rem;
-    
 }
+
 .grupo{
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 80%;
     height: 80%;
-    
 }
 
 .titulo{
@@ -99,8 +94,8 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
+
 .info{
     font-size: 3rem;
     font-family: ivypresto-display, serif;
@@ -108,11 +103,12 @@ h2{
     font-weight: 700;
     display: flex;
     justify-content: center;
-    
 }
+
 .titulo-info{
     width: 25rem;
 }
+
 p{
     margin: 0;
 }
@@ -122,24 +118,25 @@ p{
     font-style: normal;
     font-weight: 700;
 }
+
 .fa-record-vinyl{
     font-size: 3rem;
 }
+
 .desc-logo{
- 
     font-family: 'Roboto';
     font-style: normal;
     display: flex;
     justify-content: center;
     text-transform: uppercase;
 }
+
 .circulo{
     background-color: #AC01F8;
     height: 4rem;
     width: 4rem;
     border-radius: 50%;
     border:1px solid grey;
-
 }
 
 .barra {
@@ -148,19 +145,20 @@ p{
     width: 100%;
     background-color: black;
     height: 3rem;
-
-  }
+}
   
-  .palabra {
+.palabra {
     display: inline-block;
     padding: 0.75rem;
     margin-right: 1rem;
     animation: moverPalabra 10s linear infinite;
     font-family: 'Roboto';
-  }
-  .fa-check{
+}
+
+.fa-check{
     color: #AC01F8;
-  }
+}
+
   @keyframes moverPalabra {
     from {
       transform: translateX(100%);
@@ -169,30 +167,28 @@ p{
       transform: translateX(-100%);
     }
   }
-  .seccion-puntaje
-  {
+
+.seccion-puntaje{
     width: 100%;
-    
-  }
-  .container-puntaje{
+}
+
+.container-puntaje{
     width: 100%;
     height: 50rem;
-    
     display: flex;
     justify-content: center;
     background-color: #f2f2f2;
-  }
+}
+
 .puntajes{
     border: 0;
     height: 100%;
     width: 80%;
     display: flex;
-    flex-direction: column;
-    
-    background-color: #f2f2f2;
-
-    
+    flex-direction: column; 
+    background-color: #f2f2f2;  
 }
+
 .circulo-puntaje1{
     background-color: #ff6874;
     height: 4.5rem;
@@ -203,10 +199,8 @@ p{
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 10px rgba(15, 15, 15, 0.5); 
-
-    
-
 }
+
 .circulo-puntaje2{
     background-color:#ffbd3f;
     height: 4.5rem;
@@ -218,8 +212,8 @@ p{
     align-items: center;
     box-shadow: 0 4px 10px rgba(15, 15, 15, 0.5); 
     color: white;
-
 }
+
 .circulo-puntaje3{
     background-color:#00ce7a;
     height: 4.5rem;
@@ -231,8 +225,8 @@ p{
     align-items: center;
     box-shadow: 0 4px 10px rgba(15, 15, 15, 0.5); 
     color: white;
-
 }
+
 .circulo-puntaje4{
     background-color: #AC01F8;
     height: 4.5rem;
@@ -244,19 +238,18 @@ p{
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 10px rgba(15, 15, 15, 0.5); 
-    
-
 }
+
 .cont-titulo-puntaje{
     width: 100%;
     height: 3rem;
-
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #f2f2f2;
     color: black;
 }
+
 .titulo-puntaje{
     font-family: proxima-nova, sans-serif;
     font-style: normal;
@@ -266,6 +259,7 @@ p{
     justify-content: center;
     align-items: center;
 }
+
 .div-circulo{
     width: 100%;
     height: 6rem;
@@ -273,10 +267,10 @@ p{
     justify-content: center;
     background-color:#f2f2f2 ;
 }
+
 .container-circulo{
     width: 50%;
     height:6rem;
-
     background-color:#f2f2f2 ;
     border-radius: 10px;
     display: flex;
@@ -284,13 +278,14 @@ p{
     margin: 0;
     align-items: center;
 }
+
 .numero{
     font-weight: 700;
     font-size: 2.25rem;
     font-family: proxima-nova, sans-serif;
     font-style: normal;
-    
 }
+
 .desc-puntaje{
     width: 100%;
     height: 5rem;
@@ -305,12 +300,11 @@ p{
     width: 100%;
     height: 80rem;
     border: 1px solid white;
-
 }
+
 .seccion-cuadrado{
     width: 100%;
     height: 30rem;
-    
     border: 0;
     padding: 0;
     display: flex;
@@ -319,7 +313,6 @@ p{
 .cuadrado-puntajes{
     width: 50%;
     height: 100%;
-   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -332,6 +325,7 @@ p{
     border-radius: 10px;
     display: flex;
 }
+
 .cuadradito1{
     background-color: #AC01F8;
     width: 100%;
@@ -340,70 +334,65 @@ p{
     justify-content: center;
     align-items: center;
 }
+
 .cuadradito2{
     background-color: #00ce7a;
     width: 100%;
     height: 100%;
-   color: white;
+    color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center; 
 }
+
 .cuadradito3{
     background-color: #ffbd3f;
     width: 100%;
     height: 100%;
-    color:white;
-   
+    color:white; 
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;  
 }
+
 .cuadradito4{
     background-color: #ff6874;
     width: 100%;
-    height: 100%;
-    
+    height: 100%; 
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center; 
 }
 
 .desc-cuadrado{
     width: 50%;
     height: 100%;
-   
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
 .cuadrado-descripcion{
     width: 100%;
-    height: 60%;
-    
+    height: 60%;  
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
 .punto-1{
     display: flex;
-    
     width: 100%;
     margin-bottom: 3.5rem;
-   
 }
+
 .punto-2{
     display: flex;
-    
     width: 100%;
-    
-   
 }
+
 .numero-1{
     width: 3rem;
     height: 3rem;
@@ -417,18 +406,19 @@ p{
     justify-content: center;
     align-items: center;
     margin-right: 2rem;
-
 }
+
 .texto{
     width: 70%;
     color: black;
     font-family: proxima-nova, sans-serif;
     font-weight: 100;
-
 }
+
 .titulo-how{
     width: 100%;
 }
+
 .parrafo-how{
     width: 100%;
     font-family: proxima-nova, sans-serif;
@@ -437,11 +427,10 @@ p{
     font-style: normal;
     color: black;
 }
-.container-titulohow{
-    width: 100%;
-    
-}
 
+.container-titulohow{
+    width: 100%; 
+}
 
 .info-pag{
     width: 100%;
@@ -449,39 +438,31 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    /* background-color: #AC01F8; */
-    
- }
+    flex-direction: column; 
+}
 .seccion-joinus{
     width: 100%;
     height: 11rem;
     display: flex;
-   
-
     flex-direction: column;
-
-
 }
+
 .container-texto{
     width: 100%;
- 
     height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-
-
 }
+
 .texto-joinus{
     width: 30%;
     display: flex;
     justify-content: center;
     font-family: 'Roboto';
     font-size: 1.5rem;
-   
-
 }
+
 .boton-joinus{
     width: 16rem;
     background-color: #AC01F8;
@@ -491,13 +472,11 @@ p{
     font-family: 'Roboto';
     font-size: 1.2rem;
     color: white;
-
-
 }
+
 .container-boton{
     width: 100%;
     height: 4rem;
-
     display: flex;
     justify-content: center;
     align-items: center;

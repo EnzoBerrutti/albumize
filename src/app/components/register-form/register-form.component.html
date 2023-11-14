@@ -2,21 +2,22 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
+
             <div class="logo-header">
                 <img src="../../../../favicon.ico" alt="Mi Imagen" id="logo">
                 <h1 class="modal-title fs-5" id="albumize-register">albumize</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
             </div>
                 
-                <div id="sign-in">
-                    <button type="button" class="btn btn-sign-in" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        Sign In
-                      </button>
-                      <button type="button" class="btn btn-register">
-                        Register
-                      </button>
-                </div>
+            <div id="sign-in">
+                <button type="button" class="btn btn-sign-in" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Sign In
+                </button>
+                <button type="button" class="btn btn-register">
+                     Register
+                </button>
+            </div>
+
         </div>
         <div class="modal-body">
             <form class="container-form" [formGroup]="formulario" (ngSubmit)="newUser()">
@@ -33,9 +34,9 @@
                     <div class="mb-3 text-warning" *ngIf="validar('nombre', 'minlength')">
                         <p class="mensaje-alerta">First Name should have at least three characters</p> 
                     </div>
-                  </div>
+                </div>
 
-                  <div class="form-group col-md-6">
+                <div class="form-group col-md-6">
                     <div>
                         <label for="inputApellido" class="label-title">Last Name</label>
                     </div>
@@ -48,64 +49,60 @@
                     <div class="mb-3 text-warning" *ngIf="validar('apellido', 'minlength')">
                         <p class="mensaje-alerta">Last Name should have at least three characters</p>
                     </div>
-                  </div>
-                    <div class="form-group col-md-6">
-                        <div>
-                            <label for="inputEmail" class="label-title">E-mail</label>
-                        </div>
-                        <div>
-                            <input type="email" (change)="validarEmail()" class="form-control" id="inputEmail" placeholder="Write your e-mail" formControlName="email">
-                        </div>
-                        <div class="mb-3 text-warning" *ngIf="validar('email', 'email')">
-                            <p class="mensaje-alerta">Enter a valid e-mail address. Ex.: my_email@gmail.com</p>
-                        </div>
-                        <div class="mb-3 text-warning" *ngIf="validar('email', 'required')">
-                            <p class="mensaje-alerta">You must enter your e-mail</p>
-                        </div>
-                        <div class="mb-3 text-warning" *ngIf="isValidEmail">
-                            <p class="mensaje-alerta">E-mail already exists</p>
-                        </div>
-                        
+                </div>
+
+                <div class="form-group col-md-6">
+                    <div>
+                        <label for="inputEmail" class="label-title">E-mail</label>
+                     </div>
+                    <div>
+                        <input type="email" (change)="validarEmail()" class="form-control" id="inputEmail" placeholder="Write your e-mail" formControlName="email">
                     </div>
-                    <div class="form-group col-md-6">
-                        <div>
-                            <label for="inputUser" class="label-title">Username</label>
-                        </div>
-                       <div>
+                    <div class="mb-3 text-warning" *ngIf="validar('email', 'email')">
+                        <p class="mensaje-alerta">Enter a valid e-mail address. Ex.: my_email@gmail.com</p>
+                    </div>
+                    <div class="mb-3 text-warning" *ngIf="validar('email', 'required')">
+                        <p class="mensaje-alerta">You must enter your e-mail</p>
+                    </div>
+                    <div class="mb-3 text-warning" *ngIf="isValidEmail">
+                        <p class="mensaje-alerta">E-mail already exists</p>
+                    </div>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <div>
+                        <label for="inputUser" class="label-title">Username</label>
+                    </div>
+                    <div>
                         <input (change)="validarUserName()" type="text" class="form-control" id="inputUser" placeholder="Create a username" formControlName="userName">
-                       </div>
-                       <div class="mb-3 text-warning" *ngIf="validar('userName', 'required')">
+                    </div>
+                    <div class="mb-3 text-warning" *ngIf="validar('userName', 'required')">
                         <p class="mensaje-alerta">You must enter a username</p>
                     </div>
                     <div class="mb-3 text-warning" *ngIf="isValidUserName">
                         <p class="mensaje-alerta">User name already exists</p>
-                    </div>
-                     
-                    </div>
+                    </div>  
+                </div>
                     
-                    <div class="form-group col-md-6">
-                        <div>
-                            <label for="inputPW" class="label-title">Password</label>
-                        </div>
-                        <div>
-                            <input type="password" class="form-control" id="inputPW" placeholder="Create a password" formControlName="password">
-                        </div>
-                        <div class="mb-3 text-warning" *ngIf="validar('password', 'required')">
-                            <p class="mensaje-alerta">You must enter a password</p>
-                        </div>
-                        
-                        
+                <div class="form-group col-md-6">
+                    <div>
+                        <label for="inputPW" class="label-title">Password</label>
                     </div>
-                    
-                
+                    <div>
+                        <input type="password" class="form-control" id="inputPW" placeholder="Create a password" formControlName="password">
+                    </div>
+                    <div class="mb-3 text-warning" *ngIf="validar('password', 'required')">
+                        <p class="mensaje-alerta">You must enter a password</p>
+                    </div>     
+                </div> 
                 
                 <button type="submit" class="btn btn-primary" id="btn-sign" data-bs-dismiss="modal" aria-label="Close" [disabled]="formulario.invalid || isValidEmail || isValidUserName" >Register</button>
+                
                 <div class="mb-3 text-warning" *ngIf="formulario.invalid && formulario.touched">
                     <p class="mensaje-alerta">You must complete all the fields to register</p>
-                  </div>
-              </form>
+                </div>
+            </form>
         </div>
-        
       </div>
     </div>
-  </div>
+</div>

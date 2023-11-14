@@ -42,16 +42,6 @@ export class RegisterFormComponent implements OnInit {
       return;
     }
 
-
-    /*   const user: User = {
-        nombre:this.formulario.controls['nombre'].value,
-        apellido: this.formulario.controls['apellido'].value,
-        email: this.formulario.controls['email'].value,
-        username: this.formulario.controls['userName'].value,
-        password: this.formulario.controls['password'].value,
-        id : -1
-      } */
-
     this.user.nombre = this.formulario.controls['nombre'].value;
     this.user.apellido = this.formulario.controls['apellido'].value;
     this.user.email = this.formulario.controls['email'].value;
@@ -59,9 +49,8 @@ export class RegisterFormComponent implements OnInit {
     this.user.password = this.formulario.controls['password'].value;
 
     this.userAPI.postUser(this.user);
-   
 
-     this.router.navigate(['home']) ;
+    this.router.navigate(['home']) ;
   }
 
   validar(field: string, error: string) {
@@ -89,5 +78,4 @@ export class RegisterFormComponent implements OnInit {
       }
     });
   }
-
 }

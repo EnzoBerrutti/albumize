@@ -1,5 +1,5 @@
-import { Component, Input, SimpleChanges } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Component, Input} from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Album, Review, Track, TracksResponse } from 'src/app/interfaces/interfaces';
 import { ReviewsService } from 'src/app/services/reviews.service';

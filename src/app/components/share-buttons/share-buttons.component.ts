@@ -19,9 +19,5 @@ export class ShareButtonsComponent {
   pinterest = `https://pinterest.com/pin/create/bookmarklet/?media=${this.img}&url=${this.url}&is_video=${false}&description=${this.title}`
   linkedin = `https://www.linkedin.com/shareArticle?url=${this.url}&title=${this.title}`
   instagram = ``
-    
-          
-
-
 
 }

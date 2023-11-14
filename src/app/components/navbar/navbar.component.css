@@ -52,6 +52,7 @@
     margin-bottom: 0;
        
 }
+
 .icon-button{
   background: none;
   border: none;
@@ -73,12 +74,13 @@
     margin-top: 0;
     margin-bottom: 0;
 }
+
 input::placeholder{
     font-size:small;
     color: white;
-    right: 20px;
-    
+    right: 20px; 
 }
+
 input[type="text"] {
     border: none;
     color: white;
@@ -90,7 +92,6 @@ input[type="text"] {
     padding-top: 13px;
     text-indent: 15px;
     margin-right: 20px;
-
     outline: none;
     transition: width 0.3s ease-in-out;
 }
@@ -98,9 +99,9 @@ input[type="text"] {
 input[type="text"]:hover {
     width: 200px;/* Ancho deseado de la barra de búsqueda */
     background-color: #AC01F8;
-
     outline: none;
 }
+
 .fa-search:hover + input[type="text"] {
     width: 200px; /* Ancho deseado de la barra de búsqueda */
     background-color: #AC01F8;
@@ -160,8 +161,8 @@ input[type="text"]:hover {
     text-transform: capitalize;
 
 }
+
 #register-button:hover{
     background-color: #AC01F8;
     color: white;
-
 }

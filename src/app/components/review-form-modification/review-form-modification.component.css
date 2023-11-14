@@ -8,16 +8,16 @@ button{
     border: none;
     width: 10.5rem;
     height: 2.5rem;
-  }
+}
 
-  button:hover{
+button:hover{
     background-color: #AC01F8;
     transition: 0.3s ease;
-  }
+}
   
-  .boton-enviar{
+.boton-enviar{
     margin-left: 10rem;
-  }
+}
 
 .container {
     margin-left: 3rem;

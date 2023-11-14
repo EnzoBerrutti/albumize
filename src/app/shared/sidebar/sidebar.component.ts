@@ -14,10 +14,11 @@ export class SidebarComponent {
   idUser = {} as number;
   user = {} as User;
 
-  constructor(private activatedRoute:ActivatedRoute,
-              private userAPI: ServicioUsersService){
-
+  constructor(
+    private activatedRoute:ActivatedRoute,
+    private userAPI: ServicioUsersService){
   }
+  
  async ngOnInit() {
     this.activatedRoute.params.subscribe((params:Params) =>{
       this.idUser = +params['idUser']})

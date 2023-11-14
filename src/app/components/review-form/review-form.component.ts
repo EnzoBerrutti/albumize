@@ -1,6 +1,6 @@
-import { Component, ElementRef, OnInit, Renderer2, inject } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl, ValidationErrors } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { Album, Review, Track, TracksResponse } from 'src/app/interfaces/interfaces';
 import { ReviewsService } from 'src/app/services/reviews.service';
 import { ServicioMusicaService } from 'src/app/services/servicio-musica.service';
@@ -27,7 +27,6 @@ export class ReviewFormComponent implements OnInit {
     private ruta: ActivatedRoute,
     private servicio: ServicioMusicaService,
     private usuarios:ServicioUsersService,
-    private router: Router,
   ) { }
 
   formulario: FormGroup = this.formBuilder.group({

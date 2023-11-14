@@ -4,7 +4,6 @@ import { fadeInOut } from 'src/app/animations/animations';
 import { Album, Review } from 'src/app/interfaces/interfaces';
 import { CommonVariablesService } from 'src/app/services/common-variables.service';
 import { ReviewsService } from 'src/app/services/reviews.service';
-import { ServicioMusicaService } from 'src/app/services/servicio-musica.service';
 
 @Component({
   selector: 'app-album-reviews',
@@ -25,9 +24,11 @@ export class AlbumReviewsComponent implements OnInit {
 
   sortBy: string = 'opcion1'
 
-  constructor(private route: ActivatedRoute,
+  constructor(
+    private route: ActivatedRoute,
     private reviews: ReviewsService,
-    public cv: CommonVariablesService) { }
+    public cv: CommonVariablesService
+    ) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(async params => {
