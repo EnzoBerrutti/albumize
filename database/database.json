@@ -435,6 +435,14 @@
       "username": "lucas.ga97",
       "password": "lucasgauna1997",
       "id": 12
+    },
+    {
+      "nombre": "Lionel",
+      "apellido": "Scaloni",
+      "email": "leoleoscaloni@gmail.com",
+      "username": "lionel.scaloni",
+      "password": "123456",
+      "id": 13
     }
   ]
 }

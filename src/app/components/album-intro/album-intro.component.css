@@ -22,13 +22,13 @@
     border: 0.20rem solid rgb(63, 63, 63);
     border-radius: 10px;
     margin-left: 2rem;
-    margin-right: 0.2rem;
+    margin-right: 0.5rem;
     transition: 0.2s ease;
 }
 
 .names{
     margin-top: 4rem;
-    margin-left: 1rem;
+    margin-left: 0.1rem;
 }
 
 .albumTitle{

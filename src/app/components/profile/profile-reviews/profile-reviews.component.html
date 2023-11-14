@@ -3,9 +3,9 @@
         <h2 class="text-left">Your Reviews</h2>
         <p>In order to edit or delete a specific review, go to the album page by clicking on the album icon of the review</p>
         <hr>
-        <div class = 'loading' *ngIf=!allReviewsRendered >
-            <p class = 'loading-message'>Loading your reviews...</p>
-        </div>
+        <div class='loading' *ngIf="!allReviewsRendered && reviewsArray.length !== 0">
+            <p class='loading-message'>Loading your reviews...</p>
+        </div>        
         <div class = 'sort' *ngIf=allReviewsRendered >
         <label for="opciones" class="text">Sort by:</label>
             <form  [formGroup]="formulario">
