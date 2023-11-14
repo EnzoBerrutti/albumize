@@ -120,11 +120,14 @@ export class ReviewFormModificationComponent {
     if(localStorage['token']){
       console.log("esta autenticado");
 
+      /*
+      Para hacer que la date se actualice en el modify, preferi que no
       const currentDate = new Date();
       const formattedDate = `${currentDate.getMonth() + 1}-${currentDate.getDate()}-${currentDate.getFullYear()}`;
+      */
       
       this.review.albumUrl = this.idAlbum;
-      this.review.date = formattedDate;
+      this.review.date = this.userReview.date; /* formattedDate */
       this.review.punctuation = this.formulario.controls['rating'].value;
       this.review.review = this.formulario.controls['reviewBody'].value;
       console.log('flag');
