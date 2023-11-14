@@ -9,7 +9,7 @@ import { ServicioUsersService } from 'src/app/services/servicio-users.service';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
-  hayFoto: boolean = true
+  hayFoto: boolean = false
   ishidden:boolean = true
   idUser = {} as number;
   user = {} as User;

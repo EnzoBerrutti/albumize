@@ -10,7 +10,9 @@ import { ServicioMusicaService } from 'src/app/services/servicio-musica.service'
 })
 export class SearchArtistComponent implements OnInit {
   img: string[] = []
-  albums: Album[] = []
+  albums1: Album[] = []
+  albums2: Album[] = []
+ 
 
   idArtist = {} as number
   busqueda = {} as string
@@ -25,16 +27,26 @@ export class SearchArtistComponent implements OnInit {
   async ngOnInit() {
       this.activatedRoute.params.subscribe((params: Params) => {
         this.querySearch = params['query']
-        this.getAlbums();
+        this.getAlbums1();
+        this.getAlbums2();
+
       })
   }
 
-  async getAlbums() {
+  async getAlbums1() {
 
-    const data = await this.api.getAlbums(this.querySearch)
-    this.albums = data['albums']['items']
-    this.getAlbumYear(this.albums)
-    this.getDottedName(this.albums)
+    const data = await this.api.getAlbumsWithLimitOffset(this.querySearch,'50' , '0')
+    this.albums1 = data['albums']['items']
+    this.getAlbumYear(this.albums1)
+    this.getDottedName(this.albums1)
+  }
+
+  async getAlbums2() {
+
+    const data = await this.api.getAlbumsWithLimitOffset(this.querySearch,'50', '50')
+    this.albums2 = data['albums']['items']
+    this.getAlbumYear(this.albums2)
+    this.getDottedName(this.albums2)
   }
 
 

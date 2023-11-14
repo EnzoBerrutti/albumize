@@ -26,7 +26,8 @@ export class NewReleasesComponent implements OnInit {
 
 
   constructor(private api:ServicioMusicaService,
-    private fb: FormBuilder) { }
+    private fb: FormBuilder) {
+     }
 
   async ngOnInit() {
     const data = await this.api.getNewReleases()

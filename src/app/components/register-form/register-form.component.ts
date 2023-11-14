@@ -42,7 +42,7 @@ export class RegisterFormComponent implements OnInit {
   togglePasswordVisibility() {
     this.passwordVisible = !this.passwordVisible;
   }
-  
+
   async newUser() {
 
     if (this.formulario.invalid) {
@@ -63,8 +63,10 @@ export class RegisterFormComponent implements OnInit {
       this.formulario.controls['password'].value
     )
 
-    this.router.navigate(['home'])
-    window.location.reload()
+    if(localStorage['token']){
+      window.location.reload()
+/*       this.router.navigate(['home'])
+ */    }
   }
 
   validar(field: string, error: string) {
