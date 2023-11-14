@@ -145,3 +145,23 @@
     font-family: 'Roboto';
     font-size: 12px;
 }
+
+.password-input-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .password-input {
+    padding-right: -5px; /* Adjust the padding to leave space for the button */
+  }
+  
+  .togglePassword {
+    position: absolute;
+    top: 50%;
+    left: 200%;
+   
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
