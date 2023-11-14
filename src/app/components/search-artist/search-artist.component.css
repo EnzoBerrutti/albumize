@@ -1,5 +1,5 @@
 .albums{
-    background-color: rgb(25, 25, 25);
+    /* background-color: rgb(25, 25, 25); */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 
@@ -11,7 +11,7 @@
 
 
 .album-content{
-    background-color: rgb(24, 24, 24);
+    /* background-color: rgb(24, 24, 24); */
     margin: 10px 0;
     width: 250px;
     height: 320px;
