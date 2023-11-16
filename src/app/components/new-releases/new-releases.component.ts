@@ -26,8 +26,7 @@ export class NewReleasesComponent implements OnInit {
 
 
   constructor(private api:ServicioMusicaService,
-    private fb: FormBuilder) {
-     }
+    private fb: FormBuilder) { }
 
   async ngOnInit() {
     const data = await this.api.getNewReleases()
@@ -41,6 +40,8 @@ export class NewReleasesComponent implements OnInit {
     await this.getAlbumYear(this.new_releases2)
     await this.getDottedName(this.new_releases2)
 
+
+
   }
 
   getAlbumYear(array: Album[]) {
@@ -51,8 +52,8 @@ export class NewReleasesComponent implements OnInit {
 
   getDottedName(array: Album[]) {
     array.forEach((item: Album) => {
-      if (item.name.length > 10) {
-        item.name = item.name.slice(0, 10) + '...'
+      if (item.name.length > 12) {
+        item.name = item.name.slice(0, 12) + '...'
       }
     })
 
