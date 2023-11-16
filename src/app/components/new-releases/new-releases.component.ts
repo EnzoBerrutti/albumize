@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Album } from 'src/app/interfaces/interfaces';
+import { Album, Review } from 'src/app/interfaces/interfaces';
+import { ReviewsService } from 'src/app/services/reviews.service';
 import { ServicioMusicaService } from 'src/app/services/servicio-musica.service';
 
 @Component({
@@ -14,6 +15,7 @@ export class NewReleasesComponent implements OnInit {
 
   new_releases2: Album[] = []
 
+  reviewsArray:Review[] = []
 
   idArtist = {} as number
   busqueda = {} as string
@@ -26,7 +28,8 @@ export class NewReleasesComponent implements OnInit {
 
 
   constructor(private api:ServicioMusicaService,
-    private fb: FormBuilder) { }
+    private fb: FormBuilder,
+    private reviewsDB:ReviewsService) { }
 
   async ngOnInit() {
     const data = await this.api.getNewReleases()
@@ -41,9 +44,23 @@ export class NewReleasesComponent implements OnInit {
     await this.getDottedName(this.new_releases2)
 
 
+    this.reviewsArray = await this.reviewsDB.getReviews()
 
   }
 
+  calcularScore(albumUrl: string): number | string {
+    const filteredReviews = this.reviewsArray.filter(review => review.albumUrl === albumUrl);
+  
+    if (filteredReviews.length === 0) {
+      return "ND";
+    }
+  
+    const totalScore = filteredReviews.reduce((accumulator, review) => accumulator + review.punctuation, 0);
+    const averageScore = totalScore / filteredReviews.length;
+  
+    return parseFloat(averageScore.toFixed(1));
+  }
+  
   getAlbumYear(array: Album[]) {
     array.forEach((item) => {
       item.release_date = item.release_date.split("-")[0]

@@ -9,16 +9,15 @@ import { ServicioUsersService } from 'src/app/services/servicio-users.service';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
-  hayFoto: boolean = false
+  hayFoto: boolean = true
   ishidden:boolean = true
   idUser = {} as number;
   user = {} as User;
 
-  constructor(
-    private activatedRoute:ActivatedRoute,
-    private userAPI: ServicioUsersService){
+  constructor(private activatedRoute:ActivatedRoute,
+              private userAPI: ServicioUsersService){
+
   }
-  
  async ngOnInit() {
     this.activatedRoute.params.subscribe((params:Params) =>{
       this.idUser = +params['idUser']})
