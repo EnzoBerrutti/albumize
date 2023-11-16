@@ -1,165 +1,220 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito|Lacquer");
 
-.navbar {
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;500;700;1000&display=swap');
+
+
+/*  nueva parte */
+
+
+.navbar{
     background-color: black;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
     font-family: 'Nunito';
+    width: 100%;
+    height: 4rem;
 }
-
-.nav-list {
-    list-style-type: none;
+.cont-todo{
     display: flex;
-    padding: 0; /* Centrar horizontalmente los botones */
-    font-family: 'Nunito';
-    margin: 0;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
-
-.btn-nav:hover{
-    background-color: #AC01F8;
-}
-
-.nav-list li {
-    margin: 0 ;
-}
-
-.btn-nav {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-family: 'Roboto';
-    padding-top: 13px;
-    padding-bottom: 13px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 0.2rem;
-}
-
-.search-bar {
+.cont-logo{
     display: flex;
+    width: 33.33%;
+    height: 80%;
+
+}
+.div-logo{
+    display: flex;
+    justify-content: center;
     align-items: center;
-    border: none; /* Mueve la barra de búsqueda hacia la derecha */
-}
-
-.fa-search {
-    color: #fff;
-    padding: 10px;
-    font-size: 20px;
-    margin-top: 0;
-    margin-bottom: 0;   
-}
-
-.icon-button{
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 20px;
-  margin: 0;
-  color: #555; /* Color de icono cuando no se interactúa */
-  transition: color 0.3s;
-}
-
-.fa-user{
-    padding-left: 26px;
-    padding-right: 26px;
-    padding-top: 22px;
-    padding-bottom: 22px;
-    color: #fff;
-    margin-right: 220px;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-input::placeholder{
-    font-size:small;
-    color: white;
-    right: 20px;
-}
-
-input[type="text"] {
-    border: none;
-    color: white;
-    background-color: black;
-    font-weight: bold;
-    width: 0;
-    padding-bottom: 10px;
-    border-radius: 0.2rem;
-    padding-top: 13px;
-    text-indent: 15px;
-    margin-right: 20px;
-    outline: none;
-    transition: width 0.3s ease-in-out;
-}
-
-input[type="text"]:hover {
-    width: 200px;/* Ancho deseado de la barra de búsqueda */
-    background-color: #AC01F8;
-    outline: none;
-}
-
-.fa-search:hover + input[type="text"] {
-    width: 200px; /* Ancho deseado de la barra de búsqueda */
-    background-color: #AC01F8;
-    outline: none;
-}
-
-.fa-search:hover{
-    color:#AC01F8;
-}
-
-.fa-user:hover{
-    background-color: #AC01F8;
-    color: white;
+    margin-left: 1rem;
 
 }
-.barra-busqueda{
-    border: none;
-    margin: 0;
-}
-
-.barra-busqueda:hover .fa-search{
-    color: #AC01F8;
-}
-
 .logo-button{
     padding: 0;
     outline: none;
-    background-color: white;
-    border:2px solid #AC01F8;
+    background-color: #AC01F8;
+    border:2px solid  #AC01F8;
     border-radius: 50%;
-    margin-left:10rem;
-    margin-top:0.5rem;
-    margin-bottom: 0.4rem;
-    margin-right: 0.4rem;
+
+  
+
 }
 
+.div-albumize{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.5rem;
+}
 #albumize{
     text-decoration: none;
-    margin-right: 4rem;
     color: #fff;
-    font-weight: bold;
+    font-weight: 1000;
     font-size: 25px;
     font-family: 'Nunito'; 
 }
+#albumize:hover{
+    color: #AC01F8;
+    
+}
 
-#user-profile{
+.cont-home-about{
+    width: 33.33%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.cont-login-busqueda{
+    width: 33.33%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end
+
+}
+.div-home{
+    width: 4rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+    border-radius: 0.2rem;
+}
+.div-home:hover{
+    background-color: #AC01F8;
+  
+}
+.div-about{
+    width: 4rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.5rem;
+    border-radius: 0.2rem;
+}
+.div-about:hover{
+    background-color: #AC01F8;
+    
+
+}
+.btn-nav{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Roboto';
+
+   
+  
+}
+.cont-login-busqueda{
+    width: 33.33%;
+    height: 80%;
+    display: flex;
+}
+
+.barra-busqueda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    
+    
+}
+.div-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: #AC01F8;
+    border-radius:0.2rem 0 0 0.2rem ;
+}
+
+.div-placeholder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.div-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#register-button{
     background-color: white;
     border: none;
-    padding: 10px 15px 10px 15px;
-    margin-right: 10rem;
-    margin-top: 3px;
     color: black;
     font-family: 'Roboto';
+    height: 3rem;
     font-weight: 700;
     font-size: 1rem;
     border-radius: 0.2rem;
-    text-transform: capitalize;
+    margin-right: 1rem;
+
 }
 
-#user-profile:hover{
+#register-button:hover{
+    background-color: #AC01F8;
+    color: white;
+}
+.fa-search{
+    font-size: 1.5rem;
+
+}
+.input-place{
+    height: 3rem;
+    width: 13rem;
+    border: none;
+    background-color: #AC01F8;
+    outline: none;
+    border-radius: 0 0.2rem 0.2rem 0 ;
+    color: white;
+    
+    
+
+
+}
+.input-place::placeholder{
+    position: absolute;
+    color: white;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.dropdown{
+    width: 7rem;
+    height: 3rem;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-secondary{
+    height: 3rem;
+    background-color: white;
+    color: black;
+    font-weight: 500;
+    font-family: 'Roboto';
+    border-radius: 0.2rem;
+    outline: none;
+    border: none;
+    
+}
+.btn-secondary:hover{
     background-color: #AC01F8;
     color: white;
 }

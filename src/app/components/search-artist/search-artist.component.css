@@ -9,18 +9,23 @@
 }
 
 .album-content{
-    margin: 10px 0;
+    margin: 20px 0;
     width: 250px;
     height: 320px;
     padding: 20px;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    background-color: #f2f2f2;
+    color: black;
     cursor: pointer;
     border-radius: 7px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .album-content:hover{
-    background-color: rgb(63, 63, 63);
+
+   transform: scale(1.05);
+    
+    
 }
 
 .info-album{
@@ -30,8 +35,9 @@
 
 .info-album p{
     margin: 2px 0;
-    color: white;
+    color: black;
 }
+
 
 .info-album-name{
     font-size: 25px;
@@ -41,7 +47,7 @@
 .imagen-album{
     width: 210px;
     height: auto;
-    border-radius: 7px;
+    border-radius: 4px;
 }
 
 .img-album{
