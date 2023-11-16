@@ -1,24 +1,47 @@
+
 <nav class="navbar">
-  <ul class="nav-list">
-    <li>
-      <button class="logo-button" (click)="irHome()">
-        <img src="../../../../favicon.ico" alt="Mi Imagen" id="logo">
-      </button>
-    </li >
-    <li><a href="#" routerLink="home" id="albumize">albumize</a></li>
-    <li ><a href="#" [routerLink]="['/home']" class="btn-nav" id="">Home</a></li>
-    <li ><a href="#" routerLink="/about" class="btn-nav">About</a></li>
-  </ul>
-  <div class="search-bar">
-    <form [formGroup]="formulario" (ngSubmit)="search()" class="barra-busqueda">
-      <i class="fa fa-search"></i>
-      <input type="text" placeholder="Search an album or artist" formControlName="nombre">
-    </form>
-  <!-- Button trigger modal -->
-    <button type="button"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="register-button">
-      Login
-    </button>
+  <div class="cont-todo">
+    <div class="cont-logo">
+      <div class="div-logo">
+        <button class="logo-button" (click)="irHome()">
+          <img src="../../../../favicon.ico" alt="Mi Imagen" id="logo">
+        </button>
+      </div>
+        <div class="div-albumize">
+          <a href="#" routerLink="home" id="albumize">albumize</a>
+        </div>
+    </div>
+    <div class="cont-home-about">
+      <div class="div-home">
+        <a href="#" [routerLink]="['/home']" class="btn-nav" id="">Home</a>
+      </div>
+      <div class="div-about">
+        <a href="#" routerLink="/about" class="btn-nav">About</a>
+      </div>
+    </div>
+    <div class="cont-login-busqueda">
+        <form [formGroup]="formulario" (ngSubmit)="search()" class="barra-busqueda">
+          <div class="div-icon">
+            <i class="fa fa-search"></i>
+          </div>
+          <div class="div-placeholder">
+            <input type="text" placeholder="Search an album or artist" formControlName="nombre" class="input-place">
+          </div>
+          
+          
+        </form>
+      <div class="div-login">
+        <button type="button"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="register-button">
+          Login
+        </button>
+      </div>
+      
+  
+    </div>
+
   </div>
+  
+
 </nav>
 
 

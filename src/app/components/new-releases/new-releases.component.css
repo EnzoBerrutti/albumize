@@ -166,15 +166,23 @@
    width: 100%;
    height: 100%;
    padding: 0;
+   border: none;
    text-decoration: none;
    cursor: pointer;
    font-family: 'Roboto';
    display: flex;
    flex-direction: column;
    text-decoration: none;
+   transition: transform 0.3s ease-in-out;
    
 
   
+}
+.album-content:hover{
+   transform: scale(1.05);
+   border: none;
+
+
 }
 
 .div-imagen{
