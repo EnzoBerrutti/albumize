@@ -1,6 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito|Lacquer");
 
-.navbar {
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;500;700;1000&display=swap');
+
+
+/*.navbar {
     background-color: black;
     display: flex;
     justify-content: space-between;
@@ -12,7 +15,7 @@
 .nav-list {
     list-style-type: none;
     display: flex;
-    padding: 0; /* Centrar horizontalmente los botones */
+    padding: 0; 
     font-family: 'Nunito';
     margin: 0;
     align-items: center;
@@ -41,7 +44,7 @@
 .search-bar {
     display: flex;
     align-items: center;
-    border: none; /* Mueve la barra de búsqueda hacia la derecha */
+    border: none; 
 }
 
 .fa-search {
@@ -59,7 +62,7 @@
   cursor: pointer;
   font-size: 20px;
   margin: 0;
-  color: #555; /* Color de icono cuando no se interactúa */
+  color: #555; 
   transition: color 0.3s; 
 
 }
@@ -97,13 +100,13 @@ input[type="text"] {
 }
 
 input[type="text"]:hover {
-    width: 200px;/* Ancho deseado de la barra de búsqueda */
+    width: 200px;
     background-color: #AC01F8;
     outline: none;
 }
 
 .fa-search:hover + input[type="text"] {
-    width: 200px; /* Ancho deseado de la barra de búsqueda */
+    width: 200px;
     background-color: #AC01F8;
     outline: none;
 }
@@ -165,4 +168,198 @@ input[type="text"]:hover {
 #register-button:hover{
     background-color: #AC01F8;
     color: white;
+} */
+
+
+/* Nueva parte */
+
+.navbar{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito';
+    width: 100%;
+    height: 5rem;
+}
+.cont-todo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.cont-logo{
+    display: flex;
+    width: 33.33%;
+    height: 80%;
+
+}
+.div-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+
+}
+.logo-button{
+    padding: 0;
+    outline: none;
+    background-color: #AC01F8;
+    border:2px solid  #AC01F8;
+    border-radius: 50%;
+
+  
+
+}
+
+.div-albumize{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.5rem;
+}
+#albumize{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 1000;
+    font-size: 25px;
+    font-family: 'Nunito'; 
+}
+#albumize:hover{
+    color: #AC01F8;
+    
+}
+
+.cont-home-about{
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.cont-login-busqueda{
+    width: 33.33%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end
+
+}
+.div-home{
+    width: 4rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+    border-radius: 0.2rem;
+}
+.div-home:hover{
+    background-color: #AC01F8;
+  
+}
+.div-about{
+    width: 4rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.5rem;
+    border-radius: 0.2rem;
+}
+.div-about:hover{
+    background-color: #AC01F8;
+    
+
+}
+.btn-nav{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Roboto';
+
+   
+  
+}
+.cont-login-busqueda{
+    width: 33.33%;
+    height: 80%;
+    display: flex;
+}
+
+.barra-busqueda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    
+    
+}
+.div-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: #AC01F8;
+    border-radius:0.2rem 0 0 0.2rem ;
+}
+
+.div-placeholder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.div-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#register-button{
+    background-color: white;
+    border: none;
+    color: black;
+    font-family: 'Roboto';
+    height: 3rem;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+    margin-right: 1rem;
+
+}
+
+#register-button:hover{
+    background-color: #AC01F8;
+    color: white;
+}
+.fa-search{
+    font-size: 1.5rem;
+
+}
+.input-place{
+    height: 3rem;
+    width: 13rem;
+    border: none;
+    background-color: #AC01F8;
+    outline: none;
+    border-radius: 0 0.2rem 0.2rem 0 ;
+    color: white;
+    
+    
+
+
+}
+.input-place::placeholder{
+    position: absolute;
+    color: white;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
 }

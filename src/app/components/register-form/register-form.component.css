@@ -165,3 +165,10 @@
     border: none;
     cursor: pointer;
   }
+
+  .bi-eye-slash-fill{
+    margin-left: 0.5rem;
+  }
+  .bi-eye-fill{
+    margin-left: 0.5rem;
+  }
