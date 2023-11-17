@@ -66,9 +66,9 @@
                                             <div class="circulo-puntaje" [ngClass]="{
                                             
                                                 'score-10': calcularScore(album.id) === 10,
-                                                'score-7to10': (calcularScore(album.id)) < 10 && (calcularScore(album.id)) >= 7,
-                                                'score-4to7': (calcularScore(album.id)) < 7 && (calcularScore(album.id)) >= 4,
-                                                'score-less-than-4': (calcularScore(album.id)) < 4 && (calcularScore(album.id)) > 0
+                                                'score-7to10': (calcularScore(album.id)) < '10' && (calcularScore(album.id)) >= '7',
+                                                'score-4to7': (calcularScore(album.id)) < '7' && (calcularScore(album.id)) >= '4',
+                                                'score-less-than-4': (calcularScore(album.id)) < '4' && (calcularScore(album.id)) > '0'
                                               }">
                                                 <p class="parrafo-circulo-puntaje">
                                                     {{calcularScore(album.id) === -1? 'ND' : calcularScore(album.id)}}
@@ -135,9 +135,9 @@
                                             <div class="circulo-puntaje" [ngClass]="{
                                             
                                                 'score-10': calcularScore(album.id) === 10,
-                                                'score-7to10': (calcularScore(album.id)) < 10 && (calcularScore(album.id)) >= 7,
-                                                'score-4to7': (calcularScore(album.id)) < 7 && (calcularScore(album.id)) >= 4,
-                                                'score-less-than-4': (calcularScore(album.id)) < 4 && (calcularScore(album.id)) > 0
+                                                'score-7to10': (calcularScore(album.id)) < '10' && (calcularScore(album.id)) >= '7',
+                                                'score-4to7': (calcularScore(album.id)) < '7' && (calcularScore(album.id)) >= '4',
+                                                'score-less-than-4': (calcularScore(album.id)) < '4' && (calcularScore(album.id)) > '0'
                                               }">
                                                 <p class="parrafo-circulo-puntaje">
                                                     {{calcularScore(album.id) === -1? 'ND' : calcularScore(album.id)}}
