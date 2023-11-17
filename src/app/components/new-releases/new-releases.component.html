@@ -63,10 +63,19 @@
                                             
                                         </div>
                                         <div class="circulo-puntaje-contenedor">
-                                            <div class="circulo-puntaje">
+                                            <div class="circulo-puntaje" [ngClass]="{
+                                            
+                                                'score-10': calcularScore(album.id) === 10,
+                                                'score-7to10': (calcularScore(album.id)) < 10 && (calcularScore(album.id)) >= 7,
+                                                'score-4to7': (calcularScore(album.id)) < 7 && (calcularScore(album.id)) >= 4,
+                                                'score-less-than-4': (calcularScore(album.id)) < 4 && (calcularScore(album.id)) > 0
+                                              }">
                                                 <p class="parrafo-circulo-puntaje">
-                                                    {{calcularScore(album.id)}}</p>
-                                            </div>           
+                                                    {{calcularScore(album.id) === -1? 'ND' : calcularScore(album.id)}}
+                                                </p>
+                                              </div>
+                                                
+                                                  
                                         </div>                                       
                                     </div>
                                     
@@ -123,10 +132,17 @@
                                             
                                         </div>
                                         <div class="circulo-puntaje-contenedor">
-                                            <div class="circulo-puntaje">
-                                                <p class="parrafo-circulo-puntaje">{{calcularScore(album.id)}}</p>
-                                            </div>
-            
+                                            <div class="circulo-puntaje" [ngClass]="{
+                                            
+                                                'score-10': calcularScore(album.id) === 10,
+                                                'score-7to10': (calcularScore(album.id)) < 10 && (calcularScore(album.id)) >= 7,
+                                                'score-4to7': (calcularScore(album.id)) < 7 && (calcularScore(album.id)) >= 4,
+                                                'score-less-than-4': (calcularScore(album.id)) < 4 && (calcularScore(album.id)) > 0
+                                              }">
+                                                <p class="parrafo-circulo-puntaje">
+                                                    {{calcularScore(album.id) === -1? 'ND' : calcularScore(album.id)}}
+                                                </p>
+                                              </div>
 
                                         </div>
                                         
@@ -229,20 +245,11 @@
                 </div>
             </div>
             <div class="circulo-score">
-                <div class="div-albumize-based">
-                    <div class="div-score">
-                        <p class="parrafo-score">Album Score</p>
+                <div class="div-vevo">
+                    <p class="parrafo-vevo">VEVO</p>
 
-                    </div>
-                    <div class="div-based">
-                        <p class="parrafo-based">Based on member reviews</p>
-                    </div>
                 </div>
-                <div class="div-circulo-score">
-                    <div class="circulo-puntaje">
-                        <p class="parrafo-circulo-puntaje">10</p>
-                    </div>
-                </div>
+                
             </div>
         </div>
         <div class="div-theweeknd">

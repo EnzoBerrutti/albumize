@@ -1,5 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/titania');
 @import url(https://db.onlinewebfonts.com/c/f02b8ce0d397cd405edeff61d1fec6d8?family=Frisans+Std+Black);
+@import url(https://db.onlinewebfonts.com/c/bdd3635a9f49688b8c805673e2b7e815?family=Steagal+W01+Bold);
 
                
 .contenedor-foto-fondo{
@@ -350,7 +351,7 @@ font-style: normal;
    width: 4rem;
    height: 4rem;
    border-radius: 50%;
-   background-color: #AC01F8;
+   background-color: grey;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -637,7 +638,7 @@ font-style: normal;
    display: flex;
 }
 .titulo-video-cancion{
-   width: 65%;
+   width: 75%;
 
    height: 6rem;
    display: flex;
@@ -656,7 +657,7 @@ font-style: normal;
 .parrafo-nombre-cancion{
    color: black;
    margin: 0;
-   font-size: 20px;
+   font-size: 23px;
    font-weight: bold;
    font-family: proxima-nova, sans-serif;
 font-style: normal;
@@ -683,11 +684,30 @@ font-style: normal;
 
 }
 .circulo-score{
-   width: 35%;
+   width: 25%;
    display: flex;
+   justify-content: flex-end;
  
    height: 100%;
 }
+.div-vevo{
+   width: 70%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.parrafo-vevo{
+   color: black;
+   font-family: "Steagal W01 Bold";
+   font-size: 3rem;
+   margin: 0;
+}
+
+
+
+
+
 .div-albumize-based{
    width: 60%;
 
@@ -720,3 +740,24 @@ font-style: normal;
    font-family: "Frisans Std Black";
 
 }
+
+
+.score-10 {
+   background-color: #AC01F8; /* o el color que desees para puntajes de 10 */
+ }
+ 
+ .score-7to10 {
+   background-color: #00ce7a; /* o el color que desees para puntajes entre 7 y 10 */
+ }
+ 
+ .score-4to7 {
+   background-color: #ffbd3f; /* o el color que desees para puntajes entre 4 y 7 */
+ }
+ 
+ .score-less-than-4 {
+  background-color:#ff6874; /* o el color que desees para puntajes menores a 4 */
+ }
+ 
+ .no-score {
+   background-color: gray; /* o el color que desees para puntajes no disponibles */
+ }
