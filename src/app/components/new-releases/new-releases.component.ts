@@ -16,6 +16,7 @@ export class NewReleasesComponent implements OnInit {
   new_releases2: Album[] = []
 
   reviewsArray:Review[] = []
+  score:number | string = 0
 
   idArtist = {} as number
   busqueda = {} as string
@@ -43,22 +44,25 @@ export class NewReleasesComponent implements OnInit {
     await this.getAlbumYear(this.new_releases2)
     await this.getDottedName(this.new_releases2)
 
+    
+
 
     this.reviewsArray = await this.reviewsDB.getReviews()
 
   }
 
-  calcularScore(albumUrl: string): number | string {
+  calcularScore(albumUrl: string): number {
     const filteredReviews = this.reviewsArray.filter(review => review.albumUrl === albumUrl);
   
     if (filteredReviews.length === 0) {
-      return "ND";
-    }
+      return -1;
+    } 
   
     const totalScore = filteredReviews.reduce((accumulator, review) => accumulator + review.punctuation, 0);
     const averageScore = totalScore / filteredReviews.length;
   
     return parseFloat(averageScore.toFixed(1));
+   
   }
   
   getAlbumYear(array: Album[]) {

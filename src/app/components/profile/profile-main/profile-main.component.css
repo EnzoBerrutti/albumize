@@ -26,11 +26,77 @@
 }
 
 .btn-outline-warning{
-    border-color: #AC01F8;
-    color: #AC01F8;
+    background-color: rgb(59, 59, 59);
+    border: none;
+    color: white;
+    font-weight: 500;
 }
 
 .btn-outline-warning:hover{
-    background-color: #AC01F8;
+    background-color: black;
+    color: white;
+}
+
+#todo-perfil{
+    display: flex;
+    justify-content: center;
+    
+   
+   
+   
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.contenedor-todo-profile{
+    display: flex;
+    justify-content: center;
+   
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    background-color: #f2f2f2;
+    margin-top: 2rem;
+    border-radius: 15px;
+}
+.formulario-profile{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.cont-your-account{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+h2{
     color: black;
+    margin: 0;
+}
+.cont-campos{
+    margin: 0;
+    width: 100%;
+    
+
+}
+label{
+    color: black;
+    font-weight: 500;
+}
+input{
+    background-color: white;
+    width: 100%;
+    outline: none;
+    border: none;
+    
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+   
+}
+input:focus{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    
 }
