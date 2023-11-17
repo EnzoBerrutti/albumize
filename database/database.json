@@ -516,6 +516,62 @@
       "username": "lionel.scaloni",
       "password": "123456",
       "id": 13
+    },
+    {
+      "nombre": "Carlos",
+      "apellido": "Avalos",
+      "email": "carlosavalos@gmail.com",
+      "username": "carlitos23",
+      "password": "carlosavalos",
+      "id": 14
+    },
+    {
+      "nombre": "Miriam",
+      "apellido": "Bregman",
+      "email": "mbregman@gmail.com",
+      "username": "mbregman",
+      "password": "lenin",
+      "id": 15
+    },
+    {
+      "nombre": "Martin",
+      "apellido": "Malgor",
+      "email": "martinmalgor@gmail.com",
+      "username": "martinm",
+      "password": "carpintero",
+      "id": 16
+    },
+    {
+      "nombre": "Javier",
+      "apellido": "Betucci",
+      "email": "javito@gmail.com",
+      "username": "javibetu",
+      "password": "circo",
+      "id": 17
+    },
+    {
+      "nombre": "Magali",
+      "apellido": "Tolosa",
+      "email": "magatolosa@gmail.com",
+      "username": "maga",
+      "password": "magali",
+      "id": 18
+    },
+    {
+      "nombre": "Nicanor",
+      "apellido": "Marcio",
+      "email": "nicanor@gmail.com",
+      "username": "nica_nor",
+      "password": "nimar",
+      "id": 19
+    },
+    {
+      "nombre": "Lionel",
+      "apellido": "Messi",
+      "email": "liomessi@gmail.com",
+      "username": "lapulga",
+      "password": "lacopadelmundo",
+      "id": 20
     }
   ]
 }

@@ -47,6 +47,7 @@ export class ProfileReviewsComponent {
       
   }
 
+  // Funcion que llama a las funciones de ordenar las reviews
   onSortBy() {
     const selectedSort = this.formulario.controls['selectedSort'].value;
   
@@ -66,18 +67,22 @@ export class ProfileReviewsComponent {
     }
   }
 
+  // Funcion que orden de mayor a menor puntaje
   sortFromHighToLow() {
     this.reviewsArray.sort((a, b) => b.punctuation - a.punctuation);
   }
 
+  // Funcion que orden de menor a mayor puntaje
   sortFromLowToHigh() {
     this.reviewsArray.sort((a, b) => a.punctuation - b.punctuation);
   }
 
+  // Funcion que orden de las mas nuevas a las mas antiguas reviews
   sortByMostRecent() {
     this.reviewsArray = [...this.reversedOrder];
   }
   
+    // Funcion que orden de las mas antiguas a las mas nuevas reviews
   sortByOldest() {
     this.reviewsArray = [...this.originalOrder];
   }

@@ -38,6 +38,7 @@ export class ProfileMainComponent implements OnInit {
     this.activatedRoute.params.subscribe((params: Params) => {
       this.idUser = +params['idUser']
     })
+
     this.user = await this.userAPI.getUserID(this.idUser);
 
     if (this.user.nombre !== undefined && this.user.nombre !== null) {
@@ -61,49 +62,8 @@ export class ProfileMainComponent implements OnInit {
     this.isReadOnly = !this.isReadOnly
   }
 
-  capturarFile(event: any) {
-      const archivo = event.target.files[0];
-      this.extraerbase64(archivo).then((img:any)  => 
-      this.preview = img.base)
-      this.imagenCapturada.push(archivo); 
-  }
 
-  extraerbase64 = async ($event: any) => new Promise((resolve, reject) => {
-    try {
-      const unsafeImg = window.URL.createObjectURL($event);
-      const image = this.sanitizer.bypassSecurityTrustUrl(unsafeImg);
-      const reader = new FileReader()
-      reader.readAsDataURL($event)
-      reader.onload = () => {
-        resolve({
-          base: reader.result
-        });
-      }
-      reader.onerror = error => {
-        resolve({
-          base: null
-
-        })
-      };
-    } catch (error) {
-      console.log(error)
-    }
-  })
-
-  subirArchivo():any{
-    try {
-      const formularioDeDatos = new FormData();
-      console.log(this.imagenCapturada[0])
-      this.imagenCapturada.forEach((archivo:string) => {
-        console.log("hola")
-        formularioDeDatos.append('files', archivo)
-      })
-      console.log(formularioDeDatos)
-    } catch (error) {
-      
-    }
-  }
-
+// Funcion que guarda los cambios del usuario
   async guardarCambios() {
 
     if (this.formulario.invalid) {
@@ -140,6 +100,7 @@ export class ProfileMainComponent implements OnInit {
       this.formulario.controls[field].touched;
   }
 
+  // Validacion de que el nombre de usuario ya existe
   async validarUserName(){
     this.isValidUserName = false
     const users = await this.userAPI.getUsers()

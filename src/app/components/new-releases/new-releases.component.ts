@@ -35,23 +35,23 @@ export class NewReleasesComponent implements OnInit {
   async ngOnInit() {
     const data = await this.api.getNewReleases()
     this.new_releases = await data['albums']['items'].slice(0,4)
-    await this.getAlbumYear(this.new_releases)
-    await this.getDottedName(this.new_releases)
+    this.getAlbumYear(this.new_releases)
+    this.getDottedName(this.new_releases)
 
 
 
     this.new_releases2 = await data['albums']['items'].slice(4,8)
-    await this.getAlbumYear(this.new_releases2)
-    await this.getDottedName(this.new_releases2)
-
-    
+    this.getAlbumYear(this.new_releases2)
+    this.getDottedName(this.new_releases2)
 
 
     this.reviewsArray = await this.reviewsDB.getReviews()
 
   }
 
-  calcularScore(albumUrl: string): number {
+  //Funcion que calcula la puntuacion de cada album
+
+  calcularScore(albumUrl: string): number | string {
     const filteredReviews = this.reviewsArray.filter(review => review.albumUrl === albumUrl);
   
     if (filteredReviews.length === 0) {
@@ -64,6 +64,8 @@ export class NewReleasesComponent implements OnInit {
     return parseFloat(averageScore.toFixed(1));
    
   }
+
+  //Funcion que formatea el anio del album
   
   getAlbumYear(array: Album[]) {
     array.forEach((item) => {
@@ -71,6 +73,7 @@ export class NewReleasesComponent implements OnInit {
     })
   }
 
+  // Funcion que trunca el nombre del album 
   getDottedName(array: Album[]) {
     array.forEach((item: Album) => {
       if (item.name.length > 12) {

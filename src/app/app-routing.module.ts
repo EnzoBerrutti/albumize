@@ -16,7 +16,7 @@ const routes: Routes = [
   {path:'register',component:RegisterPageComponent},
   {path:'search/:query', component:SearchResultPageComponent},
   {path:'album/:id', component: AlbumInfoComponent},
-  {path: 'album/modify-review/:id', component: AlbumModifyReviewComponent},
+  {path:'album/modify-review/:id', component: AlbumModifyReviewComponent},
   {path:'album-reviews/:id', component:AlbumReviewsComponent},
   {path:'account/:idUser/main', component: ProfileMainPageComponent, canActivate : [authGuard]},
   {path:'account/:idUser/reviews', component: ProfileReviewsPageComponent, canActivate : [authGuard]},
