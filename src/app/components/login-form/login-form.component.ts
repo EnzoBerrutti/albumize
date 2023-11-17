@@ -32,23 +32,24 @@ export class LoginFormComponent {
   }
 
   // Funcion de logueo
-  onLogin(){
+ async onLogin(){
     this.isHidden = false
     if(this.formLogin.invalid) 
     {
       return
     }
 
-    this.auth.verificarUserAndPass(
-      this.formLogin.controls['email'].value,
-      this.formLogin.controls['password'].value
+     this.auth.verificarUserAndPass(this.formLogin.controls['email'].value,this.formLogin.controls['password'].value
       )
       
-      if(localStorage.getItem('token')===null){
-        this.isHidden = true
-      }
-      
+   await this.solucion()
   }
 
-
+async solucion(){
+   setTimeout(()=>{
+     if(localStorage.getItem('token')===null){
+      this.isHidden = true
+    }
+   }, 500)
+}
 }

@@ -24,7 +24,7 @@
             <input formControlName="userName" type="text" id="username" [readonly] = 'isReadOnly' [value]="user.username" [ngClass]="{'form-control': true, 'bg-white': isReadOnly, 'text-black': isReadOnly}" aria-describedby="passwordHelpInline">
           </div>
   
-          <div *ngIf="isValidUserName" class="text-light" >
+          <div *ngIf="isValidUserName" class="text-danger" >
                 User name already exist
           </div>
   

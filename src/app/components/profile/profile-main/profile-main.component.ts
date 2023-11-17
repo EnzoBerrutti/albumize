@@ -92,6 +92,8 @@ export class ProfileMainComponent implements OnInit {
         this.reviewDB.updateReview(r)
       }
     })
+
+    window.location.reload()
   }
 
   validar(field: string, error: string) {

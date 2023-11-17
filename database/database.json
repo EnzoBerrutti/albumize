@@ -502,7 +502,7 @@
       "id": 11
     },
     {
-      "nombre": "Lucas",
+      "nombre": "Luquitas",
       "apellido": "Gauna Dasmi",
       "email": "lucasgauna1997@gmail.com",
       "username": "lucas.ga97",
@@ -572,6 +572,14 @@
       "username": "lapulga",
       "password": "lacopadelmundo",
       "id": 20
+    },
+    {
+      "nombre": "Leonardo",
+      "apellido": "Tosoni",
+      "email": "leodtosoni@gmail.com",
+      "username": "leonardo",
+      "password": "leonardo",
+      "id": 21
     }
   ]
 }
