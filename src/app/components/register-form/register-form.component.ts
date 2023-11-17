@@ -56,6 +56,7 @@ export class RegisterFormComponent implements OnInit {
     this.user.username = this.formulario.controls['userName'].value;
     this.user.password = this.formulario.controls['password'].value;
 
+    //Se para el nuevo usuario a la funcion POST del servicio
     this.userAPI.postUser(this.user);
 
     this.auth.verificarUserAndPass(
@@ -75,6 +76,7 @@ export class RegisterFormComponent implements OnInit {
       this.formulario.controls[field].touched;
   }
 
+  // Valida que el email no este repetido
   validarEmail() {
     this.isValidEmail = false
     this.users.forEach((u: User) => {
@@ -85,6 +87,7 @@ export class RegisterFormComponent implements OnInit {
     });
   }
 
+    // Valida que el nombre de usuario no este repetido
   validarUserName() {
     this.isValidUserName = false
     this.users.forEach((u: User) => {

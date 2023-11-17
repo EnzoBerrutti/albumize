@@ -25,15 +25,14 @@ export class AuthService {
     return this.http.get<User[]>(this.url)
   }
 
-  verificarUserAndPass(email: string | undefined, pass: string) {
+  verificarUserAndPass(email: string | undefined, pass: string){
     this.getUsers().subscribe(users => {
       users.find(u => {
         if (u.password === pass && u.email === email) {
           this.user = u;
-   
           localStorage.setItem('token', u.id.toString())
-
-          window.location.reload()
+           this.router.navigate(["home"]);
+           window.location.reload()
           
         }
       });

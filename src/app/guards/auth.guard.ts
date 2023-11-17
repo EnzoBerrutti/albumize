@@ -15,7 +15,6 @@ function checkAuthStatus(): boolean | Observable<boolean>{
                         if(!estaAutenticado) 
                         {
                           console.log(estaAutenticado)
-                          console.log("hola")
                           router.navigate(['home'])
                         }
                       } )
