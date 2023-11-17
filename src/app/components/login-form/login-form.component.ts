@@ -33,8 +33,6 @@ export class LoginFormComponent {
 
   // Funcion de logueo
   onLogin(){
-
-    console.log(localStorage.getItem('token'))
     this.isHidden = false
     if(this.formLogin.invalid) 
     {

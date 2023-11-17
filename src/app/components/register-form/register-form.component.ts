@@ -57,17 +57,10 @@ export class RegisterFormComponent implements OnInit {
     this.user.password = this.formulario.controls['password'].value;
 
     //Se para el nuevo usuario a la funcion POST del servicio
-    this.userAPI.postUser(this.user);
+   await this.userAPI.postUser(this.user);
 
-    this.auth.verificarUserAndPass(
-      this.formulario.controls['email'].value,
-      this.formulario.controls['password'].value
-    )
-
-    if(localStorage['token']){
-      window.location.reload()
-/*       this.router.navigate(['home'])
- */    }
+   this.auth.verificarUserAndPass(this.user.email, this.user.password)
+    
   }
 
   validar(field: string, error: string) {
