@@ -109,16 +109,80 @@
 
 .contenedor-titulo{
    width: 100%;
-   border-bottom:1px solid  white;
+   /* border-bottom:1px solid  white; */
    margin-bottom: 1rem;
+   height: 20rem;
+   background-color: black;
+   /* border-top: 0.5rem solid #AC01F8; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
 
 }
+.titulo{
+   display: flex;
+   justify-content: space-around;
+   flex-direction: column;
+   align-items: center;
+   height: 55%;
+}
+/* .fa-music{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #AC01F8;
+ 
+
+}
+.fa-compact-disc{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #AC01F8;
+
+}
+.linea-iconos{
+   display: flex;
+   background-color: black;
+   justify-content: space-between;
+   width: 100%;
+
+
+} */
 .parrafo-titulo{
    margin: 0;
    color: white;
-   font-family: proxima-nova, sans-serif;
+   /* font-family: proxima-nova, sans-serif; */
+  /*  font-family: 'Dosis', "Helvetica Neue", "Helvetica", Helvetica, Arial,sans-serif;  */
+   font-family: "Frisans Std Black";
+   text-transform: uppercase;
+ 
    font-style: normal;
-   font-size: 1.2rem;
+   font-size: 2.5rem;
+
+}
+.parrafo-desc-titulo{
+   width: 100%;
+   font-size: 1rem;
+   font-weight: 100;
+   display: flex;
+   align-items: center;
+   font-family: 'Dosis', "Helvetica Neue", "Helvetica", Helvetica, Arial,sans-serif;
+   text-transform: uppercase;
+
+
+}
+.parrafo-desc-titulo2{
+   width: 100%;
+   font-size: 1rem;
+   font-weight: 100;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: 'Dosis', "Helvetica Neue", "Helvetica", Helvetica, Arial,sans-serif;
+   text-transform: uppercase;
+
 
 }
 #todo-home{
@@ -426,7 +490,7 @@ font-style: normal;
 }
 
 .contenedor-seccion-video{
-   width: 85%;
+   width: 100%;
    
    display: flex;
 
@@ -471,10 +535,17 @@ font-style: normal;
 
 
 .contenedor-titulo2{
+   
    width: 100%;
-   border-bottom:1px solid  white;
-   margin-bottom: 1.5rem;
-   width: 85%;
+   /* border-bottom:1px solid  white; */
+   margin-top: 1rem;
+   margin-bottom: 3rem;
+   height: 20rem;
+   background-color: black;
+   /* border-top: 0.5rem solid #AC01F8; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
 
 }
 
@@ -501,14 +572,26 @@ font-style: normal;
    justify-content: center;
    align-items: center;
 }
-.cont-desc-thewkn{
+.cont-desc-thewkn{/*parte nueva-------------------------------*/
    width: 90%;
    height: 90%;
    
    display: flex;
-   justify-content: space-between;
-   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 
+
+
+}
+.cont-blanco2{/*parte nueva-------------------------------*/
+   height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   flex-direction: column;
+   align-items: center;
+   background-color: #262c31;
+   border-radius: 0.4rem;
 
 
 }
@@ -518,8 +601,11 @@ font-style: normal;
 }
 .parrafo-thewkn{
    width: 100%;
+   
+   margin-bottom: 0;
+   margin-left: 6px;
    font-family: 'Roboto';
-   margin: 0;
+  
    color: white;
 }
 .foto-theweeknd{
@@ -583,6 +669,18 @@ font-style: normal;
    height: 90%;
    
    display: flex;
+   justify-content: center;
+   align-items: center;
+
+
+}
+.contenedor-blanco{ 
+   width: 100%;
+   height: 100%;
+   background-color: #262c31;
+   border-radius: 0.4rem;
+   
+   display: flex;
    justify-content: space-around;
    flex-direction: column;
 
@@ -614,16 +712,22 @@ font-style: normal;
 .cont-desc-starboy{
    display: flex;
    align-items: center;
+   justify-content: center;
    margin: 0;
 }
 .parrafo-desc-starboy{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 95%;
+   height: 95%;
    margin: 0;
-   color: white;
+   color: white; 
 
 }
 
 .seccion-puntaje-video{
-   width: 85%;
+   width: 100%;
  
    /* background-color: #f2f2f2; */
  
@@ -760,4 +864,11 @@ font-style: normal;
  
  .no-score {
    background-color: gray; /* o el color que desees para puntajes no disponibles */
+ }
+
+ .cont-seccion-info{
+   display: flex;
+   flex-direction: column;
+   width: 85%;
+
  }
