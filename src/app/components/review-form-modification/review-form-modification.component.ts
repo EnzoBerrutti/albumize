@@ -132,7 +132,7 @@ export class ReviewFormModificationComponent {
       this.review.review = this.formulario.controls['reviewBody'].value;
       console.log('flag');
       this.review.reviewer =  await this.usuarios.getUserID(localStorage['token']).then(u => u.username);
-      this.review.reviewerId = (localStorage['token']);
+      this.review.reviewerId = parseInt(localStorage['token']);
 
       this.review.id = this.userReview.id
 

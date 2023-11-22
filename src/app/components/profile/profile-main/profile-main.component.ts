@@ -62,7 +62,6 @@ export class ProfileMainComponent implements OnInit {
     this.isReadOnly = !this.isReadOnly
   }
 
-
 // Funcion que guarda los cambios del usuario
   async guardarCambios() {
 
@@ -81,12 +80,12 @@ export class ProfileMainComponent implements OnInit {
     this.user.email = this.formulario.controls['email'].touched ? this.formulario.controls['email'].value : this.user.email;
     this.user.username = this.formulario.controls['userName'].touched ? this.formulario.controls['userName'].value : this.user.username;
 
-    console.log(this.user)
     this.userAPI.putUser(this.user);
     this.isReadOnly = !this.isReadOnly
 
     const arrayReviews :Review[] = await this.reviewDB.getReviews()
     arrayReviews.forEach((r:Review)=>{
+  
       if(r.reviewerId === this.user.id){
         r.reviewer = this.user.username
         this.reviewDB.updateReview(r)

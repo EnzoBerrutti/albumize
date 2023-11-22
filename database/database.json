@@ -94,7 +94,7 @@
       "punctuation": 1.9,
       "review": "Muy mala",
       "reviewer": "manumanu",
-      "reviewerId": "2",
+      "reviewerId": 2,
       "id": 8
     },
     {
@@ -103,7 +103,7 @@
       "punctuation": 10,
       "review": "Best album in the world!!!",
       "reviewer": "tutin",
-      "reviewerId": "23",
+      "reviewerId": 23,
       "favourite": "11",
       "overrated": "0",
       "underrated": "6",
@@ -116,7 +116,7 @@
       "punctuation": 9.5,
       "review": "",
       "reviewer": "lucas.ga97",
-      "reviewerId": "12",
+      "reviewerId": 12,
       "id": 10,
       "favourite": "3",
       "overrated": "6",
@@ -129,7 +129,7 @@
       "punctuation": 8.6,
       "review": "",
       "reviewer": "lucas.ga97",
-      "reviewerId": "12",
+      "reviewerId": 12,
       "id": 11,
       "favourite": "17",
       "overrated": "3",
@@ -142,7 +142,7 @@
       "punctuation": 7.2,
       "review": "",
       "reviewer": "lucas.ga97",
-      "reviewerId": "12",
+      "reviewerId": 12,
       "favourite": "2",
       "overrated": "13",
       "underrated": "4",
@@ -155,7 +155,7 @@
       "punctuation": 7.6,
       "review": "",
       "reviewer": "lucas.ga97",
-      "reviewerId": "12",
+      "reviewerId": 12,
       "favourite": "3",
       "overrated": "6",
       "underrated": "3",
@@ -168,7 +168,7 @@
       "punctuation": 9,
       "review": "",
       "reviewer": "lucas.ga97",
-      "reviewerId": "12",
+      "reviewerId": 12,
       "favourite": "4",
       "overrated": "7",
       "underrated": "4",
@@ -181,7 +181,7 @@
       "punctuation": 7.1,
       "review": "",
       "reviewer": "lucas.ga97",
-      "reviewerId": "12",
+      "reviewerId": 12,
       "favourite": "10",
       "overrated": "7",
       "underrated": "5",
@@ -194,7 +194,7 @@
       "punctuation": 8.8,
       "review": "",
       "reviewer": "lucas.ga97",
-      "reviewerId": "12",
+      "reviewerId": 12,
       "favourite": "7",
       "overrated": "6",
       "underrated": "2",
@@ -207,7 +207,7 @@
       "punctuation": 8.3,
       "review": "",
       "reviewer": "lucas.ga97",
-      "reviewerId": "12",
+      "reviewerId": 12,
       "favourite": "0",
       "overrated": "6",
       "underrated": "7",
@@ -220,7 +220,7 @@
       "punctuation": 8.9,
       "review": "",
       "reviewer": "lucas.ga97",
-      "reviewerId": "12",
+      "reviewerId": 12,
       "favourite": "0",
       "overrated": "0",
       "underrated": "1",
@@ -233,7 +233,7 @@
       "punctuation": 5.5,
       "review": "",
       "reviewer": "lucas.ga97",
-      "reviewerId": "12",
+      "reviewerId": 12,
       "favourite": "3",
       "id": 19
     },
@@ -243,7 +243,7 @@
       "punctuation": 7.8,
       "review": "",
       "reviewer": "lucas.ga97",
-      "reviewerId": "12",
+      "reviewerId": 12,
       "favourite": "0",
       "overrated": "0",
       "underrated": "7",
@@ -255,7 +255,7 @@
       "punctuation": 5,
       "review": "",
       "reviewer": "lucas.ga97",
-      "reviewerId": "12",
+      "reviewerId": 12,
       "favourite": "0",
       "worst": "6",
       "id": 21
@@ -266,7 +266,7 @@
       "punctuation": 8.4,
       "review": "",
       "reviewer": "lucas.ga97",
-      "reviewerId": "12",
+      "reviewerId": 12,
       "favourite": "8",
       "overrated": "3",
       "underrated": "12",
@@ -279,7 +279,7 @@
       "punctuation": 9,
       "review": "",
       "reviewer": "lucas.ga97",
-      "reviewerId": "12",
+      "reviewerId": 12,
       "favourite": "6",
       "overrated": "5",
       "underrated": "1",
@@ -292,7 +292,7 @@
       "punctuation": 8.9,
       "review": "",
       "reviewer": "lucas.ga97",
-      "reviewerId": "12",
+      "reviewerId": 12,
       "id": 24,
       "favourite": "6",
       "overrated": "9",
@@ -305,7 +305,7 @@
       "punctuation": 8.2,
       "review": "",
       "reviewer": "lucas.ga97",
-      "reviewerId": "12",
+      "reviewerId": 12,
       "favourite": "6",
       "overrated": "14",
       "underrated": "2",
@@ -318,7 +318,7 @@
       "punctuation": 7.6,
       "review": "",
       "reviewer": "lucas.ga97",
-      "reviewerId": "12",
+      "reviewerId": 12,
       "id": 26,
       "favourite": "13",
       "overrated": "1",
@@ -329,22 +329,22 @@
       "albumUrl": "0bCAjiUamIFqKJsekOYuRw",
       "date": "11-14-2023",
       "punctuation": 10,
-      "review": "",
+      "review": "great",
       "reviewer": "lucas.ga97",
-      "reviewerId": "12",
+      "reviewerId": 12,
+      "id": 27,
       "favourite": "0",
       "overrated": "3",
       "underrated": "2",
-      "worst": "1",
-      "id": 27
+      "worst": "1"
     },
     {
       "albumUrl": "2ODvWsOgouMbaA5xf0RkJe",
       "date": "11-16-2023",
       "punctuation": 9.5,
       "review": "Great album!!!",
-      "reviewer": "leotosoni31",
-      "reviewerId": "1",
+      "reviewer": "leotosoni16",
+      "reviewerId": 1,
       "favourite": "8",
       "id": 28
     },
@@ -353,8 +353,8 @@
       "date": "11-16-2023",
       "punctuation": 7,
       "review": "nice",
-      "reviewer": "leotosoni31",
-      "reviewerId": "1",
+      "reviewer": "leotosoni16",
+      "reviewerId": 1,
       "id": 29
     },
     {
@@ -362,8 +362,8 @@
       "date": "11-16-2023",
       "punctuation": 10,
       "review": "",
-      "reviewer": "leotosoni31",
-      "reviewerId": "1",
+      "reviewer": "leotosoni16",
+      "reviewerId": 1,
       "id": 30
     },
     {
@@ -371,8 +371,8 @@
       "date": "11-17-2023",
       "punctuation": 5,
       "review": "",
-      "reviewer": "leotosoni31",
-      "reviewerId": "1",
+      "reviewer": "leotosoni16",
+      "reviewerId": 1,
       "id": 31
     },
     {
@@ -380,8 +380,8 @@
       "date": "11-17-2023",
       "punctuation": 3.7,
       "review": "",
-      "reviewer": "leotosoni31",
-      "reviewerId": "1",
+      "reviewer": "leotosoni16",
+      "reviewerId": 1,
       "id": 32
     },
     {
@@ -389,8 +389,8 @@
       "date": "11-17-2023",
       "punctuation": 5.2,
       "review": "",
-      "reviewer": "leotosoni31",
-      "reviewerId": "1",
+      "reviewer": "leotosoni16",
+      "reviewerId": 1,
       "id": 33
     },
     {
@@ -398,8 +398,8 @@
       "date": "11-17-2023",
       "punctuation": 8.6,
       "review": "",
-      "reviewer": "leotosoni31",
-      "reviewerId": "1",
+      "reviewer": "leotosoni16",
+      "reviewerId": 1,
       "id": 34
     },
     {
@@ -407,16 +407,34 @@
       "date": "11-17-2023",
       "punctuation": 4.4,
       "review": "",
-      "reviewer": "leotosoni31",
-      "reviewerId": "1",
+      "reviewer": "leotosoni16",
+      "reviewerId": 1,
       "id": 35
+    },
+    {
+      "albumUrl": "3HLngzP9wVd8p3SMDQgyd9",
+      "date": "11-21-2023",
+      "punctuation": 9.6,
+      "review": "me encanto",
+      "reviewer": "leotosoni16",
+      "reviewerId": 1,
+      "id": 36
+    },
+    {
+      "albumUrl": "4DyMK9x2gnmRkRa16zHaEV",
+      "date": "11-22-2023",
+      "punctuation": 9.8,
+      "review": "Muy bueno",
+      "reviewer": "leotosoni16",
+      "reviewerId": 1,
+      "id": 37
     }
   ],
   "users": [
     {
       "apellido": "Tosoni",
       "nombre": "Leonardo",
-      "username": "leotosoni31",
+      "username": "leotosoni16",
       "email": "leotosoni@hotmail.com",
       "password": "leonardo33",
       "id": 1
@@ -503,7 +521,7 @@
     },
     {
       "nombre": "Luquitas",
-      "apellido": "Gauna Dasmi",
+      "apellido": "Gauna Dasmi m",
       "email": "lucasgauna1997@gmail.com",
       "username": "lucas.ga97",
       "password": "lucasgauna1997",
@@ -580,6 +598,22 @@
       "username": "leonardo",
       "password": "leonardo",
       "id": 21
+    },
+    {
+      "nombre": "Juan",
+      "apellido": "Perez",
+      "email": "juanperez@gmail.com",
+      "username": "juancito",
+      "password": "juanjuan",
+      "id": 22
+    },
+    {
+      "nombre": "Maria",
+      "apellido": "Williams",
+      "email": "marywilliams@gmail.com",
+      "username": "mary",
+      "password": "marymary",
+      "id": 23
     }
   ]
 }

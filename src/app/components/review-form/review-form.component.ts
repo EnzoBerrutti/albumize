@@ -99,7 +99,7 @@ export class ReviewFormComponent implements OnInit {
       this.review.punctuation = this.formulario.controls['rating'].value;
       this.review.review = this.formulario.controls['reviewBody'].value;
       this.review.reviewer =  await this.usuarios.getUserID(localStorage['token']).then(u => u.username);
-      this.review.reviewerId = (localStorage['token']);
+      this.review.reviewerId = parseInt(localStorage['token']);
 
       this.addOptionalField('favourite', this.review);
       this.addOptionalField('overrated', this.review);

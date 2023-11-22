@@ -37,7 +37,7 @@ export class ProfileReviewsComponent {
 
       console.log(allreviews)
 
-      this.reviewsArray = await allreviews.filter((r:Review) => +r.reviewerId === this.user.id)
+      this.reviewsArray = await allreviews.filter((r:Review) => r.reviewerId === this.user.id)
       console.log(this.reviewsArray)
 
       this.originalOrder = [...this.reviewsArray]

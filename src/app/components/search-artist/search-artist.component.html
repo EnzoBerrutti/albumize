@@ -3,7 +3,7 @@
     <hr>
     <div class="col-10 offset-1">
         <div class="albums">
-            <div *ngFor="let album of albums1;">
+            <div *ngFor="let album of albums;">
                 <a class="album-link" routerLink="/album/{{album.id}}">
                     <div class="album-content">
                         <div class="img-album">
@@ -16,7 +16,7 @@
                     </div>
                 </a>
             </div>
-            <div *ngFor="let album of albums2;">
+            <!-- <div *ngFor="let album of albums2;">
                 <a class="album-link" routerLink="/album/{{album.id}}">
                     <div class="album-content">
                         <div class="img-album">
@@ -28,7 +28,7 @@
                         </div>
                     </div>
                 </a>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
