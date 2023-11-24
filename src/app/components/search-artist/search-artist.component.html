@@ -3,7 +3,7 @@
     <hr>
     <div class="col-10 offset-1">
         <div class="albums">
-            <div *ngFor="let album of albums;">
+            <div *ngFor="let album of albums | paginate: { itemsPerPage: 10, currentPage: page };">
                 <a class="album-link" routerLink="/album/{{album.id}}">
                     <div class="album-content">
                         <div class="img-album">
@@ -31,4 +31,5 @@
             </div> -->
         </div>
     </div>
+    <pagination-controls class="my-pagination mt-4 col-4 offset-4 border-warning" (pageChange)="page = $event" previousLabel="Previous" nextLabel="Next"></pagination-controls>
 </div>

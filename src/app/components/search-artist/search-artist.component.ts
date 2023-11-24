@@ -12,6 +12,7 @@ export class SearchArtistComponent implements OnInit {
   img: string[] = []
   albums: Album[] = []
   
+  public page!:number
 
   idArtist = {} as number
   busqueda = {} as string
@@ -24,24 +25,24 @@ export class SearchArtistComponent implements OnInit {
     ) {}
 
   async ngOnInit() {
-    this.albums = []
       this.activatedRoute.params.subscribe((params: Params) => {
         this.querySearch = params['query']
-        this.getAlbums('50', '0');
-        this.getAlbums('50', '50');
+        this.albums = []
+        this.getAlbums();
+
 
       })
   }
 
-  async getAlbums(limit:string, offset:string) {
+  async getAlbums() {
 
-    const data = await this.api.getAlbumsWithLimitOffset(this.querySearch, limit, offset)
-    console.log(data['albums']['items'])
-    this.albums = [...this.albums, ...data['albums']['items']]
+    const data1 = await this.api.getAlbumsWithLimitOffset(this.querySearch,'50' , '0')
+    const data2 = await this.api.getAlbumsWithLimitOffset(this.querySearch,'50' , '50')
+    this.albums = [...data1['albums']['items'], ...data2['albums']['items']];
+    
     this.getAlbumYear(this.albums)
     this.getDottedName(this.albums)
   }
-
 
 
   getAlbumYear(array: Album[]) {

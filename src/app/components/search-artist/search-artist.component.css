@@ -62,3 +62,18 @@
 hr{
     margin: 0;
 }
+
+.my-pagination{
+    font-size: 1.4rem;
+    font-family: Roboto, sans-serif;
+}
+.my-pagination ::ng-deep .ngx-pagination .current {
+    background: #AC01F8;
+  }
+
+  .my-pagination ::ng-deep .ngx-pagination a:hover {
+    background-color: rgba(0, 0, 0, 0);
+
+  }
+
+   
