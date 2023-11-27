@@ -16,20 +16,7 @@
                     </div>
                 </a>
             </div>
-            <!-- <div *ngFor="let album of albums2;">
-                <a class="album-link" routerLink="/album/{{album.id}}">
-                    <div class="album-content">
-                        <div class="img-album">
-                            <img class="imagen-album" [src]="album.images[1].url" alt="">
-                        </div>
-                        <div class="info-album">
-                            <p class="info-album-name">{{album.name}}</p>
-                            <p class="info-album-artist">{{album.release_date}} • {{album.artists[0].name}}</p>
-                        </div>
-                    </div>
-                </a>
-            </div> -->
         </div>
     </div>
-    <pagination-controls class="my-pagination mt-4 col-4 offset-4 border-warning" (pageChange)="page = $event" previousLabel="Previous" nextLabel="Next"></pagination-controls>
+    <pagination-controls class="my-pagination mt-4 col-12 col-lg-4 offset-lg-4 border-warning" (pageChange)="page = $event" previousLabel="Previous" nextLabel="Next"></pagination-controls>
 </div>

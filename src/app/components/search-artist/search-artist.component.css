@@ -4,6 +4,13 @@
     grid-template-columns: repeat(5, 1fr);
 }
 
+@media(max-width:576px){
+    .albums{
+        /* background-color: rgb(25, 25, 25); */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 .album-link{
     text-decoration: none;
 }
@@ -21,10 +28,18 @@
     transition: transform 0.3s ease-in-out;
 }
 
+@media(max-width:576px){
+    .album-content{
+        margin: 2px 0;
+        width: 170px;
+        height: 217px;
+        padding: 10px;
+    }
+}
+
 .album-content:hover{
 
    transform: scale(1.05);
-    
     
 }
 
@@ -44,10 +59,26 @@
     font-weight: 500;
 }
 
+@media(max-width:576px){
+    .info-album-name{
+        font-size: 18px;
+
+    }
+    .info-album-artist{
+        font-size: 8px;
+    }
+}
+
 .imagen-album{
     width: 210px;
     height: auto;
     border-radius: 4px;
+}
+
+@media(max-width:576px){
+    .imagen-album{
+        width: 144px;
+    }
 }
 
 .img-album{
@@ -59,6 +90,7 @@
     margin-top: 1rem;
 }
 
+
 hr{
     margin: 0;
 }
@@ -66,6 +98,12 @@ hr{
 .my-pagination{
     font-size: 1.4rem;
     font-family: Roboto, sans-serif;
+}
+
+@media(max-width:576px){
+    .my-pagination{
+        font-size: 0.8rem;
+    }
 }
 .my-pagination ::ng-deep .ngx-pagination .current {
     background: #AC01F8;
@@ -76,4 +114,4 @@ hr{
 
   }
 
-   
+
