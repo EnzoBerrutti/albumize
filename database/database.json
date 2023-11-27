@@ -428,21 +428,12 @@
       "reviewer": "leotosoni35",
       "reviewerId": 1,
       "id": 37
-    },
-    {
-      "albumUrl": "3b4E89rxzZQ9zkhgKpj8N4",
-      "date": "11-27-2023",
-      "punctuation": 7,
-      "review": "Hola",
-      "reviewer": "lucas.ga97",
-      "reviewerId": 12,
-      "id": 38
     }
   ],
   "users": [
     {
       "apellido": "Tosoni",
-      "nombre": "Leonardo",
+      "nombre": "Alejandro",
       "username": "leotosoni35",
       "email": "leotosoni@hotmail.com",
       "password": "leonardo33",
