@@ -1,14 +1,20 @@
 <div [@fadeInOut]>
   <app-album-intro></app-album-intro>
-  <app-review-buttons *ngIf="showButtons" class="fade-in"></app-review-buttons>
-  <ng-container *ngIf="showUl" class="fade-in">
+  <div class="mid">
+    <app-review-buttons *ngIf="showButtons" class="fade-in"></app-review-buttons>
+
+  </div>
+     <ng-container *ngIf="showUl" class="fade-in">
       <ul *ngIf="listaReviewsFiltrada.length > 0">
           <li *ngFor="let review of listaReviewsFiltrada">
               <app-review-in-album-page [review]="review"></app-review-in-album-page>
           </li>
       </ul>
-  </ng-container>
+    </ng-container>
+
   <ng-container *ngIf="listaReviewsFiltrada.length === 0" class="fade-in">
+    <div class="no-reviews">
       <h3>There are not reviews yet!</h3>
+    </div>
   </ng-container>
 </div>

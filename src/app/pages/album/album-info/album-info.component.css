@@ -3,14 +3,9 @@ html{
 }
 
 .componentes{
-    width: 75%;
-    margin-left: 10rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-
-.derecha{
-    margin-left: 5rem;
+    gap: 5rem;
 }
 
 .fade-in {
@@ -23,5 +18,12 @@ html{
     }
     100% {
       opacity: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .componentes{
+      display: flex;
+      flex-direction: column;
     }
   }

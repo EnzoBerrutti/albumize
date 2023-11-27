@@ -1,6 +1,6 @@
-<div class = "whole">
-    <label for="opciones" class="text">Sort by:</label>
-    <form  [formGroup]="formulario">
+<div class="whole">
+    <form [formGroup]="formulario" class="form-container">
+        <label for="opciones" class="text">Sort by:</label>
         <select (change)="onSortBy()" class="opciones" name="opciones" formControlName="selectedSort">
             <option selected value="opcion1">Most recent</option>
             <option value="opcion2">Oldest</option>

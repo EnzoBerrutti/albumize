@@ -1,6 +1,8 @@
+<div class="botones">
 <button type="button" [attr.data-bs-toggle]="'modal'" [attr.data-bs-target]="modalTarget" id="register-button"
     class="boton-enviar" (click)="submitReview()">Post review</button>
 <button class="boton-reviews" routerLink="/album-reviews/{{idAlbum}}">See all reviews</button>
+</div>
 <div class="container">
     <form [formGroup]="formulario">
         <fieldset>

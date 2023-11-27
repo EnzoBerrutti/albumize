@@ -25,12 +25,7 @@ button:hover{
   transition: 0.3s ease;
 }
 
-.boton-enviar{
-  margin-left: 10rem;
-}
-
 .container {
-  margin-left: 3rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
@@ -83,7 +78,7 @@ button:hover{
   display: flex;
   align-items: center; 
   justify-content: center;
-  padding: 0;
+  padding: 1rem;
   border: 2px solid rgb(62, 62, 62);
   border-radius: 50%;
   font-size: large;
@@ -164,6 +159,62 @@ button:hover{
   color: #ce76f3;
 }
 
+.dateAndButton{
+  display: flex;
+  text-align: right;
+}
+
 .btn-close-custom {
   width: 2.5rem; /* Ajusta el ancho según tus necesidades */
+}
+
+.botones{
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .botones{
+    margin-top: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .container{
+    margin: 0;
+  }
+
+  @media (max-width:768px) {
+    .details{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .date{
+        margin: 0;
+        margin-top: 0.5rem;
+        justify-self: right;
+    }
+
+    .share-buttons{
+        margin: 0;
+    }
+
+    .score{
+        justify-self: right;
+    }
+
+    .dateAndButton{
+      justify-self: right;
+      grid-column-start: 2;
+      grid-column-end: 4;
+      margin-top: 0.5rem;
+    }
+
+    .share-buttons{
+      margin-top: 0.5rem;
+    }
+}
 }

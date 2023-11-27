@@ -89,11 +89,11 @@ export class AlbumReviewsComponent implements OnInit {
   }
 
   sortByMostRecent() {
-    this.listaReviewsFiltrada = this.originalOrder;
+    this.listaReviewsFiltrada = this.reversedOrder;
   }
   
   sortByOldest() {
-    this.listaReviewsFiltrada = this.reversedOrder;
+    this.listaReviewsFiltrada = this.originalOrder;
   }
   
 }
