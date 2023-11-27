@@ -1,5 +1,3 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;500;700;1000&display=swap');
 
 
@@ -7,7 +5,7 @@
 
 /* Nueva parte */
 
-.navbar{
+.navbar {
     background-color: black;
     display: flex;
     justify-content: center;
@@ -18,56 +16,80 @@
     width: 100%;
     height: 4rem;
 }
-.cont-todo{
+
+
+
+@media(max-width:780px) {
+    .navbar {
+        height: 3rem;
+
+    }
+}
+
+.cont-todo {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 100%;
 }
-.cont-logo{
+
+.cont-logo {
     display: flex;
     width: 33.33%;
     height: 80%;
-
 }
-.div-logo{
+
+.div-logo {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 1rem;
-
 }
-.logo-button{
+
+.logo-button {
     padding: 0;
     outline: none;
     background-color: #AC01F8;
-    border:2px solid  #AC01F8;
+    border: 2px solid #AC01F8;
     border-radius: 50%;
-
-  
-
 }
 
-.div-albumize{
+@media(max-width:780px) {
+    img {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+.div-albumize {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 0.5rem;
 }
-#albumize{
+
+#albumize {
     text-decoration: none;
     color: #fff;
     font-weight: 1000;
     font-size: 25px;
-    font-family: 'Nunito'; 
-}
-#albumize:hover{
-    color: #AC01F8;
-    
+    font-family: 'Nunito';
 }
 
-.cont-home-about{
+@media(max-width:780px) {
+    #albumize {
+        font-size: 18px;
+
+    }
+}
+
+#albumize:hover {
+    color: #AC01F8;
+
+}
+
+.cont-home-about {
     width: 33.33%;
     height: 80%;
     display: flex;
@@ -75,15 +97,23 @@
     justify-content: center;
 
 }
-.cont-login-busqueda{
+
+@media(max-width:780px){
+    .cont-home-about {
+        width: 45%;
+        justify-content: space-evenly;
+    
+    }
+}
+.cont-login-busqueda {
     width: 33.33%;
     height: 80%;
     display: flex;
     align-items: center;
     justify-content: flex-end
-
 }
-.div-home{
+
+.div-home {
     width: 4rem;
     height: 3rem;
     display: flex;
@@ -92,11 +122,13 @@
     margin-right: 0.5rem;
     border-radius: 0.2rem;
 }
-.div-home:hover{
+
+.div-home:hover {
     background-color: #AC01F8;
-  
+
 }
-.div-about{
+
+.div-about {
     width: 4rem;
     height: 3rem;
     display: flex;
@@ -105,57 +137,101 @@
     margin-left: 0.5rem;
     border-radius: 0.2rem;
 }
-.div-about:hover{
-    background-color: #AC01F8;
-    
 
+.div-about:hover {
+    background-color: #AC01F8;
 }
-.btn-nav{
+
+@media(max-width:780px) {
+
+    .div-home,
+    .div-about {
+        width: 2rem;
+        height: 1.5rem;
+    }
+}
+
+.btn-nav {
     text-decoration: none;
     color: #fff;
     font-size: 1rem;
     font-weight: 700;
     font-family: 'Roboto';
-
-   
-  
 }
-.cont-login-busqueda{
+
+@media(max-width:780px) {
+    .btn-nav {
+        font-size: 0.8rem;
+    }
+
+}
+
+.cont-login-busqueda {
     width: 33.33%;
     height: 80%;
     display: flex;
 }
 
-.barra-busqueda{
+@media(max-width:780px) {
+    .cont-login-busqueda {
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        height: 3rem;
+
+    }
+}
+
+.barra-busqueda {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 1rem;
-    
-    
+
+
 }
-.div-icon{
+
+.div-icon {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 3rem;
     height: 3rem;
     background-color: #AC01F8;
-    border-radius:0.2rem 0 0 0.2rem ;
+    border-radius: 0.2rem 0 0 0.2rem;
 }
 
-.div-placeholder{
+@media(max-width:780px) {
+    .div-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+
+
+    }
+}
+
+
+.div-placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
-   
+
 }
-.div-login{
+
+/* @media(max-width:780px){
+    .div-placeholder{
+        display: none;
+    }
+
+} */
+.div-login {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#register-button{
+
+#register-button {
     background-color: white;
     border: none;
     color: black;
@@ -168,32 +244,46 @@
 
 }
 
-#register-button:hover{
+@media(max-width:780px) {
+    #register-button {
+        font-size: 0.8rem;
+        height: 2.5rem;
+    }
+}
+
+#register-button:hover {
     background-color: #AC01F8;
     color: white;
 }
-.fa-search{
+
+.fa-search {
     font-size: 1.5rem;
 
 }
-.input-place{
+
+.input-place {
     height: 3rem;
     width: 13rem;
     border: none;
     background-color: #AC01F8;
     outline: none;
-    border-radius: 0 0.2rem 0.2rem 0 ;
+    border-radius: 0 0.2rem 0.2rem 0;
     color: white;
-    
-    
-
 
 }
-.input-place::placeholder{
+
+@media(max-width:780px) {
+    .input-place {
+        height: 2.5rem;
+        width: 15rem;
+    }
+}
+
+.input-place::placeholder {
     position: absolute;
     color: white;
     top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
 
 }
