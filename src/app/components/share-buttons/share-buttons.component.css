@@ -1,5 +1,17 @@
+
+
 .share-btn{
   transition: all 0.3s ease; 
+  width: 25px;
+  height: 25px;
+}
+
+@media(max-width:780px){
+  .share-btn{
+    width: 15px;
+    height: 15px;
+  }
+  
 }
 
 .share-btn:hover{

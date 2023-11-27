@@ -4,7 +4,7 @@
     grid-template-columns: repeat(5, 1fr);
 }
 
-@media(max-width:576px){
+@media(max-width:780px){
     .albums{
         /* background-color: rgb(25, 25, 25); */
         grid-template-columns: repeat(2, 1fr);
@@ -28,7 +28,7 @@
     transition: transform 0.3s ease-in-out;
 }
 
-@media(max-width:576px){
+@media(max-width:780px){
     .album-content{
         margin: 2px 0;
         width: 170px;
@@ -59,7 +59,7 @@
     font-weight: 500;
 }
 
-@media(max-width:576px){
+@media(max-width:780px){
     .info-album-name{
         font-size: 18px;
 
@@ -75,7 +75,7 @@
     border-radius: 4px;
 }
 
-@media(max-width:576px){
+@media(max-width:780px){
     .imagen-album{
         width: 144px;
     }
@@ -100,7 +100,7 @@ hr{
     font-family: Roboto, sans-serif;
 }
 
-@media(max-width:576px){
+@media(max-width:780px){
     .my-pagination{
         font-size: 0.8rem;
     }

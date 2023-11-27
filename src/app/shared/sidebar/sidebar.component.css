@@ -10,10 +10,18 @@
     margin-left: 3rem;
     margin-top: 2rem;
     border-radius: 15px;
-   
 
 }
 
+@media(max-width:780px){
+    .contenedor-sidebar{
+
+        visibility: hidden;
+  
+    
+    }
+
+}
 
 .lista-sidebar{
     list-style: none;
