@@ -12,6 +12,7 @@ export class SearchArtistComponent implements OnInit {
   img: string[] = []
   albums: Album[] = []
   
+  maxSize:number = 5;
   public page!:number
 
   idArtist = {} as number

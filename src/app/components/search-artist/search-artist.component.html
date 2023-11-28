@@ -1,7 +1,7 @@
 <div class="row mt-3">
     <h5 class="titulo">Showing results for: "{{querySearch}}"</h5>
     <hr>
-    <div class="col-10 offset-1">
+    <div class="contenedor">
         <div class="albums">
             <div *ngFor="let album of albums | paginate: { itemsPerPage: 10, currentPage: page };">
                 <a class="album-link" routerLink="/album/{{album.id}}">
@@ -18,5 +18,5 @@
             </div>
         </div>
     </div>
-    <pagination-controls class="my-pagination mt-4 col-12 col-lg-4 offset-lg-4 border-warning" (pageChange)="page = $event" previousLabel="Previous" nextLabel="Next"></pagination-controls>
+    <pagination-controls [maxSize]="maxSize" class="my-pagination  contenedor mt-4 text-center border-warning" (pageChange)="page = $event" previousLabel="Previous" nextLabel="Next" ></pagination-controls>
 </div>
