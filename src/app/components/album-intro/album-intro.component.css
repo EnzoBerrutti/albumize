@@ -156,12 +156,23 @@
 @media (max-width: 768px) {
     .container{
         width: 95%;
+        margin-top: 1.5rem;
         display: flex;
         flex-direction: column;
     }
 
+    .iconAndName{
+        justify-content: center;
+    }
+
     .score-and-spotify{
         margin-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .trackStats{
+        margin: 0;
+        text-align: center;
     }
 
     .albumIcon{
