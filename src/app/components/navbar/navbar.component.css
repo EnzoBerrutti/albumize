@@ -16,7 +16,7 @@
 
 
 
-@media(max-width:780px) {
+@media(max-width:768px) {
     .navbar {
         height: auto;
        padding: 0.5rem 0;
@@ -53,7 +53,7 @@
     border-radius: 50%;
 }
 
-@media(max-width:780px) {
+@media(max-width:768px) {
     img {
         width: 2rem;
         height: 2rem;
@@ -75,7 +75,7 @@
     font-family: 'Nunito';
 }
 
-@media(max-width:780px) {
+@media(max-width:768px) {
     #albumize {
         font-size: 18px;
 
@@ -134,7 +134,7 @@
     background-color: #AC01F8;
 }
 
-@media(max-width:780px) {
+@media(max-width:768px) {
 
     .div-home,
     .div-about {
@@ -151,7 +151,7 @@
     font-family: 'Roboto';
 }
 
-@media(max-width:780px) {
+@media(max-width:768px) {
     .btn-nav {
         font-size: 0.8rem;
     }
@@ -181,7 +181,7 @@
     border-radius: 0.2rem 0 0 0.2rem;
 }
 
-@media(max-width:780px) {
+@media(max-width:768px) {
     .div-icon {
         width: 2.5rem;
         height: 2.5rem;
@@ -213,7 +213,7 @@
     margin-right: 1rem;
 }
 
-@media(max-width:780px) {
+@media(max-width:768px) {
     #register-button {
         font-size: 0.8rem;
         height: 2.5rem;
@@ -240,7 +240,7 @@
     color: white;
 }
 
-@media(max-width:780px) {
+@media(max-width:768px) {
     .input-place {
         height: 2.5rem;
         width: 15rem;
@@ -256,7 +256,7 @@
 
 }
 
-@media(max-width:780px){
+@media(max-width:768px){
     .cont-todo{
         display: grid;
         grid-template-columns: repeat(4, 1fr);

@@ -15,7 +15,7 @@
     margin-left: 1.5rem;
 }
 
-@media(max-width:780px){
+@media(max-width:768px){
     .contenedor{
         margin-left: 0rem;
         width: 100%;
@@ -53,7 +53,7 @@
     align-items: center;
 }
 
-@media(max-width:780px){
+@media(max-width:768px){
     .albumTitle{
         font-size: 0.8rem;
         width: 3.5rem;
@@ -86,7 +86,7 @@
     background-color: rgb(20, 225, 37);
 }
 
-@media(max-width:780px){
+@media(max-width:768px){
     .score {
         width: 2rem;
         height: 2rem;
@@ -105,7 +105,7 @@
     font-weight: 100;
 }
 
-@media(max-width:780px){
+@media(max-width:768px){
     .date{
         margin: 0;
         font-size: 0.5rem;
@@ -144,7 +144,7 @@
     margin: auto 1rem;
 }
 
-@media(max-width:780px){
+@media(max-width:768px){
     .share-buttons{
         margin: 0 auto;
         width: 10;
@@ -162,7 +162,7 @@
     align-items: center;
 }
 
-@media(max-width:780px){
+@media(max-width:768px){
     .artistName{
        margin: auto 0.5rem;
 
@@ -198,7 +198,7 @@
     margin-top: 0.9rem;
 }
 
-@media(max-width:780px){
+@media(max-width:768px){
     .share-buttons{
         margin: auto 0.1rem;
     }

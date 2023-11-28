@@ -6,12 +6,19 @@
   height: 25px;
 }
 
-@media(max-width:780px){
+@media(max-width:768px){
   .share-btn{
     width: 15px;
     height: 15px;
   }
   
+}
+
+@media(max-width:768px){
+  .modal-dialog{
+    width: 90vw;
+    margin: 0 auto;
+  }
 }
 
 .share-btn:hover{
@@ -21,12 +28,26 @@
 
 .share-btn-container {
   display: flex;
+  justify-content: space-around;
   gap: 2rem;
   padding: 0;
 }
   
+@media(max-width:768px){
+  .share-btn-container {
+    gap: 0.5rem;
+  }
+    
+}
 .share-btn-container a i {
   font-size: 35px;
+}
+
+@media(max-width:768px){
+  .share-btn-container a i {
+    font-size: 30px;
+  }
+  
 }
   
 .share-btn-container a {
