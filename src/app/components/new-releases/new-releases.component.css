@@ -31,6 +31,21 @@
    }
  }
 
+ @keyframes humoAnimacion2 {
+   0% {
+     opacity: 1;
+     transform: scale(1);
+   }
+   50% {
+     opacity: 1;
+     transform: scale(1.2);
+   }
+   100% {
+     opacity: 1;
+     transform: scale(1);
+   }
+ }
+
 
 
 
@@ -67,6 +82,15 @@
 
 }
 
+@media(max-width:768px) {
+   .h1-albumize {
+       font-size: 1.5rem;
+       animation: humoAnimacion2 20s infinite linear;
+   
+   }
+   
+}
+
 .contenedor-subtitle{
    display: flex;
    justify-content: center;
@@ -84,6 +108,13 @@
    font-size: 1.5rem;
    
 }
+@media(max-width:768px) {
+   .h2-subtitle {
+       font-size: 1rem;
+   }
+   
+}
+
 .cont-text{
    position: absolute;
    z-index: 1;
@@ -127,29 +158,7 @@
    align-items: center;
    height: 55%;
 }
-/* .fa-music{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   color: #AC01F8;
- 
 
-}
-.fa-compact-disc{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   color: #AC01F8;
-
-}
-.linea-iconos{
-   display: flex;
-   background-color: black;
-   justify-content: space-between;
-   width: 100%;
-
-
-} */
 .parrafo-titulo{
    margin: 0;
    color: white;
@@ -173,7 +182,7 @@
 
 
 }
-.parrafo-desc-titulo2{
+/* .parrafo-desc-titulo2{
    width: 100%;
    font-size: 1rem;
    font-weight: 100;
@@ -184,7 +193,29 @@
    text-transform: uppercase;
 
 
+} */
+@media(max-width:768px) {
+   .parrafo-titulo{
+      font-size: 2rem;
+   }
+   .parrafo-desc-titulo {
+       font-size: 0.8rem;
+       width: 90%;
+       text-align: center;
+       
+   
+   }
+   
+   .div-parrafos-juntos{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+   }
+   
 }
+
+/* Parte tarjetas ------------------------------------------------------------------*/
 #todo-home{
    display: flex;
    justify-content: center;
@@ -213,16 +244,26 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-  
-  
-  
-
 }
+
 .container-tarjetas{
    width:100%;
    margin: 0;
 }
-
+@media(max-width:768px) {
+   
+   .tarjetas{
+      display: flex;
+      flex-direction: column;
+   }
+   .div-tarjetas{
+      width: 85%;
+      height: 80%;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+   }
+   
+}
 .album-content{
    background-color: #f2f2f2;
    border-radius: 7px;

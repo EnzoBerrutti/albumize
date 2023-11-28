@@ -22,11 +22,16 @@
     justify-content: center;
     align-items: center;
 }
+.div-titulo-about{
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
 
+}
 .cont-parrafo{
     display: flex;
     justify-content: center;
-    height: 20%;
+    height: 50%;
 }
 
 h1{
@@ -63,6 +68,49 @@ h2{
     background-size: cover;
     background-position: center;
 }
+@media (max-width: 768px) {
+    .cont-parrafo{
+        display: flex;
+        justify-content: center;
+        
+    }
+    .texto-titulo{
+        width: 80%;
+        text-align: center; 
+        font-size: 0.8rem; 
+    }
+    
+    h1{
+        font-family: 'Dosis', "Helvetica Neue", "Helvetica", Helvetica, Arial,sans-serif;
+        text-transform: uppercase;
+        font-weight: 100;
+        font-size: 3rem;
+        text-align: center;
+    }
+    .parrafo-cont{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .foto-cont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        height: 50%;
+    }
+    .contenedor{
+        flex-direction: column;
+
+    }
+    .foto{
+        background-image: url(src\assets\images\disco-resposive.jpg);
+    }
+ }
 
 .foto2{
     background-image: url(src\assets\images\albumes-fondo2.jpg);
@@ -174,10 +222,11 @@ p{
 
 .container-puntaje{
     width: 100%;
-    height: 50rem;
+    
     display: flex;
     justify-content: center;
     background-color: #f2f2f2;
+    padding-bottom: 2rem;
 }
 
 .puntajes{
@@ -278,6 +327,46 @@ p{
     margin: 0;
     align-items: center;
 }
+@media (max-width: 768px) {
+    .container-circulo{
+        width: 100%;
+        height:6rem;
+        background-color:#f2f2f2 ;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        align-items: center;
+    }
+    .circulo-puntaje1{
+        
+        width: 4.7rem;
+        margin: 0.2rem;
+        
+    }
+    
+    .circulo-puntaje2{
+        width: 4.7rem;
+        margin: 0.2rem;
+    }
+    
+    .circulo-puntaje3{
+        width: 4.7rem;
+        margin: 0.2rem;
+    }
+    
+    .circulo-puntaje4{
+        width: 4.7rem;
+        margin: 0.2rem;
+    }
+    .desc-puntaje{
+        width: 100%;
+        height: 5rem;
+        text-align: center;
+        font-size:0.8rem;
+    }
+    
+ }
 
 .numero{
     font-weight: 700;
@@ -304,7 +393,7 @@ p{
 
 .seccion-cuadrado{
     width: 100%;
-    height: 30rem;
+    /* height: 30rem; */
     border: 0;
     padding: 0;
     display: flex;
@@ -328,8 +417,8 @@ p{
 
 .cuadradito1{
     background-color: #AC01F8;
-    width: 100%;
-    height: 100%;
+    width: 20rem;
+    height: 8rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -337,8 +426,8 @@ p{
 
 .cuadradito2{
     background-color: #00ce7a;
-    width: 100%;
-    height: 100%;
+    width: 20rem;
+    height: 8rem;
     color: white;
     display: flex;
     justify-content: center;
@@ -347,8 +436,8 @@ p{
 
 .cuadradito3{
     background-color: #ffbd3f;
-    width: 100%;
-    height: 100%;
+    width: 20rem;
+    height: 8rem;
     color:white; 
     display: flex;
     justify-content: center;
@@ -357,8 +446,8 @@ p{
 
 .cuadradito4{
     background-color: #ff6874;
-    width: 100%;
-    height: 100%; 
+    width: 20rem;
+    height: 8rem;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -385,7 +474,7 @@ p{
 .punto-1{
     display: flex;
     width: 100%;
-    margin-bottom: 3.5rem;
+    margin-bottom: 8rem;
 }
 
 .punto-2{
@@ -430,6 +519,7 @@ p{
 
 .container-titulohow{
     width: 100%; 
+    margin-bottom: 6rem;
 }
 
 .info-pag{
@@ -480,4 +570,114 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+@media(max-width: 768px){
+    .seccion-cuadrado{
+        width: 100%;
+        height: 50%;
+        border: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .desc-cuadrado{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .cuadrado-puntajes{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1.5rem;
+       
+    }
+    .cuadradito1{
+        width: 24rem;
+        height: 5rem;
+    }
+    
+    .cuadradito2{
+        width: 24rem;
+        height: 5rem;
+        
+    }
+    
+    .cuadradito3{
+     
+        width: 24rem;
+        height: 5rem;
+        
+    }
+    
+    .cuadradito4{
+        width: 24rem;
+        height: 5rem;
+    }
+    .foto-puntajes{
+        width: 90%;
+        height: 90%;
+        border-radius: 10px;
+        display: flex;
+    }
+    .container-titulohow{
+        width: 100%; 
+        margin-bottom: 2rem;
+    }
+    .punto-1{
+        display: flex;
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .texto{
+        font-size: 0.8rem;
+    }
+    .numero-1{
+        width: 3rem;
+        height: 2rem;
+        
+    }
+    .titulo{
+        font-family: 'Roboto';
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .info{
+        font-size: 2rem;
+        
+    }
+    
+    .titulo-info{
+        width: 25rem;
+    }
+    .city{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+        height: 20rem;
+    }
+    .texto-joinus{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-family: 'Roboto';
+        font-size: 1.2rem;
+    }
+    .container-texto{
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
