@@ -109,7 +109,7 @@ select:hover{
     gap: 2rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
     .text{
         font-size: 1rem;
     }

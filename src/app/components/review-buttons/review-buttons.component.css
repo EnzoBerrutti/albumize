@@ -48,11 +48,10 @@ select:hover{
     align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
     .whole{
         display: flex;
         flex-direction: column;
         gap: 1rem;
     }
-    
 }

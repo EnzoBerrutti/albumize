@@ -173,7 +173,7 @@ button:hover{
   justify-content: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   .botones{
     margin-top: 0;
     flex-direction: column;
@@ -186,7 +186,7 @@ button:hover{
     margin: 0;
   }
 
-  @media (max-width:768px) {
+  @media (max-width:1080px) {
     .details{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
