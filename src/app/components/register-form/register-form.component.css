@@ -4,7 +4,7 @@
     left: -3rem;
 }
 
-@media(max-width:768px) {
+@media(max-width:1080px) {
     .modal {
         position: absolute;
         left: 0;
@@ -31,7 +31,7 @@
     width: 600px;
 }
 
-@media(max-width:768px) {
+@media(max-width:1080px) {
     .modal-content {
         width: 100%;
         margin: 0 auto;
@@ -52,7 +52,7 @@
     padding: 20px;
 }
 
-@media(max-width:768px) {
+@media(max-width:1080px) {
     .logo-header {
         margin-left: 0;
     }
@@ -94,7 +94,7 @@
     width: 400px;
 }
 
-@media(max-width:768px) {
+@media(max-width:1080px) {
     .container-form {
         width: 90%;
     }
@@ -120,7 +120,7 @@
     border-color: rgb(212, 212, 212);
 }
 
-@media(max-width:768px) {
+@media(max-width:1080px) {
     .form-control {
         width: 280px;
     }
@@ -169,7 +169,7 @@
     border: 0px;
 }
 
-@media(max-width:768px) {
+@media(max-width:1080px) {
     .btn-primary {
         width: 300px;
         margin: 20px auto 0 auto;
@@ -223,7 +223,7 @@
     margin-left: 0.5rem;
 }
 
-@media(max-width:768px) {
+@media(max-width:1080px) {
 
     .bi-eye-fill,
     .bi-eye-slash-fill {

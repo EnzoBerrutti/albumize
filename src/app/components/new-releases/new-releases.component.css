@@ -82,7 +82,7 @@
 
 }
 
-@media(max-width:768px) {
+@media(max-width:1080px) {
    .h1-albumize {
        font-size: 1.5rem;
        animation: humoAnimacion2 20s infinite linear;
@@ -108,7 +108,7 @@
    font-size: 1.5rem;
    
 }
-@media(max-width:768px) {
+@media(max-width:1080px) {
    .h2-subtitle {
        font-size: 1rem;
    }
@@ -194,7 +194,7 @@
 
 
 } */
-@media(max-width:768px) {
+@media(max-width:1080px) {
    .parrafo-titulo{
       font-size: 2rem;
    }
@@ -250,7 +250,7 @@
    width:100%;
    margin: 0;
 }
-@media(max-width:768px) {
+@media(max-width:1080px) {
    
    .tarjetas{
       display: flex;

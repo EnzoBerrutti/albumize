@@ -2,7 +2,7 @@
     padding: 3rem 0 0 3rem;
 }
 
-@media(max-width:768px){
+@media(max-width:1080px){
     .contenedor {
         padding: 1rem;
     }

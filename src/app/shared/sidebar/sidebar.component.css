@@ -13,7 +13,7 @@
 
 }
 
-@media(max-width:780px){
+@media(max-width:1080px){
     .contenedor-sidebar{
 
         visibility: hidden;

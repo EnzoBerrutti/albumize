@@ -68,7 +68,7 @@ h2{
     background-size: cover;
     background-position: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
     .cont-parrafo{
         display: flex;
         justify-content: center;
@@ -327,7 +327,7 @@ p{
     margin: 0;
     align-items: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
     .container-circulo{
         width: 100%;
         height:6rem;
@@ -571,7 +571,7 @@ p{
     justify-content: center;
     align-items: center;
 }
-@media(max-width: 768px){
+@media(max-width: 1080px){
     .seccion-cuadrado{
         width: 100%;
         height: 50%;

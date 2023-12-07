@@ -6,7 +6,7 @@
   height: 25px;
 }
 
-@media(max-width:768px){
+@media(max-width:1080px){
   .share-btn{
     width: 15px;
     height: 15px;
@@ -14,7 +14,7 @@
   
 }
 
-@media(max-width:768px){
+@media(max-width:1080px){
   .modal-dialog{
     width: 90vw;
     margin: 0 auto;
@@ -33,7 +33,7 @@
   padding: 0;
 }
   
-@media(max-width:768px){
+@media(max-width:1080px){
   .share-btn-container {
     gap: 0.5rem;
   }
@@ -43,7 +43,7 @@
   font-size: 35px;
 }
 
-@media(max-width:768px){
+@media(max-width:1080px){
   .share-btn-container a i {
     font-size: 30px;
   }
