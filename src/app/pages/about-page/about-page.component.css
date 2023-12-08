@@ -68,7 +68,7 @@ h2{
     background-size: cover;
     background-position: center;
 }
-@media (max-width: 1080px) {
+@media (max-width: 768px) {
     .cont-parrafo{
         display: flex;
         justify-content: center;
@@ -327,7 +327,7 @@ p{
     margin: 0;
     align-items: center;
 }
-@media (max-width: 1080px) {
+@media (max-width: 768px) {
     .container-circulo{
         width: 100%;
         height:6rem;
@@ -571,7 +571,7 @@ p{
     justify-content: center;
     align-items: center;
 }
-@media(max-width: 1080px){
+@media(max-width: 768px){
     .seccion-cuadrado{
         width: 100%;
         height: 50%;
@@ -680,4 +680,199 @@ p{
         justify-content: center;
         align-items: center;
     }
+}
+@media only screen and (min-width: 768px) and (max-width: 1080px){
+    .cont-parrafo{
+        display: flex;
+        justify-content: center;
+        
+    }
+    .titulo-puntaje{
+        font-size: 1.5rem;
+    }
+    .texto-titulo{
+        width: 80%;
+        text-align: center; 
+        font-size: 1.5rem; 
+    }
+    
+    h1{
+        font-family: 'Dosis', "Helvetica Neue", "Helvetica", Helvetica, Arial,sans-serif;
+        text-transform: uppercase;
+        font-weight: 100;
+        font-size: 4rem;
+        text-align: center;
+    }
+    .parrafo-cont{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .foto-cont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        height: 50%;
+    }
+    .contenedor{
+        flex-direction: column;
+
+    }
+    .foto{
+        background-image: url(src\assets\images\disco-resposive.jpg);
+    }
+    .container-circulo{
+        width: 100%;
+        height:6rem;
+        background-color:#f2f2f2 ;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        align-items: center;
+    }
+    .circulo-puntaje1{
+        
+        width: 4.7rem;
+        margin: 0.2rem;
+        
+    }
+    
+    .circulo-puntaje2{
+        width: 4.7rem;
+        margin: 0.2rem;
+    }
+    
+    .circulo-puntaje3{
+        width: 4.7rem;
+        margin: 0.2rem;
+    }
+    
+    .circulo-puntaje4{
+        width: 4.7rem;
+        margin: 0.2rem;
+    }
+    .desc-puntaje{
+        width: 100%;
+        height: 5rem;
+        text-align: center;
+        font-size:0.8rem;
+    }
+    .seccion-cuadrado{
+        width: 100%;
+        height: 50%;
+        border: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .desc-cuadrado{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .cuadrado-puntajes{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1.5rem;
+       
+    }
+    .cuadradito1{
+        width: 24rem;
+        height: 5rem;
+    }
+    
+    .cuadradito2{
+        width: 24rem;
+        height: 5rem;
+        
+    }
+    
+    .cuadradito3{
+     
+        width: 24rem;
+        height: 5rem;
+        
+    }
+    
+    .cuadradito4{
+        width: 24rem;
+        height: 5rem;
+    }
+    .foto-puntajes{
+        width: 90%;
+        height: 90%;
+        border-radius: 10px;
+        display: flex;
+    }
+    .container-titulohow{
+        width: 100%; 
+        margin-bottom: 2rem;
+    }
+    .punto-1{
+        display: flex;
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .texto{
+        font-size: 1.2rem;
+    }
+    .numero-1{
+        width: 3rem;
+        height: 2rem;
+        
+    }
+    .titulo{
+        font-family: 'Roboto';
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .info{
+        font-size: 2rem;
+        
+    }
+    
+    .titulo-info{
+        width: 25rem;
+    }
+    .city{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        width: 80%;
+        height: 20rem;
+    }
+    .texto-joinus{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-family: 'Roboto';
+        font-size: 1.5rem;
+    }
+    .container-texto{
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+
 }

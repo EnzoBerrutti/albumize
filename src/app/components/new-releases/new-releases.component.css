@@ -1,6 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/titania');
 @import url(https://db.onlinewebfonts.com/c/f02b8ce0d397cd405edeff61d1fec6d8?family=Frisans+Std+Black);
 @import url(https://db.onlinewebfonts.com/c/bdd3635a9f49688b8c805673e2b7e815?family=Steagal+W01+Bold);
+@import url('https://fonts.cdnfonts.com/css/druk-wide-trial');
 
                
 .contenedor-foto-fondo{
@@ -82,14 +83,7 @@
 
 }
 
-@media(max-width:1080px) {
-   .h1-albumize {
-       font-size: 1.5rem;
-       animation: humoAnimacion2 20s infinite linear;
-   
-   }
-   
-}
+
 
 .contenedor-subtitle{
    display: flex;
@@ -108,12 +102,7 @@
    font-size: 1.5rem;
    
 }
-@media(max-width:1080px) {
-   .h2-subtitle {
-       font-size: 1rem;
-   }
-   
-}
+
 
 .cont-text{
    position: absolute;
@@ -171,10 +160,18 @@
    font-size: 2.5rem;
 
 }
+.div-parrafos-juntos{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
 .parrafo-desc-titulo{
-   width: 100%;
+   width: 80%;
    font-size: 1rem;
    font-weight: 100;
+   text-align: center;
+   justify-content: center;
    display: flex;
    align-items: center;
    font-family: 'Dosis', "Helvetica Neue", "Helvetica", Helvetica, Arial,sans-serif;
@@ -194,26 +191,7 @@
 
 
 } */
-@media(max-width:1080px) {
-   .parrafo-titulo{
-      font-size: 2rem;
-   }
-   .parrafo-desc-titulo {
-       font-size: 0.8rem;
-       width: 90%;
-       text-align: center;
-       
-   
-   }
-   
-   .div-parrafos-juntos{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-   }
-   
-}
+
 
 /* Parte tarjetas ------------------------------------------------------------------*/
 #todo-home{
@@ -250,20 +228,7 @@
    width:100%;
    margin: 0;
 }
-@media(max-width:1080px) {
-   
-   .tarjetas{
-      display: flex;
-      flex-direction: column;
-   }
-   .div-tarjetas{
-      width: 85%;
-      height: 80%;
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-   }
-   
-}
+
 .album-content{
    background-color: #f2f2f2;
    border-radius: 7px;
@@ -510,274 +475,99 @@ font-style: normal;
 
 }
 
-/* ////Parte del video ----------------------------------------------------------------------------------------------- */
-.todo-video{
-   width: 100%;
-   margin-bottom: 3rem;
-
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-}
-
-.parrafo-titulo2{
-   margin: 0;
-   color: white;
-   font-family: proxima-nova, sans-serif;
-   font-style: normal;
-   font-size: 1.2rem;
-   
-
-}
-
-.contenedor-seccion-video{
-   width: 100%;
-   
-   display: flex;
-
-  
-
-}
 
 
-.contenedor-video{
-   width: 57%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   /* border-radius: 10px; */
-   
-   height: 100%;
-
-
-}
-.video-puntaje{
-   width: 100%;
-   height: 40%;
-   
-
-}
-.video-1{
-   width: 100%;
-   height: 100%;
-   border-radius:8px 8px 0 0 ;
-  
+.score-10 {
+   background-color: #AC01F8; /* o el color que desees para puntajes de 10 */
+ }
  
-   margin: 0;
-}
-.div-video{
-   width: 100%;
-   height: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   /* border-radius: 10px; */
-}
+ .score-7to10 {
+   background-color: #00ce7a; /* o el color que desees para puntajes entre 7 y 10 */
+ }
+ 
+ .score-4to7 {
+   background-color: #ffbd3f; /* o el color que desees para puntajes entre 4 y 7 */
+ }
+ 
+ .score-less-than-4 {
+  background-color:#ff6874; /* o el color que desees para puntajes menores a 4 */
+ }
+ 
+ .no-score {
+   background-color: gray; /* o el color que desees para puntajes no disponibles */
+ }
 
-
-.contenedor-titulo2{
-   
-   width: 100%;
-   /* border-bottom:1px solid  white; */
-   margin-top: 1rem;
-   margin-bottom: 3rem;
-   height: 20rem;
-   background-color: black;
-   /* border-top: 0.5rem solid #AC01F8; */
-   display: flex;
-   justify-content: center;
-   align-items: center;
-
-}
-
-.contenedor-datos-derecha{
+ .cont-seccion-info{
    display: flex;
    flex-direction: column;
-   width: 43%;
-   /* background-color: #f2f2f2; */
+   width: 85%;
 
-}
-.contenedor-artista-foto{
-   
+ }
+
+/*  parte nueva artista ------------------------------------------------*/
+.artista-fondo{
+   background-image: url(src\assets\images\fondo-after-nuevo.jpg);
+   height: 100vh;
    width: 100%;
-   height: 50%;
-   display: flex;
-
-
-}
-.titulo-theweeknd{
-   width: 50%;
-   height: 100%;
-  
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-.cont-desc-thewkn{/*parte nueva-------------------------------*/
-   width: 90%;
-   height: 90%;
-   
-   display: flex;
-   justify-content: center;
-   align-items: center;
-
-
-
-}
-.cont-blanco2{/*parte nueva-------------------------------*/
-   height: 100%;
-   width: 100%;
-   display: flex;
-   justify-content: space-around;
-   flex-direction: column;
-   align-items: center;
-   background-color: #262c31;
-   border-radius: 0.4rem;
-
-
-}
-.texto-thewkn{
-   width: 100%;
-   margin: 0;
-}
-.parrafo-thewkn{
-   width: 100%;
-   
-   margin-bottom: 0;
-   margin-left: 6px;
-   font-family: 'Roboto';
-  
-   color: white;
-}
-.foto-theweeknd{
-   width: 50%;
-   height: 100%;
-  
-   display: flex;
-   justify-content: center;
-   align-items: center;
-
-}
-
-.cont-foto-thewkn{
-   background-image: url(src\assets\images\perfil-theweeknd.jpg);
    background-position: center;
    background-size: cover;
-   width: 90%;
-   height: 90%;
-   border-radius: 5px;
+
 }
-
-
-
-
-
-.contenedor-album-foto{
-   
-   width: 100%;
-   height: 50%;
+.cont-week-after{
    display: flex;
-   
-
-}
-
-.titulo-album1{
-   width: 50%;
-   height: 100%;
-  
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-.foto-album1{
-   width: 50%;
-   height: 100%;
-  
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-.cont-foto-album{
-   background-image: url(src\assets\images\the_weeknd_starboy-portada.jpg);
-  
-   background-size: cover;
-   width: 90%;
-   height: 90%;
-   border-radius: 5px;
-}
-.cont-desc-album{
-   width: 90%;
-   height: 90%;
-   
-   display: flex;
-   justify-content: center;
-   align-items: center;
-
-
-}
-.contenedor-blanco{ 
-   width: 100%;
-   height: 100%;
-   background-color: #262c31;
-   border-radius: 0.4rem;
-   
-   display: flex;
-   justify-content: space-around;
    flex-direction: column;
-
+   justify-content: space-between;
+   align-items: center;
+   height: 100%;
 }
-.cont-titulo-starboy{
-   width: 100%;
-   height: 30%;
-   display: flex;
-
-   justify-content: center;
-
+.img-theweek{
+   background-image: url(src\assets\images\Mask-group.png);
+   width: 20rem;
+   height: 8rem;
+   background-position: center;
+   background-repeat: no-repeat;
+   
 }
-
-.parrafo-starboy{
-   width: 100%;
-   margin: 0;
+.img-after{
+   background-image: url(src\assets\images\title-art2.png);
+   width: 45rem;
+   height: 15rem;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+.cont-section-video{
+   background-color: black;
    display: flex;
    justify-content: center;
    align-items: center;
- 
-   text-transform: uppercase;
-   font-size: 2rem;
-   font-weight: 500;
-   font-family: "Frisans Std Black";
-   color: white;
-  
 
 }
-.cont-desc-starboy{
+.cont-artista-video{
+   background-color: black;
    display: flex;
-   align-items: center;
-   justify-content: center;
    margin: 0;
-}
-.parrafo-desc-starboy{
-   display: flex;
-   justify-content: center;
+   padding: 0;
+   
    align-items: center;
-   width: 95%;
-   height: 95%;
+   flex-direction: column;
+   
+   
+}
+.video-artista{
+   width: 70rem;
+   height: 40rem;
    margin: 0;
-   color: white; 
-
+   padding: 0;
+}
+.video-source{
+   margin: 0;
+   padding: 0;
 }
 
-.seccion-puntaje-video{
-   width: 100%;
- 
-   /* background-color: #f2f2f2; */
- 
-   display: flex;
-}
 .div-puntaje{
-   width: 57%;
-   height: 6rem;
-   border-radius: 0 0 8px 8px;
+   width: 70rem;
+   height: 7rem;
+   border-radius: 0 0 4px 4px;
    background-color: #f2f2f2;
 
    display: flex;
@@ -823,9 +613,6 @@ font-style: normal;
 .parrafo-song{
    color: #808080;
    margin: 3px;
-   
-
-
 
 }
 .circulo-score{
@@ -849,18 +636,12 @@ font-style: normal;
    margin: 0;
 }
 
-
-
-
-
 .div-albumize-based{
    width: 60%;
-
    height: 100%;
-   
-
 
 }
+
 .div-circulo-score{
    width: 40%;
    height: 100%;
@@ -869,47 +650,346 @@ font-style: normal;
    justify-content: center;
    align-items: center;
 }
-.div-theweeknd{
-   width: 43%;
-   height: 6rem;
+.contenedor-titulo2{
+   
+   width: 100%;
+
+   margin-top: 1rem;
+   
+   height: 20rem;
+   background-color: black;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+.titulo{
+   width: 80%;
+}
+
+.cont-tarjetas-artista{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   width: 100%;
+   padding-top: 5rem;
+   background-color: black;
+   padding-bottom: 5rem;
+
+}
+.artista-tarjeta{
+   width: 23rem;
+   height: 35rem;
+   margin: 0;
+   
+
+}
+.cont-imagen-tarjeta1{
+   background-image: url(src\assets\images\theweeknd-perfil.jpg);
+   height: 50%;
+   width: 100%;
+   background-position: center;
+   background-size: cover;
+   border-radius: 2px;
+}
+.cont-imagen-tarjeta2{
+   background-image: url(src\assets\images\xo-edit.jpg);
+   height: 50%;
+   width: 100%;
+   background-position: center;
+   background-size: cover;
+   background-color: rgb(17, 17, 17);
+   border-radius: 1px;
+   
+}
+.cont-imagen-tarjeta3{
+   background-image: url(src\assets\images\aft-til.jpeg);
+   height: 50%;
+   width: 100%;
+   background-position: center;
+   background-size: cover;
+   border-radius: 1px;
+}
+.cont-desc-tarjetas{
+   height: 50%;
+   background-color: black;
+
    display: flex;
    justify-content: center;
    align-items: center;
 }
-.parrafo-theweeknd-title{
-   color: white;
-   margin: 0;
-   text-transform: uppercase;
-   font-size: 4rem;
-   font-weight: 700;
-   font-family: "Frisans Std Black";
+.cont-parrafo-tarjetas{
+   height: 90%;
+   width: 90%;
+   display: flex;
+   flex-direction: column;
+   
 
+}
+.titulo-tarjeta-artista{
+   display: flex;
+   justify-content: center;
+   font-weight: 700;
+   font-family: 'Druk Wide Trial', sans-serif;
+   text-transform: uppercase;
+   font-size: 1.4rem;
+
+}
+.titulo-tarjeta-artista2{
+   display: flex;
+   justify-content: center;
+   font-weight: 700;
+   font-family: 'Druk Wide Trial', sans-serif;
+   text-transform: uppercase;
+   font-size: 1.2rem;
+
+}
+.parrafo-tarjetas{
+   
+   margin: 0;
+   padding: 0;
+   text-wrap: pretty;
+   font-size: 0.95rem;
+   font-weight:bold;
+   font-family: 'Dosis', "Helvetica Neue", "Helvetica", Helvetica, Arial,sans-serif;
+   text-transform: uppercase;
+   
+}
+@media(max-width:768px) {
+   
+   .video-artista{
+      width: 20rem;
+      height: 15rem;
+      margin: 0;
+      padding: 0;
+   }
+   .div-puntaje{
+      width: 20rem;
+      height: 6rem;
+      border-radius: 0 0 4px 4px;
+      background-color: #f2f2f2;
+   
+      display: flex;
+   }
+   .img-after{
+      background-image: url(src\assets\images\title-art2.png);
+      width: 20rem;
+      height: 15rem;
+      background-position: center;
+
+      background-repeat: no-repeat;
+   }
+   .cont-tarjetas-artista{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      padding-top: 5rem;
+      background-color: black;
+      padding-bottom: 5rem;
+   
+   }
+   .parrafo-nombre-cancion{
+      color: black;
+      margin: 0;
+      font-size: 12px;
+      font-weight: bold;
+      font-family: proxima-nova, sans-serif;
+      font-style: normal;
+      
+   }
+   .parrafo-vevo{
+      color: black;
+      font-family: "Steagal W01 Bold";
+      font-size: 1.5rem;
+      margin: 0;
+   }
+   .marco-song{
+      border: 1px solid #808080;
+      border-radius: 2px;
+   }
+   .parrafo-song{
+      color: #808080;
+      margin: 2px;
+      font-size: 0.8rem;
+   
+   }
+   .titulo-video-cancion{
+      width: 75%;
+   
+      height: 6rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+   
+   }
+   .circulo-score{
+      width: 25%;
+      display: flex;
+      justify-content: center;
+    
+      height: 100%;
+   }
+   
+}
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+   .video-artista{
+      width: 45rem;
+      height: 20rem;
+      margin: 0;
+      padding: 0;
+   }
+   .div-puntaje{
+      width: 45rem;
+      height: 6rem;
+      border-radius: 0 0 4px 4px;
+      background-color: #f2f2f2;
+   
+      display: flex;
+   }
+   .img-after{
+      background-image: url(src\assets\images\title-art2.png);
+      width: 50rem;
+      height: 15rem;
+      background-position: center;
+
+      background-repeat: no-repeat;
+   }
+   .cont-tarjetas-artista{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      padding-top: 5rem;
+      background-color: black;
+      padding-bottom: 5rem;
+   
+   }
+   .parrafo-nombre-cancion{
+      color: black;
+      margin: 0;
+      font-size: 20px;
+      font-weight: bold;
+      font-family: proxima-nova, sans-serif;
+      font-style: normal;
+      
+   }
+   .parrafo-vevo{
+      color: black;
+      font-family: "Steagal W01 Bold";
+      font-size: 3rem;
+      margin: 0;
+   }
+   .marco-song{
+      border: 1px solid #808080;
+      border-radius: 2px;
+   }
+   .parrafo-song{
+      color: #808080;
+      margin: 2px;
+      font-size: 1rem;
+   
+   }
+   .titulo-video-cancion{
+      width: 75%;
+   
+      height: 6rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+   
+   }
+   .circulo-score{
+      width: 25%;
+      display: flex;
+      justify-content: center;
+    
+      height: 100%;
+   }
+
+}
+@media(max-width:768px) {
+   
+   .tarjetas{
+      display: flex;
+      flex-direction: column;
+   }
+   .div-tarjetas{
+      width: 85%;
+      height: 80%;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+   }
+   
+
+ .parrafo-titulo{
+      font-size: 2rem;
+   }
+   .parrafo-desc-titulo {
+       font-size: 0.8rem;
+       width: 90%;
+       text-align: center;
+       
+   
+   }
+   
+   .div-parrafos-juntos{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+   }
+ .h2-subtitle {
+       font-size: 1rem;
+   }
+ .h1-albumize {
+       font-size: 1.5rem;
+       animation: humoAnimacion2 20s infinite linear;
+   
+   }
 }
 
 
-.score-10 {
-   background-color: #AC01F8; /* o el color que desees para puntajes de 10 */
- }
- 
- .score-7to10 {
-   background-color: #00ce7a; /* o el color que desees para puntajes entre 7 y 10 */
- }
- 
- .score-4to7 {
-   background-color: #ffbd3f; /* o el color que desees para puntajes entre 4 y 7 */
- }
- 
- .score-less-than-4 {
-  background-color:#ff6874; /* o el color que desees para puntajes menores a 4 */
- }
- 
- .no-score {
-   background-color: gray; /* o el color que desees para puntajes no disponibles */
- }
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
 
- .cont-seccion-info{
-   display: flex;
-   flex-direction: column;
-   width: 85%;
+   .tarjetas{
+      display: flex;
+      flex-direction: column;
+   }
+   .div-tarjetas{
+      width: 55%;
+      height: 80%;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+   }
+   
 
- }
+ .parrafo-titulo{
+      font-size: 2rem;
+   }
+   .parrafo-desc-titulo {
+       font-size: 1rem;
+       width: 90%;
+       text-align: center;
+       
+   
+   }
+   
+   .div-parrafos-juntos{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+   }
+ .h2-subtitle {
+       font-size: 1.5rem;
+   }
+ .h1-albumize {
+       font-size: 2.5rem;
+       animation: humoAnimacion2 20s infinite linear;
+   
+   }
+}
